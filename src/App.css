@@ -3,6 +3,7 @@
     background-color: #ce6301;
     border-bottom: 1px solid #ddd;
     height: 110px;
+    width: 100%;
   }
   .nav-bar {
     display: flex;
@@ -10,6 +11,11 @@
     align-items: center;
     padding: 0px 50px;
   }
+
+  .bars{
+    display: none;
+  }
+
   .logo img {
     margin: 0 ;
     padding: 0 ;
@@ -54,14 +60,113 @@
     gap: 10px;
     color: var(--primary-color);
   }
-  
-.icon-text{
+
+  .icon-text{
   font-size: 0.9em;
   
 }
-  
-  .icons-links{
+.icons-links{
     font-size: 1.05em;
     color: var(--hover-color);
     margin-right: 12px;
   }
+
+.main__container{
+  display: none;
+}
+
+
+  /* nav media queries */
+  @media (min-width: 320px) and (max-width: 480px) {
+    .nav-links {
+      display: none;
+    }
+    .nav-bar{
+      width: 100%;
+      padding: 0 0.3em 0 0.7em;
+    }
+    .bars{
+      display: block;
+    }
+    .btn-bars{
+      border: none;
+      background-color: transparent;
+    }
+    .bars-icon{
+      color: #ffffff;
+      font-size: 1.2em;
+    }
+    .search{
+      gap: 20px;
+      font-size: 1.1em;
+    }
+    .fa-user{
+      display: none;
+    }
+    
+    .mini-nav{
+      display: none;
+    }
+
+    .enable-animation{
+      margin-block: 1.2rem;
+  }  
+  
+  .main__container {
+    display: block;
+    position: relative;
+  }
+  
+  /* Marquee styles */
+  .marquee {
+    --gap: 1rem;
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    overflow: hidden;
+    user-select: none;
+    gap: var(--gap);
+    border:none;
+    background-color: #e98e39;
+  }
+  
+  .marquee__content {
+    flex-shrink: 0;
+    display: flex;
+    gap: var(--gap);
+    min-width: 100%;
+  }
+  
+  .marquee__content > * {
+    flex: 0 0 auto;
+    color: rgb(247, 246, 246);
+    background: transparent;
+    margin: 0px;
+    padding: 0.2em;
+    text-align: center;
+  }
+
+  .marquee__item{
+    padding: 3px 10px;
+  }
+  
+  ul { padding-left: 0; }
+  
+  
+  @keyframes scroll {
+    from { transform: translateX(0); }
+    to { transform: translateX(calc(-100% - var(--gap))); }
+  }
+  
+  /* Enable animation */
+  .enable-animation .marquee__content {
+    animation: scroll 10s linear infinite;
+  }
+  
+
+
+  }
+
+
+  /* navbar ends */
+
