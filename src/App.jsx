@@ -1,16 +1,19 @@
-
-// import reactLogo from './assets/react.svg'
+import Navbar from "./Components/Navbar"
 
 import './App.css'
 
-function App() {
-  
 
-  return (
-    <>
-      Grains and Essentials
-    </>
-  )
-}
+function App(){
 
+return (
+  <>
+      <Navbar />
+      
+
+  </>
+
+
+
+
+)}
 export default App
