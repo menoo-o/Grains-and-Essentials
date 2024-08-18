@@ -1,5 +1,6 @@
 import Navbar from "./Components/Navbar"
 import Hero from "./Components/Hero"
+import Welcome from "./Components/Welcome" 
 
 import './App.css'
 
@@ -10,6 +11,7 @@ return (
   <>
       <Navbar />
       <Hero />
+      <Welcome />
       
       
 
