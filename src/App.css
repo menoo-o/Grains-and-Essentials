@@ -74,9 +74,6 @@
 .main__container{
   display: none;
 }
-
-
-
   /* navbar ends */
 
   .break{
@@ -95,7 +92,6 @@
     overflow: hidden;
     height: 660px; /* Ensure the hero section matches the image height */
 }
-
 .carousel-item img {
     width: 100%;
     height: auto;
@@ -120,7 +116,6 @@
 
 /* WELCOME TEXT*/
 .welcom{
-
   width: 100%;
   height: 250px;
   display: flex;
@@ -136,14 +131,13 @@
   flex-direction: column;
 }
 
-.para-heading{
+.para-heading, .heading-sale-items h1{
   font-size: 2.5rem;
   letter-spacing: 0.1pc;
   margin-bottom: 5px;
   text-transform: uppercase;
-  font-weight: 420;
+  font-weight: 390;
 }
-
 .para p{
   padding: 10px;
   padding-top: 5px;
@@ -151,7 +145,7 @@
   margin-bottom: 0px;
   text-align: center;
 }
-
+/* check this btn>? where it is at? */
 .shop-all{
   border: none;
   text-decoration: none;
@@ -179,6 +173,187 @@
   font-size: 3rem;
   font-weight: 380;
 }
+
+/* CATEGORIES */
+.categories{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 30px;
+}
+
+.list {
+  display: grid;
+  grid-template-columns: repeat(4, 350px); /* Four columns */
+  grid-template-rows: 320px 320px; /* Two rows with specific height */
+  gap: 50px; /* Adjust the gap between grid items */
+  margin-bottom: 10px ;
+}
+
+.image-container {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  height: 100%; /* Ensures each container fills the grid cell */
+}
+
+.image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the image covers the entire container */
+  border-radius: 10px;
+}
+
+.image-container div {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  color: white;
+  padding: 5px;
+  text-align: center;
+}
+
+.image-container div p {
+  margin: 0;
+  font-size: 1.2rem; /* Adjust the font size as necessary */
+  font-weight: 420;
+}
+
+/* NEW Arrivals */
+.new-heading-arrivals{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 100px;
+}
+.new-heading-arrivals h1{
+  font-size: 3rem;
+  font-weight: 380;
+}
+
+.shop-view{
+  border: none;
+  text-decoration: none;
+  border-bottom: 1px solid black;
+  text-transform: uppercase;
+  font-weight: 380;
+  color: #5f360f;
+  font-size: 1.2em;
+  padding: 3px 5px;
+}
+
+.new-arrivals-carousel {
+  margin: 40px 0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.new-arrival-item {
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.new-arrival-item img {
+  width: 100%;
+  height: 200px; /* Adjust as necessary */
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.new-arrival-item h3 {
+  font-size: 1.5rem;
+  margin: 10px 0;
+}
+
+.new-arrival-item p {
+  font-size: 1.25rem;
+  color: #333;
+  margin: 10px 0;
+}
+
+.weight-options button {
+  background-color: #fff;
+  border: 1px solid #f08c65;
+  padding: 5px 10px;
+  margin: 5px;
+  cursor: pointer;
+  border-radius: 4px;
+  font-weight: 600;
+}
+
+.quantity-selector {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 15px 0;
+}
+
+.quantity-selector button {
+  background-color: #e65b50;
+  border: 1px solid #ccc;
+  padding: 0px 15px;
+  cursor: pointer;
+  border-radius: 4px;
+  color: white;
+  font-size: 1.4em; /* Adjust as necessary */
+  font-family: inherit;
+}
+
+.quantity-selector input {
+  width: 40px;
+  padding: 7px 0px;
+  text-align: center;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin: 0 5px;
+  font-family: inherit;
+  font-size: 0.9rem; /* Adjust as necessary */
+  appearance: none; /* Remove any default arrows/buttons */
+      -moz-appearance: textfield; /* Remove spin buttons in Firefox */
+}
+
+.add-to-cart-btn {
+  display: inline-block;
+  background-color: #ffa061;
+  color: white;
+  border: none;
+  padding: 8px 48px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem; /* Adjust as necessary */
+  transition: background-color 0.3s;
+  font-family: inherit;
+}
+
+.add-to-cart-btn:hover {
+  background-color: #ff3d2e;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -301,17 +476,107 @@
   }
 
   .para-heading{
-    font-size: 2.3rem;}
+    font-size: 1.7rem;}
 
   .para p{
-    font-size: 1.2em;
+    font-size: 0.95em;
   }
 
-  .headingList h3 {
+  .headingList h3{
     font-size: 2rem;
   }
+
+  /* categories */
+  .categories{
+    padding: 5px 15px;
+  }
   
+  .list {
+    display: grid;
+    grid-template-columns: repeat(2, 180px); /* Four columns */
+    grid-template-rows: repeat(4, 170px); /* Two rows with specific height */
+    gap: 25px; /* Adjust the gap between grid items */
+    margin-bottom: 5px ;
+  }
   
+
+  .image-container div {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    color: white;
+    padding: 5px;
+    text-align: center;
+  }
+  
+  .image-container div p {
+    margin: 0;
+    font-size: 1rem; /* Adjust the font size as necessary */
+    font-weight: 420;
+  }
+
+  /* new arrivals */
+  .new-heading-arrivals{
+    margin-top: 50px;
+  }
+  .new-heading-arrivals h1{
+    font-size: 1.5rem;
+    font-weight: 400;
+  }
+  .shop-view{
+    font-size: 0.95em;
+  }
+  
+  .new-arrival-item img {
+    width: 100%;
+    height: 110px; /* Adjust as necessary */}
+
+  .new-arrival-item h3 {
+      font-size: 1em;
+      font-weight: 420;
+    }
+    
+  .new-arrival-item p {
+      font-size: 1.1em;
+    }
+    
+  .weight-options button {
+      padding: 2.5px 5px;
+      margin: 2.5px;
+      font-size: 0.8em;
+      font-weight: 390;
+      
+    }
+    .quantity-selector {
+      margin: 10px 0;
+    }
+    
+    .quantity-selector button {
+      background-color: #e65b50;
+      padding: 1px 9px;
+      border-radius: 2px;
+      font-size: 1.1em; /* Adjust as necessary */
+    }
+
+    .quantity-selector input {
+      width: 45px;
+      padding: 2px 0px;
+      margin: 0 5px;
+      font-size: 1rem; /* Adjust as necessary */
+      
+    }
+    
+    .add-to-cart-btn {
+      padding: 4px 16px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 1rem; /* Adjust as necessary */
+    }
+
+
+    
 
   
 
