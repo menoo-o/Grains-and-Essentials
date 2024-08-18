@@ -3,6 +3,7 @@ import Hero from "./Components/Hero"
 import Welcome from "./Components/Welcome" 
 import Categories from "./Components/Categories"
 import NewArrivals from "./Components/NewArrivals"
+import SaleItems from "./Components/SaleItem"
 
 import './App.css'
 
@@ -16,6 +17,7 @@ return (
       <Welcome />
       <Categories />
       <NewArrivals />
+      <SaleItems />
 
       
       

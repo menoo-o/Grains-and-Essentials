@@ -222,14 +222,15 @@
 }
 
 /* NEW Arrivals */
-.new-heading-arrivals{
+.heading-items{
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   margin-top: 100px;
+  margin-bottom: 30px;
 }
-.new-heading-arrivals h1{
+.heading-items h1{
   font-size: 3rem;
   font-weight: 380;
 }
@@ -518,10 +519,10 @@
   }
 
   /* new arrivals */
-  .new-heading-arrivals{
+  .heading-items{
     margin-top: 50px;
   }
-  .new-heading-arrivals h1{
+  .heading-items h1{
     font-size: 1.5rem;
     font-weight: 400;
   }
