@@ -1,6 +1,7 @@
 // NewArrivals.jsx
 import React from 'react';
 import CarouselComponent from './CarouselComponent';
+import Button from './Button';
 
 const newArrivals = [
     { imgSrc: '/new-items/item1.jpg', title: 'Cardamom', price: '$5.99' },
@@ -17,9 +18,7 @@ const NewArrivals = () => {
         <section>
             <div className="heading-items">
                 <h1>New Arrivals</h1>
-                <div className="link-shop">
-                     <a href="#" className="shop-all shop-view">View All</a>
-                 </div>
+                <Button />
             </div>
             <CarouselComponent items={newArrivals} />
         </section>

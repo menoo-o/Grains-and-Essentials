@@ -1,5 +1,5 @@
 // SaleItems.jsx
-import React from 'react';
+import Button from './Button';
 import CarouselComponent from './CarouselComponent';
 
 const saleItems = [
@@ -16,9 +16,7 @@ const SaleItems = () => {
         <section>
          <div className="heading-items">
             <h1>Sale Products</h1>
-            <div className="link-shop">
-              <a href="#" className="shop-all shop-view">View All</a>
-            </div>
+            <Button />
           </div>
 
             <CarouselComponent items={saleItems} />

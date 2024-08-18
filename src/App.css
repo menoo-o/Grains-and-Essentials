@@ -76,10 +76,6 @@
 }
   /* navbar ends */
 
-  .break{
-    width: 100%;
-    height: 50px;
-  }
 
   /* HERO */
 
@@ -136,7 +132,7 @@
   letter-spacing: 0.1pc;
   margin-bottom: 5px;
   text-transform: uppercase;
-  font-weight: 390;
+  font-weight: 500;
 }
 .para p{
   padding: 10px;
@@ -222,7 +218,7 @@
 }
 
 /* NEW Arrivals */
-.heading-items{
+.heading-items, .recipes-heading{
   display: flex;
   justify-content: center;
   align-items: center;
@@ -230,7 +226,7 @@
   margin-top: 100px;
   margin-bottom: 30px;
 }
-.heading-items h1{
+.heading-items h1, .recipes-heading h1{
   font-size: 3rem;
   font-weight: 380;
 }
@@ -334,7 +330,54 @@
   background-color: #ff3d2e;
 }
 
+/* recipie section */
+.recipes, .blog-container{
+  margin-top: 0px;
+  width: 100%;
+  height: 600px;
+}
 
+.recipe-container, .read{
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  grid-template-columns: repeat(3, 450px);
+  grid-template-rows: 1fr;
+}
+
+.recipe-descrp{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.article, .blog{
+  width: 420px;
+  height: 550px;
+}
+
+.article img{
+  width: 100%;
+  height: 450px;
+  background-color: rgb(48, 112, 51);
+}
+
+.recipe-title{
+  font-size: 1.1em;
+  font-weight: 420;
+  margin-top: 5px;
+  margin-bottom: 20px;
+}
+
+.recipe-link{
+  text-decoration: none;
+  font-size: 0.9em;
+  color: #c97b07;
+  text-transform: lowercase;
+  border: 1px solid rgb(219, 124, 34);
+  padding: 7px 15px;
+}
 
 
 
@@ -477,7 +520,7 @@
   }
 
   .para-heading{
-    font-size: 1.7rem;}
+    font-size: 1.8rem;}
 
   .para p{
     font-size: 0.95em;
@@ -522,7 +565,7 @@
   .heading-items{
     margin-top: 50px;
   }
-  .heading-items h1{
+  .heading-items h1, .recipes-heading h1{
     font-size: 1.5rem;
     font-weight: 400;
   }
@@ -576,6 +619,37 @@
       font-size: 1rem; /* Adjust as necessary */
     }
 
+    /* recipes */
+    .recipes, .blog-container{
+      height: 300px;
+    }
+    .recipe-container, .read{
+      grid-template-columns: repeat(1, 380px);
+      grid-template-rows: 1fr 1fr 1fr; 
+    }
+    .article, .blog{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      width: 380px;
+      height: 450px;
+    }
+    .article img{
+      width: 350px;
+      height: 330px;
+    }
+    .recipe-title{
+      font-size: 0.95em;
+      margin-top: 10px;
+      margin-bottom: 12px;
+    }
+    
+    .recipe-link{
+      text-decoration: none;
+      font-size: 0.8em;
+      padding: 5px 9px;
+    }
 
     
 
