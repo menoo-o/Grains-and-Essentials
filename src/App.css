@@ -379,7 +379,132 @@
   padding: 7px 15px;
 }
 
+/* Subscribe */
+/* Subscribe.css */
 
+.subscribe-container {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 20px;
+  text-align: center;
+  max-width: 100%;
+  margin: 20px auto;
+}
+
+.subscribe-container h2 {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.subscribe-container p {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.subscribe-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.subscribe-input {
+  padding: 10px;
+  margin: 0px 4px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 5px 0 0 5px;
+  width: 30%;
+}
+
+.subscribe-input::placeholder{
+  font-family: inherit;
+  font-size: 1.1em;
+}
+
+.subscribe-button {
+  padding: 7px 15px;
+  font-size: 1.1rem;
+  background-color: #ff8c00;
+  color: #fff;
+  border: none;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.subscribe-button:hover {
+  background-color: #ff7a00;
+}
+
+
+/* FOOTER */
+.footer-container {
+  background-color: #333;
+  color: #fff;
+  padding: 40px 20px;
+}
+
+.footer-top {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  border-bottom: 1px solid #444;
+  padding-bottom: 20px;
+}
+
+.footer-section {
+  flex: 1;
+  margin: 0 20px;
+  min-width: 200px;
+}
+
+.footer-section h3 {
+  margin-bottom: 20px;
+  font-size: 1.2em;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-section ul li a:hover {
+  color: #f0a500; /* Orangey highlight color */
+}
+
+.social-icons {
+  display: flex;
+  gap: 10px;
+}
+
+.social-icons a {
+  color: #fff;
+  font-size: 1.5em;
+  transition: color 0.3s;
+}
+
+.social-icons a:hover {
+  color: #f0a500; /* Orangey highlight color */
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 0.9em;
+}
 
 
 
@@ -626,6 +751,7 @@
     .recipe-container, .read{
       grid-template-columns: repeat(1, 380px);
       grid-template-rows: 1fr 1fr 1fr; 
+   
     }
     .article, .blog{
       display: flex;
@@ -633,7 +759,8 @@
       align-items: center;
       flex-direction: column;
       width: 380px;
-      height: 450px;
+      height: 420px;
+  
     }
     .article img{
       width: 350px;
@@ -651,7 +778,21 @@
       padding: 5px 9px;
     }
 
-    
+    /* subscribe-container */
+    .subscribe-container{
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+    }
+    /* footer */  
+    .footer-container {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+    }
+      
+      
+
 
   
 

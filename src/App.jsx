@@ -5,6 +5,8 @@ import Categories from "./Components/Categories"
 import NewArrivals from "./Components/NewArrivals"
 import SaleItems from "./Components/SaleItem"
 import Recipes from "./Components/Recipes"
+import Subscribe from "./Components/Subscribe"
+import Footer from "./Components/Footer"
 
 import './App.css'
 
@@ -12,7 +14,7 @@ import './App.css'
 function App(){
 
 return (
-  <>
+  <>  
       <Navbar />
       <Hero />
       <Welcome />
@@ -20,9 +22,7 @@ return (
       <NewArrivals />
       <SaleItems />
       <Recipes />
-
-      
-      
+      <Footer />
 
   </>
 
