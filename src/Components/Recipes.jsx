@@ -2,6 +2,8 @@ import React from 'react';
 import Button from './Button';
 import '../App.css'; // Assuming you have a separate CSS file for styling
 
+
+
 const Recipes = () => {
   const recipes = [
     {
@@ -43,6 +45,7 @@ const Recipes = () => {
           ))}
         </div>
       </section>
+      
     </div>
   );
 };
