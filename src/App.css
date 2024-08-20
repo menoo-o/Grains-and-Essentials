@@ -873,4 +873,70 @@
 
 
 
-  
+  /* Container for the dropdown */
+.dropdown-container {
+  position: relative;
+  display: inline-block;
+}
+
+/* The button that triggers the dropdown */
+.dropdown-trigger {
+  display: flex;
+  align-items: center;
+  background-color: #008cba;
+  color: white;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+/* Optional: styling for the icon */
+.dropdown-icon {
+  margin-left: 10px;
+  width: 20px;
+  height: 20px;
+}
+
+/* The dropdown menu itself */
+.dropdown-menu {
+  display: none; /* Initially hidden */
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: white;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  min-width: 160px;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+/* Show the dropdown when active */
+.dropdown-menu.active {
+  display: block;
+}
+
+/* List styling */
+.dropdown-menu ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* List items */
+.dropdown-menu li {
+  padding: 12px 16px;
+}
+
+/* Links inside the dropdown */
+.dropdown-menu li a {
+  text-decoration: none;
+  color: black;
+  display: block;
+}
+
+/* Hover effect on links */
+.dropdown-menu li a:hover {
+  background-color: #f1f1f1;
+}
