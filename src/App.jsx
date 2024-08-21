@@ -6,7 +6,8 @@ import NewArrivals from "./Components/NewArrivals"
 import SaleItems from "./Components/SaleItem"
 import Recipes from "./Components/Recipes"
 import Footer from "./Components/Footer"
-import DropMenu from "./Components/DropMenu"
+import DropNav from "./Components/DropNav"
+
 
 import './App.css'
 
@@ -14,8 +15,7 @@ import './App.css'
 function App() {
   return (
     <div className="app-container">
-
-      <DropMenu />
+      <DropNav />
       
       {/* <nav>
         <Navbar />
@@ -29,7 +29,6 @@ function App() {
           <SaleItems />
           <Recipes />
       </main>
-      
       
         <Footer /> */}
       

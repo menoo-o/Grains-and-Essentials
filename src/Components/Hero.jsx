@@ -1,4 +1,3 @@
-import React from 'react';
 import { Carousel } from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css'; // Import carousel styles
 import '../App.css'; // Import custom styles

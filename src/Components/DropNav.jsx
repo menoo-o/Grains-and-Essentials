@@ -1,13 +1,16 @@
-import './styles.css';
-import { ReactComponent as CaretIcon } from '/icons/caret.svg';
-import { ReactComponent as ArrowIcon } from '/icons/arrow.svg';
-import  { useState, useEffect, useRef } from 'react';
+import './DropNav.css';
+
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowDown, faArrowLeft } from '@fortawesome/free-solid-svg-icons';
+
+
+import React, { useState, useEffect, useRef } from 'react';
 import { CSSTransition } from 'react-transition-group';
 
-function DropMenu() {
+function DropNav() {
   return (
     <Navbar>     
-     <NavItem icon={<CaretIcon />}>
+     <NavItem icon={<FontAwesomeIcon icon={faArrowDown} />}>
         <DropdownMenu></DropdownMenu>
       </NavItem>
     </Navbar>
@@ -98,7 +101,7 @@ function DropdownMenu() {
         unmountOnExit
         onEnter={calcHeight}>
         <div className="menu">
-          <DropdownItem goToMenu="main" leftIcon={<ArrowIcon />}>
+          <DropdownItem goToMenu="main" leftIcon={ <FontAwesomeIcon icon={faArrowLeft} /> }>
             <h2>Categories</h2>
           </DropdownItem>
           <DropdownItem >Grains & Cereals</DropdownItem>
@@ -119,7 +122,7 @@ function DropdownMenu() {
         unmountOnExit
         onEnter={calcHeight}>
         <div className="menu">
-          <DropdownItem goToMenu="main" leftIcon={<ArrowIcon />}>
+          <DropdownItem goToMenu="main" leftIcon={<FontAwesomeIcon icon={faArrowLeft} />}>
             <h2>Contact Us</h2>
           </DropdownItem>
           <DropdownItem leftIcon="🦘">WhatsApp</DropdownItem>
@@ -131,4 +134,4 @@ function DropdownMenu() {
   );
 }
 
-export default DropMenu;
+export default DropNav;
