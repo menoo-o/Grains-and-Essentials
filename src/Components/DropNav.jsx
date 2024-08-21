@@ -1,11 +1,11 @@
 import './DropNav.css';
-
+import PropTypes from 'prop-types';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faArrowLeft } from '@fortawesome/free-solid-svg-icons';
 import { faFacebook, faInstagram, faYoutube, faWhatsapp } from '@fortawesome/free-brands-svg-icons';
 
 
-import React, { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { CSSTransition } from 'react-transition-group';
 
 function DropNav() {
@@ -26,6 +26,10 @@ function Navbar(props) {
   );
 }
 
+Navbar.propTypes = {
+  children: PropTypes.node.isRequired,
+};
+
 function NavItem(props) {
   const [open, setOpen] = useState(false);
 
@@ -39,6 +43,11 @@ function NavItem(props) {
     </li>
   );
 }
+
+NavItem.propTypes = {
+  icon: PropTypes.node.isRequired,
+  children: PropTypes.node,
+};
 
 function DropdownMenu() {
   const [activeMenu, setActiveMenu] = useState('main');
@@ -63,6 +72,13 @@ function DropdownMenu() {
       </a>
     );
   }
+
+  DropdownItem.propTypes = {
+    goToMenu: PropTypes.string,
+    leftIcon: PropTypes.node,
+    rightIcon: PropTypes.node,
+    children: PropTypes.node.isRequired,
+  };
 
   return (
     // <div className="dropdown" style={{ height: '70vh' }} ref={dropdownRef}>
