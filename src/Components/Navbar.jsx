@@ -1,6 +1,7 @@
 import '../App.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faUser, faCartShopping, faMagnifyingGlass,  faCheck, faLeaf, faTruckFast, faCube, faBars } from '@fortawesome/free-solid-svg-icons';
+import DropNav from './DropNav';
+import { faUser, faCartShopping, faMagnifyingGlass,  faCheck, faLeaf, faTruckFast, faCube } from '@fortawesome/free-solid-svg-icons';
 
 function Navbar(){
 return (
@@ -8,9 +9,9 @@ return (
       <nav>
         <section className="nav-bar">
 
-          <div className='bars'>
-            <button className='btn-bars' type='button'><FontAwesomeIcon icon={faBars} className='bars-icon' /></button>
-          </div>
+        <div className='bars'>
+            <DropNav />
+        </div>
 
           <div className="logo">
               <img src="/logo.jpg" alt="logo" />
@@ -30,6 +31,10 @@ return (
                <a href="#"> <FontAwesomeIcon icon={faCartShopping} /> </a>
                <a href="#"> <FontAwesomeIcon icon={faUser} className='fa-user'  />  </a>
           </div>
+
+         
+
+
         </section>
 
         <section className="mini-nav">

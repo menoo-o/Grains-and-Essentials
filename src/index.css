@@ -22,7 +22,10 @@
     font-weight: 400;
     font-style: normal;
     height: 100%;
-    
+  }
+
+  h2{
+    font-size: 1.25em ;
   }
   
 

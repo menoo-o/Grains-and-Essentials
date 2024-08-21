@@ -6,7 +6,7 @@ import NewArrivals from "./Components/NewArrivals"
 import SaleItems from "./Components/SaleItem"
 import Recipes from "./Components/Recipes"
 import Footer from "./Components/Footer"
-import DropNav from "./Components/DropNav"
+
 
 
 import './App.css'
@@ -15,9 +15,9 @@ import './App.css'
 function App() {
   return (
     <div className="app-container">
-      <DropNav />
+      {/* <DropNav /> */}
       
-      {/* <nav>
+      <nav>
         <Navbar />
       </nav>
 
@@ -30,7 +30,7 @@ function App() {
           <Recipes />
       </main>
       
-        <Footer /> */}
+        <Footer />
       
       
     </div>

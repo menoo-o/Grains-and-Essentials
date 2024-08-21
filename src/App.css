@@ -33,6 +33,7 @@
     padding: 0 ;
     width: 135px;
     height: 109px;
+    
   }
   
   .nav-links, .search {
@@ -540,12 +541,20 @@
 
   /* nav media queries & Hero*/
   @media (min-width: 330px) and (max-width: 480px) {
+    .logo img {
+      margin: 0 ;
+      padding-right: 30px ;
+      width: 140px;
+      height: 111px;
+    }
     .nav-links {
       display: none;
     }
     .nav-bar{
       width: 100%;
-      padding: 0 0.3em 0 0.7em;
+      /* padding: 0 0.3em 0 0.7em; */
+      padding: 0 0.35em 0 1em;
+      flex-direction: row-reverse;
     }
     .bars{
       display: block;

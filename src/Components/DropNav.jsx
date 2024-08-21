@@ -1,7 +1,8 @@
 import './DropNav.css';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faArrowDown, faArrowLeft } from '@fortawesome/free-solid-svg-icons';
+import { faBars, faArrowLeft } from '@fortawesome/free-solid-svg-icons';
+import { faFacebook, faInstagram, faYoutube, faWhatsapp } from '@fortawesome/free-brands-svg-icons';
 
 
 import React, { useState, useEffect, useRef } from 'react';
@@ -10,7 +11,7 @@ import { CSSTransition } from 'react-transition-group';
 function DropNav() {
   return (
     <Navbar>     
-     <NavItem icon={<FontAwesomeIcon icon={faArrowDown} />}>
+     <NavItem icon={<FontAwesomeIcon icon={faBars} className='bars-icon' /> }>
         <DropdownMenu></DropdownMenu>
       </NavItem>
     </Navbar>
@@ -56,7 +57,7 @@ function DropdownMenu() {
   function DropdownItem(props) {
     return (
       <a href="#" className="menu-item" onClick={() => props.goToMenu && setActiveMenu(props.goToMenu)}>
-        <span className="icon-button">{props.leftIcon}</span>
+        <span>{props.leftIcon}</span>
         {props.children}
         <span className="icon-right">{props.rightIcon}</span>
       </a>
@@ -64,35 +65,38 @@ function DropdownMenu() {
   }
 
   return (
-    <div className="dropdown" style={{ height: menuHeight }} ref={dropdownRef}>
+    // <div className="dropdown" style={{ height: '70vh' }} ref={dropdownRef}>
+      <div className="dropdown" style={{ height: menuHeight }} ref={dropdownRef}> 
 
-      <CSSTransition
-        in={activeMenu === 'main'}
-        timeout={500}
-        classNames="menu-primary"
-        unmountOnExit
-        onEnter={calcHeight}>
-        <div className="menu">
+<CSSTransition
+  in={activeMenu === 'main'}
+  timeout={600}
+  classNames="menu-primary"
+  unmountOnExit
+  onEnter={calcHeight}>
+  <div className="menu">
 
-          <DropdownItem>Home</DropdownItem>
+    <DropdownItem>Home</DropdownItem>
 
-          <DropdownItem
-            goToMenu="shop">
-            Shop
-          </DropdownItem>
+    <DropdownItem goToMenu="shop">Shop</DropdownItem>
 
-          <DropdownItem
-           
-            goToMenu="contact">
-            Contact Us
-          </DropdownItem>
+    <DropdownItem>Contact Us</DropdownItem>
 
-          <DropdownItem>Blogs</DropdownItem>
-          <DropdownItem>About Us</DropdownItem>
-          <DropdownItem>Login</DropdownItem>
+    <DropdownItem>Blogs</DropdownItem>
+    <DropdownItem>About Us</DropdownItem>
+    <DropdownItem>Login</DropdownItem>
 
-        </div>
-      </CSSTransition>
+    {/* Social Media Icons in a Row */}
+    <div className="social-media-icons">
+      <DropdownItem leftIcon={<FontAwesomeIcon icon={faWhatsapp} className='icon-left' />} />
+      <DropdownItem leftIcon={<FontAwesomeIcon icon={faInstagram} className='icon-left' />} />
+      <DropdownItem leftIcon={<FontAwesomeIcon icon={faFacebook} className='icon-left' />} />
+      <DropdownItem leftIcon={<FontAwesomeIcon icon={faYoutube} className='icon-left' />} />
+    </div>
+
+  </div>
+</CSSTransition>
+
 
       <CSSTransition
         in={activeMenu === 'shop'}
@@ -101,7 +105,7 @@ function DropdownMenu() {
         unmountOnExit
         onEnter={calcHeight}>
         <div className="menu">
-          <DropdownItem goToMenu="main" leftIcon={ <FontAwesomeIcon icon={faArrowLeft} /> }>
+          <DropdownItem goToMenu="main" leftIcon={ <FontAwesomeIcon icon={faArrowLeft} className='icon-left'/>  }>
             <h2>Categories</h2>
           </DropdownItem>
           <DropdownItem >Grains & Cereals</DropdownItem>
@@ -115,21 +119,19 @@ function DropdownMenu() {
         </div>
       </CSSTransition>
 
-      <CSSTransition
+      {/* <CSSTransition
         in={activeMenu === 'contact'}
         timeout={500}
         classNames="menu-secondary"
         unmountOnExit
         onEnter={calcHeight}>
         <div className="menu">
-          <DropdownItem goToMenu="main" leftIcon={<FontAwesomeIcon icon={faArrowLeft} />}>
+          <DropdownItem goToMenu="main" leftIcon={<FontAwesomeIcon icon={faArrowLeft} className='icon-left' />}>
             <h2>Contact Us</h2>
           </DropdownItem>
-          <DropdownItem leftIcon="🦘">WhatsApp</DropdownItem>
-          <DropdownItem leftIcon="🐸">Instagram</DropdownItem>
-          <DropdownItem leftIcon="🦋">Facebook</DropdownItem>
+          
         </div>
-      </CSSTransition>
+      </CSSTransition> */}
     </div>
   );
 }
