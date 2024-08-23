@@ -1,8 +1,5 @@
 body {
     margin: 0;
-    background: #151616;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
   }
   
  
@@ -105,16 +102,16 @@ body {
 /* Social Media Icons Row */
 .social-media-icons {
   display: flex;
-  justify-content: space-between; /* Adjust spacing between icons */
-  padding: 0.5rem 0; /* Optional: Add padding to the row */
-  border-top: 1px solid #ccc; /* Optional: Add a border on top */
-  margin-top: 0.5rem; /* Optional: Add margin on top */
+  justify-content: space-between; 
+  padding: 0.5rem 0; 
+  border-top: 1px solid #ccc; 
+  margin-top: 0.5rem; 
 }
 
 /* Adjust the appearance of individual icons within the row */
 .social-media-icons .menu-item {
-  flex: 1; /* Allow each icon to take up equal space */
-  justify-content: center; /* Center the icon horizontally */
+  flex: 1; /* 
+  justify-content: center; 
   padding: 0.5rem; /* Adjust padding for better spacing */
   margin: 0; /* Remove margin to prevent extra spacing */
 }
@@ -153,3 +150,25 @@ body {
     transition: all var(--speed) ease;
   }  
 
+  .menu-primary-enter {
+    position: absolute;
+    transform: translateX(-110%);
+    opacity: 0;
+  }
+  
+  .menu-primary-enter-active {
+    transform: translateX(0%);
+    opacity: 1;
+    transition: transform 600ms ease, opacity 600ms ease;
+  }
+  
+  .menu-primary-exit {
+    position: absolute;
+  }
+  
+  .menu-primary-exit-active {
+    transform: translateX(-110%);
+    opacity: 0;
+    transition: transform 600ms ease, opacity 600ms ease;
+  }
+  

@@ -1,18 +1,17 @@
 import './DropNav.css';
+import { NavLink } from 'react-router-dom';
 import PropTypes from 'prop-types';
+import React, { useState, useEffect, useRef } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faArrowLeft } from '@fortawesome/free-solid-svg-icons';
 import { faFacebook, faInstagram, faYoutube, faWhatsapp } from '@fortawesome/free-brands-svg-icons';
-
-
-import { useState, useEffect, useRef } from 'react';
 import { CSSTransition } from 'react-transition-group';
 
 function DropNav() {
   return (
-    <Navbar>     
-     <NavItem icon={<FontAwesomeIcon icon={faBars} className='bars-icon' /> }>
-        <DropdownMenu></DropdownMenu>
+    <Navbar>
+      <NavItem icon={<FontAwesomeIcon icon={faBars} className='bars-icon' />}>
+        <DropdownMenu />
       </NavItem>
     </Navbar>
   );
@@ -33,13 +32,19 @@ Navbar.propTypes = {
 function NavItem(props) {
   const [open, setOpen] = useState(false);
 
+  // Function to close the dropdown
+  const closeDropdown = () => setOpen(false);
+
   return (
     <li className="nav-item">
       <a href="#" className="icon-button" onClick={() => setOpen(!open)}>
         {props.icon}
       </a>
 
-      {open && props.children}
+      {open && React.Children.map(props.children, (child) => {
+        // Cloning children to pass closeDropdown as a prop
+        return React.cloneElement(child, { closeDropdown });
+      })}
     </li>
   );
 }
@@ -49,107 +54,108 @@ NavItem.propTypes = {
   children: PropTypes.node,
 };
 
-function DropdownMenu() {
+function DropdownMenu({ closeDropdown }) {
   const [activeMenu, setActiveMenu] = useState('main');
   const [menuHeight, setMenuHeight] = useState(null);
   const dropdownRef = useRef(null);
 
   useEffect(() => {
-    setMenuHeight(dropdownRef.current?.firstChild.offsetHeight)
-  }, [])
+    setMenuHeight(dropdownRef.current?.firstChild.offsetHeight);
+  }, []);
 
   function calcHeight(el) {
     const height = el.offsetHeight;
     setMenuHeight(height);
   }
 
-  function DropdownItem(props) {
+  function DropdownItem({ to, goToMenu, leftIcon, rightIcon, children, closeDropdown }) {
+    const handleClick = () => {
+      if (goToMenu) {
+        setActiveMenu(goToMenu);
+      }
+      if (closeDropdown && !goToMenu) {
+        closeDropdown(); // Close the dropdown if navigating
+      }
+    };
+
     return (
-      <a href="#" className="menu-item" onClick={() => props.goToMenu && setActiveMenu(props.goToMenu)}>
-        <span>{props.leftIcon}</span>
-        {props.children}
-        <span className="icon-right">{props.rightIcon}</span>
-      </a>
+      <NavLink
+        to={to}
+        className={({ isActive }) => `menu-item${isActive ? ' active' : ''}`}
+        onClick={handleClick}
+      >
+        <span>{leftIcon}</span>
+        {children}
+        <span className="icon-right">{rightIcon}</span>
+      </NavLink>
     );
   }
 
   DropdownItem.propTypes = {
+    to: PropTypes.string,
     goToMenu: PropTypes.string,
     leftIcon: PropTypes.node,
     rightIcon: PropTypes.node,
     children: PropTypes.node.isRequired,
+    closeDropdown: PropTypes.func, // Added closeDropdown prop
   };
 
   return (
-    // <div className="dropdown" style={{ height: '70vh' }} ref={dropdownRef}>
-      <div className="dropdown" style={{ height: menuHeight }} ref={dropdownRef}> 
+    <div className="dropdown" style={{ height: menuHeight }} ref={dropdownRef}>
+      <CSSTransition
+        in={activeMenu === 'main'}
+        timeout={600}
+        classNames="menu-primary"
+        unmountOnExit
+        onEnter={calcHeight}
+      >
+        <div className="menu">
+          <DropdownItem to="/" closeDropdown={closeDropdown}>Home</DropdownItem>
+          <DropdownItem to="/shop" goToMenu="shop" closeDropdown={closeDropdown}>Shop</DropdownItem>
+          <DropdownItem to="/contact" closeDropdown={closeDropdown}>Contact Us</DropdownItem>
+          <DropdownItem to="/blogs" closeDropdown={closeDropdown}>Blogs</DropdownItem>
+          <DropdownItem to="/recipes" closeDropdown={closeDropdown}>Recipes</DropdownItem>
+          <DropdownItem to="/about" closeDropdown={closeDropdown}>About Us</DropdownItem>
+          <DropdownItem to="/login" closeDropdown={closeDropdown}>Login</DropdownItem>
 
-<CSSTransition
-  in={activeMenu === 'main'}
-  timeout={600}
-  classNames="menu-primary"
-  unmountOnExit
-  onEnter={calcHeight}>
-  <div className="menu">
-
-    <DropdownItem>Home</DropdownItem>
-
-    <DropdownItem goToMenu="shop">Shop</DropdownItem>
-
-    <DropdownItem>Contact Us</DropdownItem>
-
-    <DropdownItem>Blogs</DropdownItem>
-    <DropdownItem>About Us</DropdownItem>
-    <DropdownItem>Login</DropdownItem>
-
-    {/* Social Media Icons in a Row */}
-    <div className="social-media-icons">
-      <DropdownItem leftIcon={<FontAwesomeIcon icon={faWhatsapp} className='icon-left' />} />
-      <DropdownItem leftIcon={<FontAwesomeIcon icon={faInstagram} className='icon-left' />} />
-      <DropdownItem leftIcon={<FontAwesomeIcon icon={faFacebook} className='icon-left' />} />
-      <DropdownItem leftIcon={<FontAwesomeIcon icon={faYoutube} className='icon-left' />} />
-    </div>
-
-  </div>
-</CSSTransition>
-
+          {/* Social Media Icons in a Row */}
+          <div className="social-media-icons">
+            {/* Assuming these are not navigation links, otherwise add `to` prop */}
+            <DropdownItem leftIcon={<FontAwesomeIcon icon={faWhatsapp} className='icon-left' />} closeDropdown={closeDropdown} />
+            <DropdownItem leftIcon={<FontAwesomeIcon icon={faInstagram} className='icon-left' />} closeDropdown={closeDropdown} />
+            <DropdownItem leftIcon={<FontAwesomeIcon icon={faFacebook} className='icon-left' />} closeDropdown={closeDropdown} />
+            <DropdownItem leftIcon={<FontAwesomeIcon icon={faYoutube} className='icon-left' />} closeDropdown={closeDropdown} />
+          </div>
+        </div>
+      </CSSTransition>
 
       <CSSTransition
         in={activeMenu === 'shop'}
         timeout={500}
         classNames="menu-secondary"
         unmountOnExit
-        onEnter={calcHeight}>
+        onEnter={calcHeight}
+      >
         <div className="menu">
-          <DropdownItem goToMenu="main" leftIcon={ <FontAwesomeIcon icon={faArrowLeft} className='icon-left'/>  }>
+          <DropdownItem goToMenu="main" leftIcon={<FontAwesomeIcon icon={faArrowLeft} className='icon-left' />} closeDropdown={closeDropdown}>
             <h2>Categories</h2>
           </DropdownItem>
-          <DropdownItem >Grains & Cereals</DropdownItem>
-          <DropdownItem >Rice</DropdownItem>
-          <DropdownItem >Lentils & Beans</DropdownItem>
-          <DropdownItem >Cooking & Baking</DropdownItem>
-          <DropdownItem >Herbs & Spices</DropdownItem>
-          <DropdownItem >Organic Sweetners</DropdownItem>
-          <DropdownItem >Dried Fruits & Nuts</DropdownItem>
-          <DropdownItem >Storage Essentials</DropdownItem>
+          <DropdownItem>Grains & Cereals</DropdownItem>
+          <DropdownItem>Rice</DropdownItem>
+          <DropdownItem>Lentils & Beans</DropdownItem>
+          <DropdownItem>Cooking & Baking</DropdownItem>
+          <DropdownItem>Herbs & Spices</DropdownItem>
+          <DropdownItem>Organic Sweeteners</DropdownItem>
+          <DropdownItem>Dried Fruits & Nuts</DropdownItem>
+          <DropdownItem>Storage Essentials</DropdownItem>
         </div>
       </CSSTransition>
-
-      {/* <CSSTransition
-        in={activeMenu === 'contact'}
-        timeout={500}
-        classNames="menu-secondary"
-        unmountOnExit
-        onEnter={calcHeight}>
-        <div className="menu">
-          <DropdownItem goToMenu="main" leftIcon={<FontAwesomeIcon icon={faArrowLeft} className='icon-left' />}>
-            <h2>Contact Us</h2>
-          </DropdownItem>
-          
-        </div>
-      </CSSTransition> */}
     </div>
   );
 }
+
+DropdownMenu.propTypes = {
+  closeDropdown: PropTypes.func, // Added prop validation for closeDropdown
+};
 
 export default DropNav;

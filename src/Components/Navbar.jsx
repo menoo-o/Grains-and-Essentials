@@ -1,9 +1,19 @@
 import '../App.css'
+import '../Components/Nav.css'
+import { NavLink } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import DropNav from './DropNav';
 import { faUser, faCartShopping, faMagnifyingGlass,  faCheck, faLeaf, faTruckFast, faCube } from '@fortawesome/free-solid-svg-icons';
 
 function Navbar(){
+  const routes = [
+    { name: 'Home', path: '/' },
+    { name: 'Shop', path: '/shop' },
+    { name: 'About', path: '/about' },
+    { name: 'Blogs', path: '/blogs' },
+    { name: 'Recipes', path: '/recipes' },
+    { name: 'Contact Us', path: '/contact' },
+  ];
 return (
   <>
       <nav>
@@ -18,13 +28,17 @@ return (
           </div>
 
           <div className="nav-links">
-              <a href="#">Home</a>
-              <a href="#">About</a>
-              <a href="#">Shop</a>
-              <a href="#">Blog</a>
-              <a href="#">Recipes</a>
-              <a href="#">Contact</a>
-          </div>
+            {routes.map((route) => (
+              <NavLink 
+                key={route.path} 
+                to={route.path} 
+                activeClassName="active-link"
+                exact={route.path === '/'}
+              >
+               {route.name}
+              </NavLink>
+      ))}
+    </div>
 
           <div className="search">
                <a href="#"> <FontAwesomeIcon icon={faMagnifyingGlass}  />  </a>
