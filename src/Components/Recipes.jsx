@@ -1,6 +1,6 @@
 import React from 'react';
 import Button from './Button';
-import '../App.css'; // Assuming you have a separate CSS file for styling
+import '../App.css'; // CSS file for styling
 
 
 
@@ -26,7 +26,7 @@ const Recipes = () => {
   return (
     <div className="recipes-section">
       <div className="recipes-heading">
-        <h1>Recipe Inspiration</h1>
+        <h1>RECIPE INSIPIRATION</h1>
         <Button />
       </div>
 

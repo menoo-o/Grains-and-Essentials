@@ -1,4 +1,5 @@
 import '../App.css';
+import { NavLink } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebook, faInstagram, faYoutube, faWhatsapp } from '@fortawesome/free-brands-svg-icons';
 
@@ -6,25 +7,26 @@ const Footer = () => {
   return (
     <div className="footer-container">
       <div className="footer-top">
-        <div className="footer-section footer-links">
-          <h3>Quick Links</h3>
-          <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Shop</a></li>
-            <li><a href="#">Recipes</a></li>
-            <li><a href="#">Blog</a></li>
-            <li><a href="#">Contact Us</a></li>
-          </ul>
-        </div>
-        <div className="footer-section customer-service">
-          <h3>Customer Service</h3>
-          <ul>
-            <li><a href="#">FAQs</a></li>
-            <li><a href="#">Shipping & Returns</a></li>
-            <li><a href="#">Privacy Policy</a></li>
-            <li><a href="#">Terms of Service</a></li>
-          </ul>
-        </div>
+      <div className="footer-section footer-links">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><NavLink to="/" activeClassName="active-link">Home</NavLink></li>
+          <li><NavLink to="/about" activeClassName="active-link">About</NavLink></li>
+          <li><NavLink to="/shop" activeClassName="active-link">Shop</NavLink></li>
+          <li><NavLink to="/recipes" activeClassName="active-link">Recipes</NavLink></li>
+          <li><NavLink to="/blogs" activeClassName="active-link">Blog</NavLink></li>
+          <li><NavLink to="/contact" activeClassName="active-link">Contact Us</NavLink></li>
+        </ul>
+      </div>
+      <div className="footer-section customer-service">
+        <h3>Customer Service</h3>
+        <ul>
+          <li><NavLink to="/faqs" activeClassName="active-link">FAQs</NavLink></li>
+          <li><NavLink to="/shipping-returns" activeClassName="active-link">Shipping & Returns</NavLink></li>
+          <li><NavLink to="/privacy-policy" activeClassName="active-link">Privacy Policy</NavLink></li>
+          <li><NavLink to="/terms-of-service" activeClassName="active-link">Terms of Service</NavLink></li>
+        </ul>
+      </div>
         <div className="footer-section foot-about">
           <h3>Healthy Living, Sustainable Giving</h3>
           <p>

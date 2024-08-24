@@ -517,6 +517,268 @@
   font-size: 0.9em;
 }
 
+/* PAGE ABOUT CSS */
+/* General Reset and Styling */
+.about-container {
+  margin: 0;
+  padding: 0;
+  background-color: #f5f5f5;
+  line-height: 1.6;
+  border-bottom: none;
+
+}
+
+/* Container Styles */
+.about-heading,
+.who-are-we,
+.about-para {
+  border-bottom: none;
+  max-width: 80%;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 2px 8px rgba(116, 68, 6, 0.1);
+}
+
+/* Header Styles */
+.about-heading h1 {
+  font-size: 2rem;
+  color: #e48e1f;
+  padding-bottom: 5px;
+  margin-bottom: 25px;
+  text-align: center;
+  border-bottom: none;
+}
+
+.who-are-we h2,
+.about-para h2 {
+  font-size: 1.45rem;
+  color: #e7ad61;
+  font-weight: 600;
+  border-bottom: 1px solid #e48b39;
+  padding-bottom: 5px;
+  margin-bottom: 10px;
+}
+
+/* Paragraph Styles */
+.who-are-we p,
+.about-para p {
+  font-size: 1rem;
+  border-bottom: none;
+  color: #666666;
+  margin-bottom: 10px;
+  text-align: left;
+  line-height: 1.8;
+}
+
+.about-para span{
+  font-weight: bolder;
+}
+
+/* Additional Styling */
+.about-para {
+  padding-top: 20px;
+  margin-top: 20px;
+}
+
+.btn-explore {
+  color: #666666;
+  font-weight: 600;
+  text-decoration: none;
+  transition: filter 300ms;
+}
+
+.btn-explore:hover{
+  color: #ce6301;
+  filter: brightness(1.5);
+}
+
+/* Blogs page */
+.blogs-container{
+  margin: 4.5rem auto;
+  padding: 20px;
+  padding-top: 0 !important;
+  font-family: inherit;
+
+}
+
+.blogs-heading{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.blogs-heading h2{
+  font-size: 1.45rem;
+  color: #e48e1f;
+  border-bottom: 1px solid #e48b39;
+  padding-bottom: 5px;
+  margin-bottom: 10px;
+  padding-top: 0px;
+
+}
+
+.blogs-heading p{
+  text-align: center;
+}
+
+.blog-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* Creates 4 columns */
+  grid-gap: 20px; /* Adds space between grid items */
+  max-width: 1200px; /* Limits the width of the grid */
+  margin: 0 auto; /* Centers the grid horizontally */
+  padding: 20px; /* Adds padding around the grid */
+}
+
+.blog-card {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden; /* Ensures the content does not overflow */
+  text-align: center;
+  transition: transform 0.2s; /* Adds a hover effect */
+}
+
+.blog-card:hover {
+  transform: translateY(-5px); /* Lifts the card slightly on hover */
+}
+
+.blog-image {
+  width: 100%; /* Ensures the image covers the entire width of its container */
+  height: 240px; /* Sets a fixed height for the image */
+  object-fit: cover; /* Ensures the image covers the container without stretching */
+  display: block; /* Removes any inline space */
+  border-bottom: 1px solid #ddd; /* Adds a subtle border between the image and the title */
+}
+
+.blog-title {
+  font-size: 1rem;
+  color: #333;
+  padding: 15px; /* Adds padding around the title */
+  background-color: #f5f5f5; /* Gives a background color to the title area */
+  margin: 0; /* Removes default margin */
+}
+
+.blog-title:hover{
+  color: #e48e1f;
+}
+
+/* Blog/recipe header component  */
+/* BlogHeader.css */
+
+.blogs-container {
+  padding: 20px;
+  padding-top: 0 !important;
+  text-align: center;
+  background-color: #f0f0f0; /* Background color for the header */
+  margin-bottom: 20px; /* Adds some space below the header */
+}
+
+.blogs-heading h2 {
+  font-size: 2rem; /* Font size for the heading */
+  color: #e48e1f; /* Text color for the heading */
+  margin-bottom: 10px; /* Adds some space below the heading */
+}
+
+.blogs-heading p {
+  font-size: 1.1rem; /* Font size for the paragraph */
+  color: #666; /* Text color for the paragraph */
+  margin: 0; /* Removes default margin */
+}
+
+/* contact pg */
+/* ContactPage.css */
+
+.contact-container {
+  width: 75%; /* Maximum width of the contact form container */
+  margin: 4.5rem auto; /* Center the form horizontally */
+  margin-bottom: 3rem;
+  
+  padding: 20px; /* Padding around the form */
+  background-color: #f9f9f9; /* Light background color */
+  border-radius: 10px; /* Rounded corners for the form container */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for a floating effect */
+}
+
+.contact-heading{
+  font-size: 2rem;
+  text-align: center;
+  color: #e48e1f;
+  padding-bottom: 5px;
+  margin-bottom: 25px;
+  padding-top: 0px;
+}
+.contact-form {
+  display: flex;
+  flex-direction: column; /* Arrange items in a column layout */
+  gap: 15px; /* Space between each form group */
+}
+
+.form-row {
+  display: flex;
+  gap: 10px; /* Space between name and email inputs */
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column; /* Arrange label and input vertically */
+  flex: 1; /* Equal width for name and email input fields */
+}
+
+.form-input, .form-textarea {
+  padding: 10px; /* Padding inside the input and textarea */
+  font-size: 0.9em; /* Font size for the text */
+  font-family: inherit;
+  border: 1px solid #ccc; /* Border color for input and textarea */
+  border-radius: 5px; /* Rounded corners for input and textarea */
+  margin-top: 5px; /* Space between label and input */
+  outline: none; /* Remove default outline */
+}
+
+.labels-contact{
+  color: #e7ad61;
+  font-weight: 700;
+}
+
+.form-input:focus, .form-textarea:focus {
+  border-color: #ffb13d; /* Change border color on focus */
+  box-shadow: 0 0 5px rgba(206, 142, 24, 0.5); /* Glow effect on focus */
+}
+
+.form-textarea {
+  resize: vertical; /* Allow resizing of the textarea vertically only */
+  min-height: 180px; /* Minimum height for the textarea */
+}
+
+.send-button {
+  padding: 5px 10px; /* Padding inside the button */
+  width: 8em;
+  font-size: 1em; /* Font size for button text */
+
+  font-family: inherit;
+  color: #fff; /* Text color */
+  background-color: #e29828; /* Background color for the button */
+  border: none; /* Remove default border */
+  border-radius: 5px; /* Rounded corners for the button */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s; /* Smooth transition for background color change */
+}
+
+.send-button:hover {
+  background-color: #ce6301; /* Darker background color on hover */
+}
+
+.send-button:active {
+  background-color: #946000; /* Even darker color when button is active */
+}
+
+.error {
+  color: red; /* Color for error messages */
+  font-size: 12px; /* Font size for error messages */
+  margin-top: 5px; /* Space above the error message */
+}
 
 
 
@@ -765,7 +1027,9 @@
 
     /* recipes */
     .recipes, .blog-container{
-      height: 300px;
+      height: auto ;
+      margin-bottom: 3rem;
+      
     }
     .recipe-container, .read{
       grid-template-columns: repeat(1, 380px);
@@ -846,7 +1110,7 @@
     }
 
     .footer-container {
-      margin-top: 1000px; /* This pushes the footer to the bottom */
+      margin-top: auto; /* This pushes the footer to the bottom */
     }
 
     .footer-top {
@@ -861,6 +1125,65 @@
 
     .foot-about{
       display: none;
+    }
+
+    /* about pg */
+    .about-heading h1 {
+      margin-top: 15px;
+      margin-bottom: 0px;
+      width: 100%;
+      font-size: 1.30rem;
+    }
+  
+    .who-are-we h2,
+    .about-para h2 {
+      font-size: 1.2rem;
+    }
+  
+    .who-are-we p,
+    .about-para p {
+      font-size: 0.90rem;
+    }
+
+    /* blogs/recipes page */
+    .blog-grid{
+      grid-template-columns: repeat(1, 1fr);
+    }
+
+    .blog-title{
+      text-align: left;
+    }
+
+    .blogs-container{
+      margin-top: 1.8rem;
+    }
+
+    /* contact  */
+
+    .contact-container{
+      width: 85%;
+      padding: 10px;
+    }
+
+    .contact-form{
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+    }
+  
+    .form-input, .form-textarea {
+      font-size: 0.85em; /* Smaller font size for inputs */
+    }
+
+    .form-row{
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      flex-direction: column;
+    }
+
+    .form-group{
+      width: 95%;
     }
 
    

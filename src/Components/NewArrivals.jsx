@@ -17,7 +17,7 @@ const NewArrivals = () => {
     return (
         <section>
             <div className="heading-items">
-                <h1>New Arrivals</h1>
+                <h1>NEW ARRIVALS</h1>
                 <Button />
             </div>
             <CarouselComponent items={newArrivals} />

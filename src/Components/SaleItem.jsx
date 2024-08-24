@@ -15,7 +15,7 @@ const SaleItems = () => {
     return (
         <section>
          <div className="heading-items">
-            <h1>Sale Products</h1>
+            <h1>SALE ITEMS</h1>
             <Button />
           </div>
 

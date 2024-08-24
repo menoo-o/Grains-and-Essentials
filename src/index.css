@@ -24,8 +24,58 @@
     height: 100%;
   }
 
- 
+  .app-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* optional, to take full viewport height */
+    overflow: hidden;
+  }
+
+  main {
+    flex-grow: 1; /* takes up remaining space */
+  }
 
 
+  .footer-container {
+    margin-top: auto; /* sticks to the bottom */
+  }
+
+  @media (max-width: 768px) { /* tablet breakpoint */
+    .app-container {
+      flex-direction: column;
+    }
+    main {
+      flex-grow: 1;
+    }
+    .footer-container {
+      margin-top: auto;
+    }
+  }
   
+  @media (max-width: 480px) { /* mobile breakpoint */
+    .app-container {
+      flex-direction: column;
+    }
+    main {
+      flex-grow: 1;
+    }
+    .footer-container {
+      margin-top: auto;
+    }
+  }
+
+
+  @media (max-width: 480px) {
+    .footer-container {
+      margin-top: auto;
+      padding: 10px; /* add padding for mobile */
+    }
+  }
+
+  @media (max-width: 480px) {
+    .app-container {
+      min-height: 100vh; /* or a fixed height, e.g., 300px */
+      overflow: hidden;
+    }
+  }
 
