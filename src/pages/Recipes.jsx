@@ -41,6 +41,7 @@ const Recipes = () => {
   return (
     <>
     {/* same div used for blogs and recipes page */}
+    
     <div className='blogs-container'>
       <Header 
         heading="Recipes" 

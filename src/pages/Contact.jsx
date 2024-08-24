@@ -72,7 +72,7 @@ const ContactPage = () => {
 
 
     <div className='contact-container'>
-      <h2 className='contact-heading'> Contact Us</h2>
+      <h2 className='contact-heading'> GET IN TOUCH</h2>
       <form className='contact-form' onSubmit={handleSubmit}>
         {/* Name and Email on the same line */}
         <div className='form-row'>

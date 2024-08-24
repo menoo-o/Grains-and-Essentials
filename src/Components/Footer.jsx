@@ -1,12 +1,19 @@
 import '../App.css';
 import { NavLink } from 'react-router-dom';
+import BackToTopButton from './BackToTopButton ';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebook, faInstagram, faYoutube, faWhatsapp } from '@fortawesome/free-brands-svg-icons';
 
 const Footer = () => {
   return (
-    <div className="footer-container">
+    <>
+    
+      <div className="footer-container">
+        
+        <BackToTopButton />
+        
       <div className="footer-top">
+
       <div className="footer-section footer-links">
         <h3>Quick Links</h3>
         <ul>
@@ -56,6 +63,8 @@ const Footer = () => {
         <p>&copy; 2024 Grain & Essentials. All Rights Reserved.</p>
       </div>
     </div>
+    </>
+    
   );
 };
 
