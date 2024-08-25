@@ -32,28 +32,28 @@ const Categories = () => {
                <p>Cooking and Baking</p>
              </div>
            </div>
-
+{/* 
            <div className="image-container spices">
              <img src="/categories/herbs.jpeg" alt="spices" width="200" height="200" />
              <div>
                <p>Herbs and Spices</p>
              </div>
-           </div>
+           </div> */}
 
            <div className="image-container sugar">
              <img src="/categories/sugar.jpeg" alt="sugar" width="200" height="200" />
              <div>
-               <p>Organic Sweeteners</p>
+               <p>Honey & Sweeteners</p>
              </div>
            </div>
 
 
-           <div className="image-container nuts">
+           {/* <div className="image-container nuts">
              <img src="/categories/nuts.jpeg" alt="nuts" width="200" height="200" />
              <div>
                <p>Dried Fruit & Nuts</p>
              </div>
-           </div>
+           </div> */}
 
            <div className="image-container jars">
              <img src="/categories/jars.jpeg" alt="jars" width="200" height="200" />

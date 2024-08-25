@@ -193,9 +193,9 @@
 
 .list {
   display: grid;
-  grid-template-columns: repeat(4, 350px); /* Four columns */
+  grid-template-columns: repeat(3, 350px); /* Four columns */
   grid-template-rows: 320px 320px; /* Two rows with specific height */
-  gap: 50px; /* Adjust the gap between grid items */
+  gap: 70px; /* Adjust the gap between grid items */
   margin-bottom: 10px ;
 }
 
@@ -804,6 +804,58 @@
   margin-top: 5px; /* Space above the error message */
 }
 
+/* Shop */
+/* Product grid */
+.layout {
+  background: #f9f9f9; /* Adjust as needed */
+}
+
+.product-card {
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.product-card img {
+  width: 100px; /* Adjust to fit your design */
+  height: 100px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.weight-options button {
+  margin: 0 4px;
+  padding: 4px 8px;
+}
+
+.quantity-selector {
+  display: flex;
+  align-items: center;
+}
+
+.quantity-selector button,
+.quantity-selector input {
+  margin: 0 4px;
+}
+
+.add-to-cart-btn {
+  background-color: orange;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.add-to-cart-btn:hover {
+  background-color: darkorange;
+}
 
 
 
