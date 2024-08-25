@@ -514,8 +514,9 @@
 
 .footer-bottom {
   text-align: center;
-  margin-top: 20px;
+  margin-top: 2.2rem;
   font-size: 0.9em;
+  margin-bottom: 0;
 }
 /* footer back to top btn */
 .back-to-top-btn {
@@ -542,7 +543,7 @@
 /* PAGE ABOUT CSS */
 /* General Reset and Styling */
 .about-container {
-  margin: 0;
+  margin-top: 3.47rem;
   padding: 0;
   background-color: #f5f5f5;
   line-height: 1.6;
@@ -809,20 +810,7 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/* .................MEDIA QUERIES................ */
 
   /* nav media queries & Hero*/
   @media (min-width: 330px) and (max-width: 480px) {
@@ -949,7 +937,8 @@
   }
 
   .para-heading{
-    font-size: 1.8rem;}
+    font-size: 1.8rem;
+  }
 
   .para p{
     font-size: 0.95em;
@@ -1149,6 +1138,9 @@
     }
 
     /* about pg */
+    .about-container {
+      margin-top: 1rem;
+    }
     .about-heading h1 {
       margin-top: 15px;
       margin-bottom: 0px;
@@ -1179,11 +1171,20 @@
       margin-top: 2.5rem;
     }
 
+    .blogs-heading h2 {
+      font-size: 1.65rem;
+    }
+
     /* contact  */
 
     .contact-container{
       width: 85%;
       padding: 10px;
+      margin-top: 2rem;
+    }
+
+    .contact-heading{
+      font-size: 1.65rem;
     }
 
     .contact-form{
@@ -1209,8 +1210,8 @@
 
     /* back to top btn */
     .back-to-top-btn {
-      font-size: 1.3em;
-      padding: 8px 14px;
+      font-size: 1.6em;
+      padding: 7px 15px;
     }
     
    
@@ -1227,3 +1228,4 @@
 
 
   }
+  

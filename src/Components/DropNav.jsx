@@ -111,7 +111,8 @@ function DropdownMenu({ closeDropdown }) {
       >
         <div className="menu">
           <DropdownItem to="/" closeDropdown={closeDropdown}>Home</DropdownItem>
-          <DropdownItem to="/shop" goToMenu="shop" closeDropdown={closeDropdown}>Shop</DropdownItem>
+          <DropdownItem goToMenu="shop" > Shop</DropdownItem>
+          {/* <DropdownItem to="/shop" goToMenu="shop" closeDropdown={closeDropdown}>Shop</DropdownItem> */}
           <DropdownItem to="/contact" closeDropdown={closeDropdown}>Contact Us</DropdownItem>
           <DropdownItem to="/blogs" closeDropdown={closeDropdown}>Blogs</DropdownItem>
           <DropdownItem to="/recipes" closeDropdown={closeDropdown}>Recipes</DropdownItem>
@@ -140,6 +141,7 @@ function DropdownMenu({ closeDropdown }) {
           <DropdownItem goToMenu="main" leftIcon={<FontAwesomeIcon icon={faArrowLeft} className='icon-left' />} closeDropdown={closeDropdown}>
             <h2>Categories</h2>
           </DropdownItem>
+          <DropdownItem>All Products</DropdownItem>
           <DropdownItem>Grains & Cereals</DropdownItem>
           <DropdownItem>Rice</DropdownItem>
           <DropdownItem>Lentils & Beans</DropdownItem>

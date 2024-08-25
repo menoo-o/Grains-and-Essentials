@@ -17,9 +17,7 @@ function Home() {
     <div className="app-container">
 
       
-      {/* <nav>
-        <Navbar />
-      </nav> */}
+
 
       <main>
           <Hero />
@@ -29,8 +27,6 @@ function Home() {
           <SaleItems />
           <Recipes />
       </main>
-      
-        {/* <Footer /> */}
       
       
     </div>
