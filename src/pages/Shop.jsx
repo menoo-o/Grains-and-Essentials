@@ -1,36 +1,36 @@
 import React, { useState, useEffect } from 'react';
+import ProductGrid from '../Components/ProductGrid';
 import Header from '../Components/Header';
 import { useNavigate, useLocation } from 'react-router-dom';
 import products from '../data/productsData';
-
-import ProductFilter from '../Components/ProductFilter';
-import ProductSort from '../Components/ProductSort';
-import ProductGrid from '../Components/ProductGrid';
-import PaginationControls from '../Components/PaginationControls';
+import '../App.css'
 
 function Shop() {
   const productsPerPage = 12;
   const navigate = useNavigate();
   const location = useLocation();
 
-  const [filter, setFilter] = useState('All Products');
+  const query = new URLSearchParams(location.search);
+  const page = parseInt(query.get('page')) || 1;
+  const categoryFromURL = query.get('category') || 'All Products';
+
+  const [filter, setFilter] = useState(categoryFromURL);
   const [sort, setSort] = useState('best selling');
   const [filteredProducts, setFilteredProducts] = useState(products);
   const [sortedProducts, setSortedProducts] = useState(products);
 
-  const query = new URLSearchParams(location.search);
-  const page = parseInt(query.get('page')) || 1;
-
-  const totalPages = Math.ceil(sortedProducts.length / productsPerPage);
+  const totalPages = Math.ceil(filteredProducts.length / productsPerPage);
   const [currentPage, setCurrentPage] = useState(page);
 
   useEffect(() => {
-    navigate(`?page=${currentPage}`);
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  }, [currentPage, navigate]);
+    setFilter(categoryFromURL);
+  }, [categoryFromURL]);
 
   useEffect(() => {
-    const filtered = products.filter((product) => filter === 'All Products' || product.category === filter);
+    const filtered = products.filter((product) => {
+      if (filter === 'All Products') return true;
+      return product.category === filter;
+    });
     setFilteredProducts(filtered);
   }, [filter]);
 
@@ -46,6 +46,7 @@ function Shop() {
 
       return 0;
     });
+
     setSortedProducts(sorted);
   }, [sort, filteredProducts]);
 
@@ -53,19 +54,51 @@ function Shop() {
   const indexOfFirstProduct = indexOfLastProduct - productsPerPage;
   const currentProducts = sortedProducts.slice(indexOfFirstProduct, indexOfLastProduct);
 
-  const handleFilterChange = (e) => setFilter(e.target.value);
-  const handleSortChange = (e) => setSort(e.target.value);
+  const handlePrevPage = () => {
+    if (currentPage > 1) {
+      setCurrentPage(currentPage - 1);
+    }
+  };
+
+  const handleNextPage = () => {
+    if (currentPage < totalPages) {
+      setCurrentPage(currentPage + 1);
+    }
+  };
+
+  const handlePageClick = (pageNum) => {
+    setCurrentPage(pageNum);
+  };
 
   return (
     <>
       <div className='shoppg-heading'>
-        <Header heading="All Products" paragraph="Fill up your pantry stocks here" />
+        <Header
+          heading="All Products"
+          paragraph="Fill up your pantry stocks here"
+        />
       </div>
 
       <div className='shoppg-container'>
         <div className='left-block-shoppg'>
-          <ProductFilter filter={filter} handleFilterChange={handleFilterChange} />
-          <ProductSort sort={sort} handleSortChange={handleSortChange} />
+          <h3>Filter By</h3>
+          <select value={filter} onChange={(e) => setFilter(e.target.value)}>
+            <option value="All Products">All Products</option>
+            <option value="Grains & Flour">Grains & Flour</option>
+            <option value="Lentils">Lentils</option>
+            <option value="Baking">Baking</option>
+            <option value="Sugar">Sugar</option>
+            <option value="Rice">Rice</option>
+          </select>
+
+          <h3>Sort By</h3>
+          <select value={sort} onChange={(e) => setSort(e.target.value)}>
+            <option value="best selling">Best Selling</option>
+            <option value="price low to high">Price: Low to High</option>
+            <option value="price high to low">Price: High to Low</option>
+            <option value="alphabetical a-z">Alphabetical: A-Z</option>
+            <option value="alphabetical z-a">Alphabetical: Z-A</option>
+          </select>
         </div>
 
         <div className="Shop-Container">
@@ -73,14 +106,18 @@ function Shop() {
         </div>
       </div>
 
-      <PaginationControls
-        currentPage={currentPage}
-        totalPages={totalPages}
-        onPageChange={setCurrentPage}
-      />
-
-      <div className='page-info'>
-        Page {currentPage} of {totalPages}
+      <div className="pagination">
+        <button onClick={handlePrevPage} disabled={currentPage === 1}>Prev</button>
+        {Array.from({ length: totalPages }, (_, index) => (
+          <button
+            key={index + 1}
+            onClick={() => handlePageClick(index + 1)}
+            className={currentPage === index + 1 ? 'active' : ''}
+          >
+            {index + 1}
+          </button>
+        ))}
+        <button onClick={handleNextPage} disabled={currentPage === totalPages}>Next</button>
       </div>
     </>
   );

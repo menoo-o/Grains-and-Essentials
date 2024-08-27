@@ -97,7 +97,7 @@ function DropdownMenu({ closeDropdown }) {
     leftIcon: PropTypes.node,
     rightIcon: PropTypes.node,
     children: PropTypes.node.isRequired,
-    closeDropdown: PropTypes.func, // Added closeDropdown prop
+    closeDropdown: PropTypes.func,
   };
 
   return (
@@ -111,8 +111,7 @@ function DropdownMenu({ closeDropdown }) {
       >
         <div className="menu">
           <DropdownItem to="/" closeDropdown={closeDropdown}>Home</DropdownItem>
-          <DropdownItem goToMenu="shop" > Shop</DropdownItem>
-          {/* <DropdownItem to="/shop" goToMenu="shop" closeDropdown={closeDropdown}>Shop</DropdownItem> */}
+          <DropdownItem goToMenu="shop">Shop</DropdownItem>
           <DropdownItem to="/contact" closeDropdown={closeDropdown}>Contact Us</DropdownItem>
           <DropdownItem to="/blogs" closeDropdown={closeDropdown}>Blogs</DropdownItem>
           <DropdownItem to="/recipes" closeDropdown={closeDropdown}>Recipes</DropdownItem>
@@ -121,7 +120,6 @@ function DropdownMenu({ closeDropdown }) {
 
           {/* Social Media Icons in a Row */}
           <div className="social-media-icons">
-            {/* Assuming these are not navigation links, otherwise add `to` prop */}
             <DropdownItem leftIcon={<FontAwesomeIcon icon={faWhatsapp} className='icon-left' />} closeDropdown={closeDropdown} />
             <DropdownItem leftIcon={<FontAwesomeIcon icon={faInstagram} className='icon-left' />} closeDropdown={closeDropdown} />
             <DropdownItem leftIcon={<FontAwesomeIcon icon={faFacebook} className='icon-left' />} closeDropdown={closeDropdown} />
@@ -141,15 +139,12 @@ function DropdownMenu({ closeDropdown }) {
           <DropdownItem goToMenu="main" leftIcon={<FontAwesomeIcon icon={faArrowLeft} className='icon-left' />} closeDropdown={closeDropdown}>
             <h2>Categories</h2>
           </DropdownItem>
-          <DropdownItem>All Products</DropdownItem>
-          <DropdownItem>Grains & Cereals</DropdownItem>
-          <DropdownItem>Rice</DropdownItem>
-          <DropdownItem>Lentils & Beans</DropdownItem>
-          <DropdownItem>Cooking & Baking</DropdownItem>
-          <DropdownItem>Herbs & Spices</DropdownItem>
-          <DropdownItem>Organic Sweeteners</DropdownItem>
-          <DropdownItem>Dried Fruits & Nuts</DropdownItem>
-          <DropdownItem>Storage Essentials</DropdownItem>
+          <DropdownItem to="/shop?category=All%20Products" closeDropdown={closeDropdown}>All Products</DropdownItem>
+          <DropdownItem to="/shop?category=Grains%20%26%20Flour" closeDropdown={closeDropdown}>Grains & Flour</DropdownItem>
+          <DropdownItem to="/shop?category=Lentils" closeDropdown={closeDropdown}>Lentils</DropdownItem>
+          <DropdownItem to="/shop?category=Baking" closeDropdown={closeDropdown}>Baking</DropdownItem>
+          <DropdownItem to="/shop?category=Sugar" closeDropdown={closeDropdown}>Sugar</DropdownItem>
+          <DropdownItem to="/shop?category=Rice" closeDropdown={closeDropdown}>Rice</DropdownItem>
         </div>
       </CSSTransition>
     </div>
@@ -157,7 +152,7 @@ function DropdownMenu({ closeDropdown }) {
 }
 
 DropdownMenu.propTypes = {
-  closeDropdown: PropTypes.func, // Added prop validation for closeDropdown
+  closeDropdown: PropTypes.func,
 };
 
 export default DropNav;
