@@ -5,8 +5,8 @@ import Header from '../Components/Header';
 import { useNavigate, useLocation } from 'react-router-dom';
 import products from '../data/productsData'; // Import product data
 
-// Lazy load the ProductGrid component
-const ProductGrid = lazy(() => import('../Components/ProductGrid'));
+import ProductGrid from '../Components/ProductGrid';
+
 
 function Shop() {
   const productsPerPage = 12; // Number of products per page
