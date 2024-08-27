@@ -5,9 +5,9 @@ const Categories = () => {
        
        <div className="list">  
            <div className="image-container grains-cereals">
-             <img src="/categories/AdobeStock_629085287_Preview.jpeg" alt="grains and cereals" width="200" height="200" />
+             <img src="/categories/AdobeStock_629085287_Preview.jpeg" alt="grains and flour" width="200" height="200" />
              <div>
-               <p>Grains and Cereals</p>
+               <p>Grains and Flour</p>
              </div>
            </div>
 

@@ -1314,19 +1314,63 @@
       font-size: 1.6em;
       padding: 7px 15px;
     }
-    
-   
 
- 
-
-
-
-
-      
-
-
+    /* Shop pg */
+    .shoppg-container {
+      display: flex; /* Use flexbox for mobile */
+      flex-direction: column; /* Stack elements vertically */
+      padding: 10px; /* Reduce padding for smaller screens */
+      margin: 10px; /* Reduce margin for smaller screens */
+    }
   
+    .left-block-shoppg {
+      display: flex; /* Flexbox for alignment */
+      flex-direction: row !important; /* Align filter and sort in a row */
+      justify-content: space-between; /* Space between filter and sort options */
+      width: 100%; /* Full width on mobile */
+      margin-bottom: 20px; /* Add space below filter/sort */
+    }
+  
+    .Shop-Container {
+      display: grid !important; /* Use grid layout for product cards */
+      grid-template-columns: 1fr !important; /* 2 columns for product cards on mobile */
+      justify-self: center ;
+      gap: 0px; /* Gap between product cards */
+      width: 100%; /* Full width on mobile */
+    }
+  
+    .product-card {
+      width: 65% !important; /* Full width of grid column */
+      max-width: none; /* Remove max-width constraint */
+      margin: 35px; /* Remove margin */
+      height: 430px !important;
+    }
+  
+    .product-card img {
+      width: 100%; /* Full width of card */
+      height: 50%; /* Maintain aspect ratio */
+    }
 
-
+    .left-block-shoppg {
+     display: flex;
+      flex-direction: row; /* Change to horizontal layout for mobile */
+      justify-content: space-evenly; /* Space out filter and sort components */
+      align-items: center; /* Align items in the center vertically */
+      gap: 10px; /* Reduce the gap on mobile */
+      padding: 10px; /* Adjust padding for mobile view */
+    }
+  
+    .left-block-shoppg h3 {
+      margin: 0; /* Remove margin for headings to save space */
+      font-size: 0.9em; /* Adjust font size for better mobile fit */
+      padding: 0;
+    }
+  
+    .left-block-shoppg select {
+      width: auto; /* Adjust width to fit content */
+      font-size: 0.9em; /* Adjust font size for mobile view */
+      margin-top: 15px;
+    }
+ 
   }
   
