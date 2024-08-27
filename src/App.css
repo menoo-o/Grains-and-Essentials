@@ -309,7 +309,12 @@
   border-radius: 4px;
   color: white;
   font-size: 1.4em; /* Adjust as necessary */
+  background-color: #ffcca9;
   font-family: inherit;
+}
+
+.quantity-selector button:hover{
+  background-color: #f7b78c;
 }
 
 .quantity-selector input {
@@ -339,7 +344,7 @@
 }
 
 .add-to-cart-btn:hover {
-  background-color: #ff3d2e;
+  background-color: #ff7b2e;
 }
 
 /* recipie section */
@@ -822,41 +827,82 @@
 }
 
 .product-card img {
-  width: 100px; /* Adjust to fit your design */
-  height: 100px;
+  width: 240px; /* Adjust to fit your design */
+  height: 180px;
   object-fit: cover;
   border-radius: 8px;
 }
 
-.weight-options button {
-  margin: 0 4px;
-  padding: 4px 8px;
+.shoppg-heading{
+  margin-top: 4rem;
 }
 
-.quantity-selector {
+.shoppg-container{
+  display: grid;
+  grid-template-columns: 300px 800px;
+  padding: 20px;
+  margin: 20px;
+  margin-top: 5px;
+  overflow: hidden;
+}
+
+.Shop-Container{
+  margin-bottom: 35px;
+}
+
+.pagination {
   display: flex;
+  justify-content: center;
   align-items: center;
+  gap: 10px;
 }
 
-.quantity-selector button,
-.quantity-selector input {
-  margin: 0 4px;
-}
-
-.add-to-cart-btn {
-  background-color: orange;
-  color: white;
-  border: none;
-  padding: 8px 16px;
-  border-radius: 4px;
+.pagination button {
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  background-color: #f0f0f0;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  border-radius: 4px;
 }
 
-.add-to-cart-btn:hover {
-  background-color: darkorange;
+.pagination button.active {
+  background-color: #e29828;
+  color: white;
 }
 
+.pagination button:disabled {
+  background-color: #e0e0e0;
+  cursor: not-allowed;
+}
+
+.page-info {
+  text-align: center;
+  margin-top: 10px;
+}
+
+
+.left-block-shoppg {
+  padding: 20px;
+  background-color: #f9f9f9; /* Light grey background */
+  border-radius: 8px;
+  margin-right: 20px; /* Space to the right of the filter block */
+}
+
+.left-block-shoppg h3 {
+  margin-bottom: 10px;
+  font-size: 16px;
+  color: #333; /* Darker text for the headers */
+}
+
+.left-block-shoppg select {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 20px; /* Space between the dropdowns */
+  border-radius: 4px;
+  border: 1px solid #ccc; /* Light grey border */
+  font-size: 14px;
+  color: #333; /* Darker text for the dropdown options */
+}
 
 
 
@@ -1071,6 +1117,7 @@
       padding: 1px 9px;
       border-radius: 2px;
       font-size: 1.1em; /* Adjust as necessary */
+    
     }
 
     .quantity-selector input {
@@ -1078,6 +1125,7 @@
       padding: 2px 0px;
       margin: 0 5px;
       font-size: 1rem; /* Adjust as necessary */
+     
       
     }
     
@@ -1086,6 +1134,7 @@
       border-radius: 5px;
       cursor: pointer;
       font-size: 1rem; /* Adjust as necessary */
+      
     }
 
     /* recipes */

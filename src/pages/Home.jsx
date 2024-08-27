@@ -16,9 +16,6 @@ function Home() {
   return (
     <div className="app-container">
 
-      
-
-
       <main>
           <Hero />
           <Welcome />

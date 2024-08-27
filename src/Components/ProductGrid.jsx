@@ -1,4 +1,4 @@
-import React from 'react';
+import PropTypes from 'prop-types';
 import GridLayout from 'react-grid-layout';
 import '../App.css'; // You'll define your custom styles here
 
@@ -9,7 +9,7 @@ const ProductGrid = ({ products }) => {
     x: (index % 4) * 3, // 4 items per row, adjust if needed
     y: Math.floor(index / 4) * 2, // Adjust the height based on the row
     w: 3, // width of each grid item
-    h: 2, // height of each grid item
+    h: 3, // height of each grid item
   }));
 
   return (
@@ -24,7 +24,7 @@ const ProductGrid = ({ products }) => {
     >
       {products.map((item, index) => (
         <div key={index} className="product-card">
-          <img src={item.imgSrc} alt={item.title} />
+          <img src={item.imgSrc} alt={item.title} className='shoppg-img' />
           <h3>{item.title}</h3>
           <p>{item.price}</p>
           <div className="weight-options">
@@ -42,6 +42,17 @@ const ProductGrid = ({ products }) => {
       ))}
     </GridLayout>
   );
+};
+
+// Define prop types
+ProductGrid.propTypes = {
+  products: PropTypes.arrayOf(
+    PropTypes.shape({
+      imgSrc: PropTypes.string.isRequired,
+      title: PropTypes.string.isRequired,
+      price: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
+    })
+  ).isRequired,
 };
 
 export default ProductGrid;
