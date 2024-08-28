@@ -1,27 +1,29 @@
 // SaleItems.jsx
+import React from 'react';
 import Button from './Button';
 import CarouselComponent from './CarouselComponent';
+import PropTypes from 'prop-types'; // For prop types validation
+import saleData from '../data/saleData'; // Sale products data
 
-const saleItems = [
-    { imgSrc: '/sale-items/item1.jpg', title: 'Almonds', price: '$5.99' },
-    { imgSrc: '/sale-items/item2.jpg', title: 'Black Pepper', price: '$7.99' },
-    { imgSrc: '/sale-items/item3.jpg', title: 'Honey', price: '$5.99' },
-    { imgSrc: '/sale-items/item4.jpg', title: 'Oats', price: '$2.99' },
-    { imgSrc: '/sale-items/item5.jpg', title: 'Red Pepper', price: '$10.99' },
-    // Add more items
-];
+const SaleItems = ({ quantities, onQuantityChange }) => {
+  return (
+    <section>
+      <div className="heading-items">
+        <h1>SALE ITEMS</h1>
+        <Button />
+      </div>
+      <CarouselComponent 
+        items={saleData} 
+        quantities={quantities} 
+        onQuantityChange={onQuantityChange} 
+      />
+    </section>
+  );
+};
 
-const SaleItems = () => {
-    return (
-        <section>
-         <div className="heading-items">
-            <h1>SALE ITEMS</h1>
-            <Button />
-          </div>
-
-            <CarouselComponent items={saleItems} />
-        </section>
-    );
+SaleItems.propTypes = {
+  quantities: PropTypes.object.isRequired,
+  onQuantityChange: PropTypes.func.isRequired,
 };
 
 export default SaleItems;

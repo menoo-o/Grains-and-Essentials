@@ -1,6 +1,7 @@
 import {useState} from 'react';
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
+import QuantitySelector from './QuantitySelector';
 import '../App.css'; // Make sure to include your custom styles
 
 const CarouselComponent = ({ items }) => {
@@ -48,11 +49,7 @@ const CarouselComponent = ({ items }) => {
                             </button>
                         ))}
                     </div>
-                    <div className="quantity-selector">
-                        <button>-</button>
-                        <input type="number" value="1" min="1" />
-                        <button>+</button>
-                    </div>
+                    <QuantitySelector />
                     <button className="add-to-cart-btn">Add to Cart</button>
                 </div>
             ))}
