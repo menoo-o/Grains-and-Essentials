@@ -13,6 +13,7 @@ function Navbar(){
     { name: 'Blogs', path: '/blogs' },
     { name: 'Recipes', path: '/recipes' },
     { name: 'Contact Us', path: '/contact' },
+
   ];
 return (
   <>
@@ -42,7 +43,9 @@ return (
 
           <div className="search">
                <a href="#"> <FontAwesomeIcon icon={faMagnifyingGlass}  />  </a>
-               <a href="#"> <FontAwesomeIcon icon={faCartShopping} /> </a>
+               <NavLink to="/cart">
+                 <FontAwesomeIcon icon={faCartShopping} />
+                </NavLink>
                <a href="#"> <FontAwesomeIcon icon={faUser} className='fa-user'  />  </a>
           </div>
 

@@ -5,6 +5,7 @@ import About from './pages/About';
 import Blogs from './pages/Blogs';
 import Recipes from './pages/Recipes';
 import Contact from './pages/Contact';
+import Cart from './pages/Cart';
 import Navbar from './Components/Navbar';
 import Footer from './Components/Footer';
 import './App.css';
@@ -23,6 +24,8 @@ function App() {
           <Route path="/blogs" element={<Blogs />} />
           <Route path="/recipes" element={<Recipes />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/cart" element={<Cart />} />
       </Routes>
       <Footer />
     </div>

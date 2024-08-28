@@ -4,7 +4,7 @@ const Button = () => {
   return (
     <>
           <div className="link-shop">
-                     <a href="#" className="shop-all shop-view">View All</a>
+              <a href="#" className="shop-all shop-view">View All</a>
           </div> 
     </>
   )
