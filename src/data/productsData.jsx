@@ -23,7 +23,7 @@ const products = [
 
     { id: 15, imgSrc: '/shop/lentils/chana daal.webp', title: 'Chana Daal', price: '$8', category: "Lentils" },
     { id: 16, imgSrc: '/shop/lentils/green grams.webp', title: 'Green Grams', price: '$9', category: "Lentils" },
-    { id: 17, imgSrc: '/shop/lentils/kalay chanay.webp', title: 'Kalay Chanay', price: '$140', category: "Lentils" },
+    { id: 17, imgSrc: '/shop/lentils/kalay chanay.webp', title: 'Black Chickpeas', price: '$140', category: "Lentils" },
     { id: 18, imgSrc: '/shop/lentils/kidney beans.webp', title: 'Kidney Beans', price: '$360', category: "Lentils" },
     { id: 19, imgSrc: '/shop/lentils/masar daal sabit.webp', title: 'Masar Sabit', price: '$110', category: "Lentils" },
     { id: 20, imgSrc: '/shop/lentils/mash_black gram.webp', title: 'Black Gram', price: '$170', category: "Lentils" },
