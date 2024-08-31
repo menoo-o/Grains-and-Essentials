@@ -1,11 +1,20 @@
 // src/contexts/CartContext.jsx
 
-import React, { createContext, useState, useContext } from 'react';
+import React, { createContext, useState, useContext, useEffect } from 'react';
 
 const CartContext = createContext();
 
 export const CartProvider = ({ children }) => {
-  const [cartItems, setCartItems] = useState([]);
+  const [cartItems, setCartItems] = useState(() => {
+    // Load cart items from localStorage when the component mounts
+    const savedCartItems = localStorage.getItem('cartItems');
+    return savedCartItems ? JSON.parse(savedCartItems) : [];
+  });
+
+  useEffect(() => {
+    // Save cart items to localStorage whenever the cartItems state changes
+    localStorage.setItem('cartItems', JSON.stringify(cartItems));
+  }, [cartItems]);
 
   const addItem = (item, weight, quantity) => {
     console.log('Adding item to cart:', item);
@@ -19,26 +28,27 @@ export const CartProvider = ({ children }) => {
 
     const totalPrice = (basePrice * priceMultiplier).toFixed(2);
 
+    const newItem = {
+      ...item,
+      weight,
+      quantity,
+      totalPrice: `$${totalPrice}`,  // Store as a string with a currency symbol
+      price: totalPrice, // Store the raw numeric price for calculations
+    };
+
     setCartItems((prevItems) => {
-      // Check if the item with the same id and weight already exists in the cart
+      // Check if the item with the same weight is already in the cart
       const existingItemIndex = prevItems.findIndex(
-        (cartItem) => cartItem.id === item.id && cartItem.weight === weight
+        (i) => i.id === item.id && i.weight === weight
       );
 
-      if (existingItemIndex >= 0) {
-        // If item exists, update the quantity
+      if (existingItemIndex !== -1) {
+        // If item exists, increment the quantity
         const updatedItems = [...prevItems];
-        updatedItems[existingItemIndex].quantity += quantity; // Increment the quantity
+        updatedItems[existingItemIndex].quantity += quantity;
         return updatedItems;
       } else {
-        // If item doesn't exist, add it as a new item
-        const newItem = {
-          ...item,
-          weight,
-          quantity,
-          totalPrice: `$${totalPrice}`,  // Store as a string with a currency symbol
-          price: totalPrice, // Store the raw numeric price for calculations
-        };
+        // If item does not exist, add it to the cart
         return [...prevItems, newItem];
       }
     });
