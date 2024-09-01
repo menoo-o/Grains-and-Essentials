@@ -9,7 +9,7 @@ const Footer = () => {
     <>
     
       <div className="footer-container">
-        
+      
         <BackToTopButton />
         
       <div className="footer-top">

@@ -23,7 +23,7 @@ const CarouselComponent = ({ items }) => {
         <Carousel
             responsive={responsive}
             infinite={true}
-            autoPlay={false}
+            autoPlay={true}
             autoPlaySpeed={3000}
             keyBoardControl={true}
             customTransition="transform 500ms ease-in-out"
@@ -38,19 +38,9 @@ const CarouselComponent = ({ items }) => {
                     <img src={item.imgSrc} alt={item.title} />
                     <h3>{item.title}</h3>
                     <p>{item.price}</p>
-                    <div className="weight-options">
-                        {['250g', '500g', '1kg'].map((weight) => (
-                            <button
-                                key={weight}
-                                className={`weight-btn ${selectedWeights[index] === weight ? 'active' : ''}`}
-                                onClick={() => handleWeightClick(index, weight)}
-                            >
-                                {weight}
-                            </button>
-                        ))}
-                    </div>
-                    <QuantitySelector />
-                    <button className="add-to-cart-btn">Add to Cart</button>
+           
+
+                    <button className="add-to-cart-btn">Explore</button>
                 </div>
             ))}
         </Carousel>

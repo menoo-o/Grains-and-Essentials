@@ -3,7 +3,7 @@
 const saleData = [
 
     { id: 14, imgSrc: '/shop/Grains and Flour/Oats.webp', title: 'Oats', price: '$5', category: "Grains & Flour" },
-    { id: 15, imgSrc: '/shop/lentils/chana daal.webp', title: 'Chana Daal', price: '$8', category: "Lentils" },
+    { id: 17, imgSrc: '/shop/lentils/kalay chanay.webp', title: 'Black Chickpeas', price: '$140', category: "Lentils" },
     { id: 24, imgSrc: '/shop/lentils/yellow lentils.webp', title: 'Yellow Lentils', price: '$09', category: "Lentils" },
 
     { id: 26, imgSrc: '/shop/rice/brown rice.webp', title: 'Brown Rice', price: '$49', category: "Rice" },

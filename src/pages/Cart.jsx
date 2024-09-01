@@ -35,7 +35,7 @@ const Cart = () => {
           <div className="cart-column">Total</div>
         </div>
         {cartItems.length === 0 ? (
-          <p>Your cart is empty.</p>
+          <p className='empty-cart'>Your cart is empty.</p>
         ) : (
           cartItems.map((item, index) => (
             <div key={index} className="cart-item-row">
