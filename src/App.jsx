@@ -1,5 +1,5 @@
 // src/App.jsx
-
+import ScrollToTop from './Components/ScrollToTop'
 import React from 'react';
 import { CartProvider } from './contexts/CartContext';
 import { Routes, Route } from 'react-router-dom';
@@ -18,6 +18,7 @@ import './index.css';
 function App() {
   return (
     <CartProvider>
+      <ScrollToTop />
       <div className="app-container">
         <nav>
           <Navbar />

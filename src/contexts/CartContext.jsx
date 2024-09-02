@@ -11,6 +11,8 @@ export const CartProvider = ({ children }) => {
     return savedCartItems ? JSON.parse(savedCartItems) : [];
   });
 
+  const [showCartAlert, setShowCartAlert] = useState(false); // State to control cart alert visibility
+
   useEffect(() => {
     // Save cart items to localStorage whenever the cartItems state changes
     localStorage.setItem('cartItems', JSON.stringify(cartItems));
@@ -18,11 +20,11 @@ export const CartProvider = ({ children }) => {
 
   const addItem = (item, weight, quantity) => {
     console.log('Adding item to cart:', item);
-    
+
     // Compute the correct price based on the weight
     const basePrice = parseFloat(item.price.replace(/[^0-9.]/g, ''));
     let priceMultiplier = 1;
-    
+
     if (weight === '500g') priceMultiplier = 2;
     if (weight === '1kg') priceMultiplier = 4;
 
@@ -52,6 +54,14 @@ export const CartProvider = ({ children }) => {
         return [...prevItems, newItem];
       }
     });
+
+    // Show the alert when an item is added
+    setShowCartAlert(true);
+
+    // Hide the alert after 3-4 seconds
+    setTimeout(() => {
+      setShowCartAlert(false);
+    }, 3000);
   };
 
   const removeItem = (index) => {
@@ -67,7 +77,7 @@ export const CartProvider = ({ children }) => {
   };
 
   return (
-    <CartContext.Provider value={{ cartItems, addItem, removeItem, updateItemQuantity }}>
+    <CartContext.Provider value={{ cartItems, addItem, removeItem, updateItemQuantity, showCartAlert }}>
       {children}
     </CartContext.Provider>
   );
