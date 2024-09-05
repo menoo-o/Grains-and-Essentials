@@ -1123,6 +1123,39 @@
   .recipe-blog li {
     margin: 10px 0;
   }
+
+  .recipe-detail {
+    max-width: 800px;
+    margin: 3.5rem auto;
+    padding: 20px;
+  }
+  
+  .recipe-detail img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+  }
+  
+  .recipe-detail h1 {
+    font-size: 32px;
+    margin-bottom: 10px;
+  }
+  
+  .recipe-detail h2 {
+    font-size: 24px;
+    margin-top: 20px;
+  }
+  
+  .recipe-detail ul {
+    list-style-type: disc;
+    margin-left: 20px;
+  }
+  
+  .recipe-detail p {
+    font-size: 16px;
+    line-height: 1.6;
+  }
+  
   
   
 

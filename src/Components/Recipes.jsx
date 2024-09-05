@@ -1,5 +1,6 @@
 import React from 'react';
 import Button from './Button';
+import { NavLink } from 'react-router-dom';
 import '../App.css'; // CSS file for styling
 
 
@@ -27,7 +28,10 @@ const Recipes = () => {
     <div className="recipes-section">
       <div className="recipes-heading">
         <h1>RECIPE INSIPIRATION</h1>
-        <Button />
+        <NavLink to='/recipes'>
+          <Button />
+        </NavLink>
+        
       </div>
 
       
@@ -36,7 +40,6 @@ const Recipes = () => {
           {recipes.map((recipe, index) => (
             <div key={index} className="article">
               <img src={recipe.imgSrc} alt="recipes" />
-              
               <div className="recipe-descrp">
                 <p className="recipe-title">{recipe.title}</p>
                 <p><a href={recipe.link} className="recipe-link">Get Recipe</a></p>

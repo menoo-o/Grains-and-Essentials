@@ -11,6 +11,7 @@ import Recipes from './pages/Recipes';
 import Contact from './pages/Contact';
 import Cart from './pages/Cart';
 import Navbar from './Components/Navbar';
+import RecipeDetail from './Components/RecipeDetail ';
 import Footer from './Components/Footer';
 import './App.css';
 import './index.css';
@@ -29,6 +30,7 @@ function App() {
             <Route path="/about" element={<About />} />
             <Route path="/blogs" element={<Blogs />} />
             <Route path="/recipes" element={<Recipes />} />
+            <Route path="/recipes/:id/:slug" element={<RecipeDetail />} /> {/* Dynamic recipe route */}
             <Route path="/contact" element={<Contact />} />
             <Route path="/cart" element={<Cart />} />
         </Routes>

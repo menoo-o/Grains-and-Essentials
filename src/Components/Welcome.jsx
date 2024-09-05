@@ -1,4 +1,4 @@
-
+import { NavLink } from "react-router-dom"
 
 const Welcome = () => {
   return (
@@ -12,7 +12,9 @@ const Welcome = () => {
 
                 <div className="headingList">
                     <h3>Browse Categories</h3>
-                    <a href="#" className="shop-all"> Shop all </a>
+                    <NavLink to='shop'>
+                      <a href="" className="shop-all"> Shop all </a>  
+                    </NavLink>    
                 </div> 
     </>
   )

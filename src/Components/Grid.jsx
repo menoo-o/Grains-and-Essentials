@@ -1,22 +1,31 @@
 // BlogGrid.js
 import React from 'react';
 import PropTypes from 'prop-types';
-import '../App.css'; // Ensure to create and import this CSS file
+import { NavLink } from 'react-router-dom';
+import '../App.css';
+
+// Helper function to generate slug from the title
+const slugify = (title) => {
+  return title.toLowerCase().replace(/ /g, '-');
+};
 
 const Grid = ({ blogs }) => {
   return (
     <div className='blog-grid'>
       {blogs.map(blog => (
-        <div className='blog-card' key={blog.id}>
+        <NavLink 
+          key={blog.id}
+          to={`/recipes/${blog.id}/${slugify(blog.title)}`} // URL with id and slug
+          className='blog-card'
+        >
           <img src={blog.imageUrl} alt={blog.title} className='blog-image' />
           <h3 className='blog-title'>{blog.title}</h3>
-        </div>
+        </NavLink>
       ))}
     </div>
   );
-}
+};
 
-// Define PropTypes for type checking
 Grid.propTypes = {
   blogs: PropTypes.arrayOf(
     PropTypes.shape({

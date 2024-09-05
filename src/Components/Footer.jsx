@@ -44,7 +44,7 @@ const Footer = () => {
         <div className="footer-section">
           <h3>Follow Us</h3>
           <div className="social-icons">
-            <a href="#">
+            <a href="https://www.facebook.com/share/fX917bsQzSESxZJJ/?mibextid=qi2Omg" target='_blank'>
               <FontAwesomeIcon icon={faFacebook} alt="Facebook" />
             </a>
             <a href="#">
