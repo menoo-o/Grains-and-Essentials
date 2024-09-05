@@ -596,7 +596,7 @@
   display: grid;
   grid-template-columns: repeat(4, 1fr); /* Creates 4 columns */
   grid-gap: 20px; /* Adds space between grid items */
-  max-width: 1200px; /* Limits the width of the grid */
+  max-width: 1350px; /* Limits the width of the grid */
   margin: 0 auto; /* Centers the grid horizontally */
   padding: 20px; /* Adds padding around the grid */
 }
@@ -616,7 +616,7 @@
 
 .blog-image {
   width: 100%; /* Ensures the image covers the entire width of its container */
-  height: 240px; /* Sets a fixed height for the image */
+  height: 330px; /* Sets a fixed height for the image */
   object-fit: cover; /* Ensures the image covers the container without stretching */
   display: block; /* Removes any inline space */
   border-bottom: 1px solid #ddd; /* Adds a subtle border between the image and the title */
@@ -1052,7 +1052,7 @@
   border: 1px solid #ccc;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   padding: 10px;
-  animation: fadeOut 6s forwards; /* Animates the fading out effect */
+  animation: fadeOut 8s forwards; /* Animates the fading out effect */
 }
 
 @keyframes fadeOut {
@@ -1078,6 +1078,55 @@
     background-color: #f0aa5a; /* Change background of active button */
 
   }
+
+  /* recipe pg */
+  .all-recipes-page {
+    display: flex;
+    flex-direction: column;
+    gap: 40px; /* Adds space between each recipe */
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .recipe-blog {
+    padding: 20px;
+    border-bottom: 1px solid #ddd;
+  }
+
+  .recipe-blog {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .recipe-blog h1,
+  .recipe-blog h2,
+  .recipe-blog h3 {
+    color: #333;
+  }
+  
+  .recipe-blog p {
+    line-height: 1.6;
+  }
+  
+  .recipe-blog img.recipe-image {
+    width: 100%;
+    height: auto;
+    margin: 20px 0;
+  }
+  
+  .recipe-blog ul {
+    list-style-type: disc;
+    padding-left: 20px;
+  }
+  
+  .recipe-blog li {
+    margin: 10px 0;
+  }
+  
+  
+
+  
 
 
 
@@ -1314,6 +1363,9 @@
     }
 
     /* recipes */
+
+
+
     .recipes, .blog-container{
       height: auto ;
       margin-bottom: 3rem;
