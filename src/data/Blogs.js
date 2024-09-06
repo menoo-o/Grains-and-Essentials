@@ -37,7 +37,7 @@ const recipes = [
     {
         id: 2,
         title: 'Kung Pao Chicken with Brown Rice',
-        imageUrl: '/recipeblogs/chickpeafalafel.webp',
+        imageUrl: '/recipeblogs/kungpao.webp',
         intro: "Indulge in the bold and savory flavours of our Kung Pao Chicken, expertly paired with the nutty goodness of Brown Rice! This classic Chinese-inspired dish is a masterclass in balancing spices and textures, with juicy chicken, crunchy vegetables, and a hint of smokiness. Perfect for a quick weeknight dinner or a special occasion, this wholesome recipe is sure to satisfy your cravings and leave you wanting more!",
         ingredients: [
             "½ kg boneless skinless chicken breast",
@@ -88,7 +88,7 @@ const recipes = [
     {
         id: 3,
         title: 'Masoor Lentils Special Kebabs',
-        imageUrl: '/recipeblogs/chickpeafalafel.webp',
+        imageUrl: '/recipeblogs/kebab.webp',
         intro: "Transform the humble lentil into a culinary masterpiece with our Masoor Lentils Special Kebabs! These mouth-watering morsels are a testament to the magic that happens when ordinary ingredients meet extraordinary flavour and creativity. Packed with protein, fibre, and nutrients, these kebabs are not only a treat for your taste buds but also a boon for your health. Get ready to delight your senses and nourish your body with this sensational lentil recipe!",
         ingredients: [
             "1 cup Masoor Lentils, drained and soaked",
@@ -141,172 +141,248 @@ const recipes = [
       },
     //   Blog4
     {
-        id: 1,
-        title: 'Chickpea Lentils and Cabbage Falafels',
-        imageUrl: '/recipeblogs/chickpeafalafel.webp',
-        intro: "Discover the ultimate trifecta of flavour, nutrition, and versatility with our delectable falafel recipe! Made with protein-rich Split Yellow Mung Lentils and packed with the added crunch of cabbage, these crispy, golden bites are a game-changer for any meal. Whether you're craving a satisfying brunch or a nourishing dinner, falafels are the perfect answer - pair them with your favourite dressing or sauce for a truly unforgettable treat. Indulge in the wholesome goodness and share the love with your loved ones!",
+        id: 4,
+        title: 'Chickpeas With a Guajillo Chile Sauce',
+        imageUrl: '/recipeblogs/chickpeasauce.webp',
+        intro: "Indulge in the vibrant flavours of Mexico with our Chickpeas in Guajillo Chile Sauce recipe! This fibre-rich dish is a perfect addition to your diet, packed with nutritious chickpeas and a bold, slightly smoky sauce made with Guajillo chilies. Inspired by the warm and aromatic spices of Mexican cuisine, this recipe combines the familiarity of Pakistani flavours with the excitement of international flair. Get ready to savour a refreshing and deliciously spicy twist on traditional chickpea dishes!",
         ingredients: [
-          "½ cup Dry Mung Beans",
-          "1 cup chopped cabbage",
-          "½ cup Dry Split Chickpea Lentils",
-          "½ cup Split Yellow Mung Lentils",
-          "2 Serrano Pepper",
-          "½ bunch Fresh Cilantro",
-          "5 cloves Garlic",
-          "¼ cup Coriander Seed Whole",
-          "4 tbsp Olive Oil",
-          "1 tbsp Pink Salt",
-          "1 tsp Black Pepper",
-          "2 tsp Baking Powder"
-        ],
+          "2 cups cooked Chickpeas Beans",
+          "2 medium cups medium carrots",
+          "1 medium cup white onion",
+          "2 cloves of minced garlic",
+          "¼ cup of parsley",
+          "¼ cup guajillo chili salsa",
+          "⅛ tsp Black Pepper Powder",
+          "4 tsp olive oil",
+          "Salt to taste"
+          ],
         instructions: [
-          { title: 'Step 1: Soak and Drain', description: 'Mix all the beans and lentils, wash, and soak for 4-6 hours. Drain all the water out.' },
-          { title: 'Step 2: Blend', description: 'Add the drained mixture to a food processor. Include the following ingredients: Serrano peppers, cabbage, cilantro, garlic, salt, pepper, coriander seeds, baking powder, and 4 tablespoons of olive oil. Then, process the mixture until it is smooth.' },
-          { title: 'Step 3: Shape', description: 'Scoop out the mixture and form falafel balls with your hands. Shape them into small patties.' },
-          { title: 'Step 4: Fry', description: 'Shallow fry the falafels until crispy and golden brown.' }
-        ],
+          {
+          title: "Step 1: Prepare the Vegetables",
+          description: "Wash and dice the carrots and onion. Finely chop the parsley."
+          },
+          {
+          title: "Step 2: Sauté the Vegetables",
+          description: "Heat olive oil in a pan over medium heat. Sauté the diced carrots for 4 minutes, then add the diced onion and garlic and cook for an additional 4 minutes."
+          },
+          {
+          title: "Step 3: Add Chickpeas and Salsa",
+          description: "Add the cooked chickpeas and cook for 2 minutes. Then, add the guajillo chili salsa and black pepper. Cook for 2 more minutes, stirring constantly, until the salsa has reduced and coated the chickpeas."
+          },
+          {
+          title: "Step 4: Season and Serve",
+          description: "Add salt to taste. Transfer the mixture to a serving dish and garnish with chopped parsley."
+          }
+          ],
         tips: [
-          "For crisper falafels, chill them in the refrigerator for 30 minutes before frying.",
-          "Use a thermometer to maintain the ideal frying temperature (350°F/175°C).",
-          "Don't overcrowd the pan; fry in batches if necessary.",
-          "Experiment with different seasonings, herbs, or spices to create unique flavour profiles.",
-          "Serve with your favourite toppings, such as tahini sauce, hummus, or fresh veggies."
-          ]
+          "Adjust the level of heat in the dish by using more or less guajillo Chile salsa.",
+          "Serve with freshly cooked rice, parathas, or use as a filling for tacos or wraps.",
+          "Add some diced bell peppers or zucchini to the pan with the carrots and onion for added flavour and nutrients.",
+          "For a creamier sauce, add a tablespoon or two of sour cream or Greek yogurt towards the end of cooking.",
+          "Experiment with different types of chili peppers or hot sauce for a unique flavour profile."
+          ],          
       },
     //   Blog5
     {
-        id: 1,
-        title: 'Chickpea Lentils and Cabbage Falafels',
-        imageUrl: '/recipeblogs/chickpeafalafel.webp',
-        intro: "Discover the ultimate trifecta of flavour, nutrition, and versatility with our delectable falafel recipe! Made with protein-rich Split Yellow Mung Lentils and packed with the added crunch of cabbage, these crispy, golden bites are a game-changer for any meal. Whether you're craving a satisfying brunch or a nourishing dinner, falafels are the perfect answer - pair them with your favourite dressing or sauce for a truly unforgettable treat. Indulge in the wholesome goodness and share the love with your loved ones!",
+        id: 5,
+        title: 'One Pot Lentil Soup',
+        imageUrl: '/recipeblogs/haleem.webp',
+        intro: "Indulge in the comforting warmth of Pakistan's national treasure, Haleem - a slow-cooked stew that harmoniously blends the creaminess of wheat, the tenderness of lentils, and the fragrance of aromatic spices. Traditional Haleem is slow cooked for hours, but this revised recipe simplifies the process while maintaining the flavours. One Pot Lentil Soup is simplified for a quicker and easier preparation without compromising on flavour. As we share this recipe with you, we hope you'll experience the same joy and nourishment that this hearty soup brings to our tables.",
         ingredients: [
-          "½ cup Dry Mung Beans",
-          "1 cup chopped cabbage",
-          "½ cup Dry Split Chickpea Lentils",
-          "½ cup Split Yellow Mung Lentils",
-          "2 Serrano Pepper",
-          "½ bunch Fresh Cilantro",
-          "5 cloves Garlic",
-          "¼ cup Coriander Seed Whole",
-          "4 tbsp Olive Oil",
-          "1 tbsp Pink Salt",
-          "1 tsp Black Pepper",
-          "2 tsp Baking Powder"
-        ],
+          "1 medium onion, finely chopped",
+          "3-4 cloves of garlic, minced",
+          "1-inch piece of ginger, grated",
+          "1 cup uncooked rinsed Haleem mix (containing Yellow Mung Bean Lentils, Split Red Masur Lentil, rice, and wheat flour)",
+          "1-2 dried red chilies",
+          "2 cups thinly sliced carrots",
+          "1 healthy pinch salt",
+          "1 tbs Haleem Masala",
+          "3 cups Beef or Lamb Broth",
+          "3/4 cup light coconut milk",
+          "2 Tbsp soy sauce",
+          "1/2 cup ghee"
+          ],
         instructions: [
-          { title: 'Step 1: Soak and Drain', description: 'Mix all the beans and lentils, wash, and soak for 4-6 hours. Drain all the water out.' },
-          { title: 'Step 2: Blend', description: 'Add the drained mixture to a food processor. Include the following ingredients: Serrano peppers, cabbage, cilantro, garlic, salt, pepper, coriander seeds, baking powder, and 4 tablespoons of olive oil. Then, process the mixture until it is smooth.' },
-          { title: 'Step 3: Shape', description: 'Scoop out the mixture and form falafel balls with your hands. Shape them into small patties.' },
-          { title: 'Step 4: Fry', description: 'Shallow fry the falafels until crispy and golden brown.' }
-        ],
+          {
+          title: "Step 1: Sauté Aromatics",
+          description: "Heat oil in a large pot over medium heat. Add onion powder and sauté for 1 minute."
+          },
+          {
+          title: "Step 2: Add Spices and Vegetables",
+          description: "Add garlic, ginger, and pepper. Sauté for 2-3 minutes. Then add carrots and a pinch of salt. Cook for 1-2 minutes, stirring occasionally."
+          },
+          {
+          title: "Step 3: Add Haleem Mix",
+          description: "Add the Haleem mix (containing Yellow Mung Bean Lentils, Split Red Masur Lentil, rice, and wheat flour). Stir to combine. Cook for 1-2 minutes."
+          },
+          {
+          title: "Step 4: Add Liquid and Simmer",
+          description: "Add vegetable broth and coconut milk. Bring to a low boil, then reduce heat to low and simmer, uncovered, stirring occasionally, for 20-25 minutes."
+          },
+          {
+          title: "Step 5: Season and Finish",
+          description: "Add Haleem Masala powder (or a blend of ground cumin, coriander, cinnamon, cardamom, and turmeric). Stir once more. Simmer for an additional 5-10 minutes or until the soup has reached the desired consistency."
+          },
+          {
+          title: "Step 6: Serve",
+          description: "Present it hot, garnished with fresh cilantro or ginger, if desired."
+          }
+          ],
         tips: [
-          "For crisper falafels, chill them in the refrigerator for 30 minutes before frying.",
-          "Use a thermometer to maintain the ideal frying temperature (350°F/175°C).",
-          "Don't overcrowd the pan; fry in batches if necessary.",
-          "Experiment with different seasonings, herbs, or spices to create unique flavour profiles.",
-          "Serve with your favourite toppings, such as tahini sauce, hummus, or fresh veggies."
+          "Adjust the amount of vegetable broth and coconut milk to achieve your desired consistency.",
+          "If using a combination of lentils, rice, and wheat flour, be sure to stir well to prevent lumps from forming.",
+          "For added richness, stir in some ghee or heavy cream towards the end of cooking.",
+          "Experiment with different spice blends or add a pinch of cayenne pepper for an extra kick."
           ]
       },
     //   Blog 6
     {
-        id: 1,
-        title: 'Chickpea Lentils and Cabbage Falafels',
-        imageUrl: '/recipeblogs/chickpeafalafel.webp',
-        intro: "Discover the ultimate trifecta of flavour, nutrition, and versatility with our delectable falafel recipe! Made with protein-rich Split Yellow Mung Lentils and packed with the added crunch of cabbage, these crispy, golden bites are a game-changer for any meal. Whether you're craving a satisfying brunch or a nourishing dinner, falafels are the perfect answer - pair them with your favourite dressing or sauce for a truly unforgettable treat. Indulge in the wholesome goodness and share the love with your loved ones!",
+        id: 6,
+        title: 'Vanilla Cake',
+        imageUrl: '/recipeblogs/vanillacake.webp',
+        intro: "Cake always brings a big smile. And the freshly baked cake tastes even better. In this recipe of ours, we will try to blend in some goodness into your cake baking with our ingredients. The Vanilla cake is a flavourful mouth-watering recipe which is sure to get your party going.",
         ingredients: [
-          "½ cup Dry Mung Beans",
-          "1 cup chopped cabbage",
-          "½ cup Dry Split Chickpea Lentils",
-          "½ cup Split Yellow Mung Lentils",
-          "2 Serrano Pepper",
-          "½ bunch Fresh Cilantro",
-          "5 cloves Garlic",
-          "¼ cup Coriander Seed Whole",
-          "4 tbsp Olive Oil",
-          "1 tbsp Pink Salt",
-          "1 tsp Black Pepper",
-          "2 tsp Baking Powder"
-        ],
+          "1 cup Refined Flour (Maida)",
+          "1/4 Cup Oil",
+          "1 cup Milk",
+          "1/2 cup Powdered White Sugar",
+          "1/2 tsp Baking Powder",
+          "1/4 tsp Baking Soda",
+          "1 tsp Vanilla essence",
+          "Mix seeds (Sunflower, melon, & flax seeds each 1 tbsp)",
+          "1 Pinch Salt"
+          ],
         instructions: [
-          { title: 'Step 1: Soak and Drain', description: 'Mix all the beans and lentils, wash, and soak for 4-6 hours. Drain all the water out.' },
-          { title: 'Step 2: Blend', description: 'Add the drained mixture to a food processor. Include the following ingredients: Serrano peppers, cabbage, cilantro, garlic, salt, pepper, coriander seeds, baking powder, and 4 tablespoons of olive oil. Then, process the mixture until it is smooth.' },
-          { title: 'Step 3: Shape', description: 'Scoop out the mixture and form falafel balls with your hands. Shape them into small patties.' },
-          { title: 'Step 4: Fry', description: 'Shallow fry the falafels until crispy and golden brown.' }
-        ],
+          {
+          title: "Step 1: Prepare Dry Ingredients",
+          description: "Sieve refined flour, baking soda, baking powder, and salt together. Set aside."
+          },
+          {
+          title: "Step 2: Prepare Wet Ingredients",
+          description: "Mix sugar, oil, milk, and vanilla essence in a grinder until smooth."
+          },
+          {
+          title: "Step 3: Combine Mixtures",
+          description: "Mix both dry and wet mixtures until well combined. Create a smooth batter."
+          },
+          {
+          title: "Step 4: Prepare Cake Pan",
+          description: "Pour batter into a greased pan. Sprinkle 1/4 cup of mixed seeds over the batter and gently press with a spatula."
+          },
+          {
+          title: "Step 5: Remove Air Bubbles",
+          description: "Tap the cake pan on a countertop to release any large air bubbles."
+          },
+          {
+          title: "Step 6: Bake",
+          description: "Place the cake pan in a preheated pressure cooker and bake for 1 hour. Alternatively, bake in a preheated oven at 180°C (360°F) for about 1 hour."
+          }
+          ],
         tips: [
-          "For crisper falafels, chill them in the refrigerator for 30 minutes before frying.",
-          "Use a thermometer to maintain the ideal frying temperature (350°F/175°C).",
-          "Don't overcrowd the pan; fry in batches if necessary.",
-          "Experiment with different seasonings, herbs, or spices to create unique flavour profiles.",
-          "Serve with your favourite toppings, such as tahini sauce, hummus, or fresh veggies."
-          ]
+          "Consider using brown sugar or jaggery instead of white sugar for a richer flavour and deeper colour.",
+          "Baking time may vary, so keep an eye on the cake.",
+          "If the batter looks dry, add 2-4 tsp of milk.",
+          "Use a toothpick to check for doneness; it should come out clean.",
+          "Let the cake cool before slicing and serving.",
+          "Experiment with different flavours by adding nuts, chocolate chips, or fruit to the batter.",
+          "For a moist cake, don't overmix the batter, and ensure the ingredients are at room temperature."
+          ],
       },
     //   Blog 7
     {
-        id: 1,
-        title: 'Chickpea Lentils and Cabbage Falafels',
-        imageUrl: '/recipeblogs/chickpeafalafel.webp',
-        intro: "Discover the ultimate trifecta of flavour, nutrition, and versatility with our delectable falafel recipe! Made with protein-rich Split Yellow Mung Lentils and packed with the added crunch of cabbage, these crispy, golden bites are a game-changer for any meal. Whether you're craving a satisfying brunch or a nourishing dinner, falafels are the perfect answer - pair them with your favourite dressing or sauce for a truly unforgettable treat. Indulge in the wholesome goodness and share the love with your loved ones!",
+        id: 7,
+        title: 'Hot Spicy Mexican-Style Kidney Beans',
+        imageUrl: '/recipeblogs/spicykidney.webp',
+        intro: "Get ready to ignite your taste buds with our Mexican-Style Kidney Beans, a flavourful and nutritious recipe that's perfect for a Sunday treat! This aromatic bowl of goodness is a testament to the shared love of bold spices and flavours between Mexican and Pakistani cuisine. Just like Pakistani dishes, Mexican cuisine relies heavily on a blend of warming spices like cumin, coriander, and chili peppers to create a depth of flavour that's both comforting and exciting. Our recipe combines the best of both worlds, bringing together the familiar warmth of Pakistani spices with the vibrant spirit of Mexican flavours. Try it out and experience the magic for yourself!",
         ingredients: [
-          "½ cup Dry Mung Beans",
-          "1 cup chopped cabbage",
-          "½ cup Dry Split Chickpea Lentils",
-          "½ cup Split Yellow Mung Lentils",
-          "2 Serrano Pepper",
-          "½ bunch Fresh Cilantro",
-          "5 cloves Garlic",
-          "¼ cup Coriander Seed Whole",
-          "4 tbsp Olive Oil",
-          "1 tbsp Pink Salt",
-          "1 tsp Black Pepper",
-          "2 tsp Baking Powder"
-        ],
+          "2 tbsp oil",
+          "1 chopped onion",
+          "1/2 chopped jalapeño",
+          "4 cloves garlic",
+          "1 chopped tomato",
+          "1 tsp salt",
+          "1 tsp red chilli powder",
+          "1 tsp cumin powder",
+          "1 cup Kidney Beans",
+          "2 cups water"
+          ],
         instructions: [
-          { title: 'Step 1: Soak and Drain', description: 'Mix all the beans and lentils, wash, and soak for 4-6 hours. Drain all the water out.' },
-          { title: 'Step 2: Blend', description: 'Add the drained mixture to a food processor. Include the following ingredients: Serrano peppers, cabbage, cilantro, garlic, salt, pepper, coriander seeds, baking powder, and 4 tablespoons of olive oil. Then, process the mixture until it is smooth.' },
-          { title: 'Step 3: Shape', description: 'Scoop out the mixture and form falafel balls with your hands. Shape them into small patties.' },
-          { title: 'Step 4: Fry', description: 'Shallow fry the falafels until crispy and golden brown.' }
-        ],
+          {
+          title: "Step 1: Sauté Aromatics",
+          description: "Heat 2 tbsp oil in a pressure cooker over medium heat. Add 1 chopped onion, 1/2 chopped jalapeño, and 4 cloves garlic. Sauté until the onion is translucent."
+          },
+          {
+          title: "Step 2: Add Tomato and Spices",
+          description: "Add 1 chopped tomato and cook for 1-2 minutes. Then, add Salt, Red Chili Ground, and Cumin Ground. Stir well to combine."
+          },
+          {
+          title: "Step 3: Add Kidney Beans and Water",
+          description: "Add 1 cup Kidney Beans and 2 cups water. Mix well to ensure the beans are covered with water."
+          },
+          {
+          title: "Step 4: Pressure Cook",
+          description: "Pressure cook the beans for 5 whistles or until they are tender."
+          },
+          {
+          title: "Step 5: Serve and Garnish",
+          description: "Top with lemon juice and cilantro. Serve hot."
+          }
+          ],
         tips: [
-          "For crisper falafels, chill them in the refrigerator for 30 minutes before frying.",
-          "Use a thermometer to maintain the ideal frying temperature (350°F/175°C).",
-          "Don't overcrowd the pan; fry in batches if necessary.",
-          "Experiment with different seasonings, herbs, or spices to create unique flavour profiles.",
-          "Serve with your favourite toppings, such as tahini sauce, hummus, or fresh veggies."
+          "For an extra kick, add diced serrano peppers or more jalapeños to the sauté.",
+          "Use fresh cilantro leaves for garnish or add a dollop of sour cream for a creamy contrast.",
+          "Serve with tortilla chips, warm flour or corn tortillas, or over Mexican rice.",
+          "Add some heat with diced green chilies or a sprinkle of cayenne pepper.",
+          "Experiment with different types of beans, such as pinto or black beans, for a varied texture and flavour."
           ]
       },
     //   Blog 8
     {
-        id: 1,
-        title: 'Chickpea Lentils and Cabbage Falafels',
-        imageUrl: '/recipeblogs/chickpeafalafel.webp',
-        intro: "Discover the ultimate trifecta of flavour, nutrition, and versatility with our delectable falafel recipe! Made with protein-rich Split Yellow Mung Lentils and packed with the added crunch of cabbage, these crispy, golden bites are a game-changer for any meal. Whether you're craving a satisfying brunch or a nourishing dinner, falafels are the perfect answer - pair them with your favourite dressing or sauce for a truly unforgettable treat. Indulge in the wholesome goodness and share the love with your loved ones!",
+        id: 8,
+        title: 'Kheer: Traditional Pakistan Rice Pudding)',
+        imageUrl: '/recipeblogs/kheer.webp',
+        intro: "Kheer, a rice pudding, is the quintessential Pakistani sweet dish that everyone grows up eating. Made with flavourful and aromatic ingredients like Super Basmati Rice, kheer is the most common dessert in Pakistani households. Its creamy texture and subtle sweetness make it a favourite among people of all ages. Follow our simple recipe to create this delicious treat and make your celebrations even sweeter.",
         ingredients: [
-          "½ cup Dry Mung Beans",
-          "1 cup chopped cabbage",
-          "½ cup Dry Split Chickpea Lentils",
-          "½ cup Split Yellow Mung Lentils",
-          "2 Serrano Pepper",
-          "½ bunch Fresh Cilantro",
-          "5 cloves Garlic",
-          "¼ cup Coriander Seed Whole",
-          "4 tbsp Olive Oil",
-          "1 tbsp Pink Salt",
-          "1 tsp Black Pepper",
-          "2 tsp Baking Powder"
-        ],
+          "3 teaspoons of uncooked Super Basmati Rice",
+          "¼ cup of finely grated dry coconut",
+          "3 teaspoons of sugar (or to taste)",
+          "½ teaspoon of Green Cardamom Whole powder",
+          "2 teaspoons of almonds and cashew nuts",
+          "1 litre Whole Milk",
+          "10-15 strands of saffron (optional)",
+          "20-25 raisins"
+          ],
         instructions: [
-          { title: 'Step 1: Soak and Drain', description: 'Mix all the beans and lentils, wash, and soak for 4-6 hours. Drain all the water out.' },
-          { title: 'Step 2: Blend', description: 'Add the drained mixture to a food processor. Include the following ingredients: Serrano peppers, cabbage, cilantro, garlic, salt, pepper, coriander seeds, baking powder, and 4 tablespoons of olive oil. Then, process the mixture until it is smooth.' },
-          { title: 'Step 3: Shape', description: 'Scoop out the mixture and form falafel balls with your hands. Shape them into small patties.' },
-          { title: 'Step 4: Fry', description: 'Shallow fry the falafels until crispy and golden brown.' }
-        ],
+          {
+          title: "Step 1: Rinse and Soak Rice",
+          description: "Rinse the basmati rice 2-3 times and soak it in ½ cup water for 30 minutes."
+          },
+          {
+          title: "Step 2: Heat Milk",
+          description: "Heat milk in a heavy-bottomed pan over medium-high heat, stirring frequently to prevent scorching."
+          },
+          {
+          title: "Step 3: Add Rice and Spices",
+          description: "Once milk boils, reduce heat to low. Drain water from rice and add rice, saffron, raisins, and dry coconut to the pan."
+          },
+          {
+          title: "Step 4: Cook Kheer",
+          description: "Cook uncovered on low heat for 45-50 minutes, stirring frequently and scraping the sides of the pan. Mash the mixture with the back of a ladle."
+          },
+          {
+          title: "Step 5: Add Sugar and Cardamom",
+          description: "Once kheer thickens, add sugar and cardamom powder. Cook for 2 minutes, checking for sugar consistency."
+          },
+          {
+          title: "Step 6: Serve",
+          description: "Transfer kheer to small serving bowls. Garnish with almond and cashew nut. Serve hot or chilled."
+          }
+          ],
         tips: [
-          "For crisper falafels, chill them in the refrigerator for 30 minutes before frying.",
-          "Use a thermometer to maintain the ideal frying temperature (350°F/175°C).",
-          "Don't overcrowd the pan; fry in batches if necessary.",
-          "Experiment with different seasonings, herbs, or spices to create unique flavour profiles.",
-          "Serve with your favourite toppings, such as tahini sauce, hummus, or fresh veggies."
+          "The perfectly cooked kheer should be thick and creamy like a chunky custard, with rice grains almost incorporated into the milk.",
+          "Kheer will thicken a little more once cooled.",
+          "You can replace refined sugar with other options like; Brown sugar (adds a caramel-like flavour), Jaggery (adds a rich, earthy flavour) & Honey (adds a distinct flavour, use sparingly)",
+          "Remember to adjust the amount of sugar to your taste preferences, as different sweeteners have varying levels of sweetness."
           ]
       },
     {
@@ -369,70 +445,80 @@ const recipes = [
       },
     //   Blog 10
     {
-        id: 1,
-        title: 'Chickpea Lentils and Cabbage Falafels',
-        imageUrl: '/recipeblogs/chickpeafalafel.webp',
-        intro: "Discover the ultimate trifecta of flavour, nutrition, and versatility with our delectable falafel recipe! Made with protein-rich Split Yellow Mung Lentils and packed with the added crunch of cabbage, these crispy, golden bites are a game-changer for any meal. Whether you're craving a satisfying brunch or a nourishing dinner, falafels are the perfect answer - pair them with your favourite dressing or sauce for a truly unforgettable treat. Indulge in the wholesome goodness and share the love with your loved ones!",
+        id: 10,
+        title: 'Red Lentil Hummus',
+        imageUrl: '/recipeblogs/hummuslentil.webp',
+        intro: "Get ready to electrify your party with the ultimate game-changer: Red Lentil Hummus! Dips are the secret ingredient to unlocking a memorable bash, adding a thrilling trifecta of tangy, spicy, and savory flavours that will leave your guests craving for more. And the best part? This nutritious delight is incredibly easy to whip up, making it the perfect accompaniment to your festive gatherings with friends and family. So, go ahead and give your party a delicious boost with this mouth-watering Red Lentil Hummus - your taste buds and your guests will thank you!",
         ingredients: [
-          "½ cup Dry Mung Beans",
-          "1 cup chopped cabbage",
-          "½ cup Dry Split Chickpea Lentils",
-          "½ cup Split Yellow Mung Lentils",
-          "2 Serrano Pepper",
-          "½ bunch Fresh Cilantro",
-          "5 cloves Garlic",
-          "¼ cup Coriander Seed Whole",
-          "4 tbsp Olive Oil",
-          "1 tbsp Pink Salt",
-          "1 tsp Black Pepper",
-          "2 tsp Baking Powder"
-        ],
+          "Split Masur Red Lentils",
+          "Coconut oil",
+          "Tahini",
+          "Lemon",
+          "Ginger",
+          "Garlic"
+          ],
         instructions: [
-          { title: 'Step 1: Soak and Drain', description: 'Mix all the beans and lentils, wash, and soak for 4-6 hours. Drain all the water out.' },
-          { title: 'Step 2: Blend', description: 'Add the drained mixture to a food processor. Include the following ingredients: Serrano peppers, cabbage, cilantro, garlic, salt, pepper, coriander seeds, baking powder, and 4 tablespoons of olive oil. Then, process the mixture until it is smooth.' },
-          { title: 'Step 3: Shape', description: 'Scoop out the mixture and form falafel balls with your hands. Shape them into small patties.' },
-          { title: 'Step 4: Fry', description: 'Shallow fry the falafels until crispy and golden brown.' }
-        ],
+          {
+          title: "Step 1: Cook the Lentils",
+          description: "Start by cooking the lentils. Add water to a medium saucepan, bring to a boil, then add the lentils and simmer until tender (about 15 minutes)."
+          },
+          {
+          title: "Step 2: Cool and Blend",
+          description: "Drain the cooked lentils and let them cool (10-15 minutes). Once almost at room temperature, add them to a blender with the other ingredients and process until smooth, scraping down the sides as needed."
+          },
+          {
+          title: "Step 3: Adjust Consistency",
+          description: "If the hummus gets too thick, stir in some water before serving."
+          }
+          ],
         tips: [
-          "For crisper falafels, chill them in the refrigerator for 30 minutes before frying.",
-          "Use a thermometer to maintain the ideal frying temperature (350°F/175°C).",
-          "Don't overcrowd the pan; fry in batches if necessary.",
-          "Experiment with different seasonings, herbs, or spices to create unique flavour profiles.",
-          "Serve with your favourite toppings, such as tahini sauce, hummus, or fresh veggies."
-          ]
+          "Enjoy your red lentil hummus straight from the blender for the best flavour and texture. Store it in the fridge for up to 4-5 days.",
+          "Add a pinch of cumin, paprika, or red pepper flakes to give your hummus an extra kick.",
+          "Top your hummus with a sprinkle of sumac, parsley, or a few pomegranate seeds for a pop of colour and freshness.",
+          "Serve with crudités, pita chips, or crackers for a satisfying snack.",
+          "Prepare the lentils and store them in the fridge for up to a day before blending with the other ingredients."
+          ],
       },
     //   Blog 11
     {
-        id: 1,
-        title: 'Chickpea Lentils and Cabbage Falafels',
-        imageUrl: '/recipeblogs/chickpeafalafel.webp',
-        intro: "Discover the ultimate trifecta of flavour, nutrition, and versatility with our delectable falafel recipe! Made with protein-rich Split Yellow Mung Lentils and packed with the added crunch of cabbage, these crispy, golden bites are a game-changer for any meal. Whether you're craving a satisfying brunch or a nourishing dinner, falafels are the perfect answer - pair them with your favourite dressing or sauce for a truly unforgettable treat. Indulge in the wholesome goodness and share the love with your loved ones!",
+        id: 11,
+        title: 'Rice Balls',
+        imageUrl: '/recipeblogs/riceballs.webp',
+        intro: "For all the food loving cute balls out there, we have a perfect blend of flavourful and healthy mix of rice balls for you. With all the festivities around, a homemade piece of soft and moist ball of rice could be a perfect match for an eve of spookiness. This one is going to be a simple and easy to create recipe for people who like to keep it raw and tasty.",
         ingredients: [
-          "½ cup Dry Mung Beans",
-          "1 cup chopped cabbage",
-          "½ cup Dry Split Chickpea Lentils",
-          "½ cup Split Yellow Mung Lentils",
-          "2 Serrano Pepper",
-          "½ bunch Fresh Cilantro",
-          "5 cloves Garlic",
-          "¼ cup Coriander Seed Whole",
-          "4 tbsp Olive Oil",
-          "1 tbsp Pink Salt",
-          "1 tsp Black Pepper",
-          "2 tsp Baking Powder"
+          { text: "1 cup ", link: { label: "basmati rice", url: "/shop" } }, // Link to Basmati Rice
+          { text: "2 cups carrot juice" },
+          { text: "1 cup water" },
+          { text: "1/2 tsp. pink rock salt - fine grind" },
+          { text: "black olives" },
+          { text: "green bell pepper" }
         ],
         instructions: [
-          { title: 'Step 1: Soak and Drain', description: 'Mix all the beans and lentils, wash, and soak for 4-6 hours. Drain all the water out.' },
-          { title: 'Step 2: Blend', description: 'Add the drained mixture to a food processor. Include the following ingredients: Serrano peppers, cabbage, cilantro, garlic, salt, pepper, coriander seeds, baking powder, and 4 tablespoons of olive oil. Then, process the mixture until it is smooth.' },
-          { title: 'Step 3: Shape', description: 'Scoop out the mixture and form falafel balls with your hands. Shape them into small patties.' },
-          { title: 'Step 4: Fry', description: 'Shallow fry the falafels until crispy and golden brown.' }
-        ],
+          {
+          title: "Step 1: Cook the Rice",
+          description: "Start with boiling water, carrot juice, rice, and salt for 15 minutes, or until all the liquid is absorbed. Let it cool down to room temperature."
+          },
+          {
+          title: "Step 2: Shape the Rice Balls",
+          description: "Make small golf ball-sized balls out of rice, using your hands by pressing firmly. (Note: In case rice starts sticking to your hand, lightly sprinkle some water on hands before rolling.)"
+          },
+          {
+          title: "Step 3: Add the Face",
+          description: "Cut the olives into the shape of eyes and mouth and place them over the balls, giving them a gentle press, so they stick on."
+          },
+          {
+          title: "Step 4: Add the Stem",
+          description: "Cut a small triangle of green bell pepper and stick it over the top of the rice ball to form the stem."
+          },
+          {
+          title: "Step 5: Plate and Garnish",
+          description: "Now, you can start your plating. To add a pop of colour and freshness, garnish with a sprinkle of chopped fresh herbs like parsley, cilantro, or dill. You can also serve with a side of your favourite dipping sauce."
+          }
+          ],
         tips: [
-          "For crisper falafels, chill them in the refrigerator for 30 minutes before frying.",
-          "Use a thermometer to maintain the ideal frying temperature (350°F/175°C).",
-          "Don't overcrowd the pan; fry in batches if necessary.",
-          "Experiment with different seasonings, herbs, or spices to create unique flavour profiles.",
-          "Serve with your favourite toppings, such as tahini sauce, hummus, or fresh veggies."
+          "To make the rice balls more vibrant, you can add a few drops of food colouring to the rice mixture before shaping.",
+          "Experiment with different seasonings and spices in the rice mixture for unique flavour profiles.",
+          "Consider using other ingredients like chopped veggies, cheese, or nuts to add texture and flavour to the rice balls."
           ]
       },
     // Add more recipes...

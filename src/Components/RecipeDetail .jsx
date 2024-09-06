@@ -1,6 +1,6 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, NavLink } from 'react-router-dom';
 import recipes from '../data/Blogs';
 
 const RecipeDetail = () => {
@@ -29,7 +29,14 @@ const RecipeDetail = () => {
       <h2>Ingredients</h2>
       <ul>
         {recipe.ingredients.map((ingredient, index) => (
-          <li key={index}>{ingredient}</li>
+          <li key={index}>
+             {ingredient.text}
+            {ingredient.link ? (
+              <NavLink to={ingredient.link.url} className="ingredient-link">
+                {ingredient.link.label}
+              </NavLink>
+            ) : null}
+            </li>
         ))}
       </ul>
 
