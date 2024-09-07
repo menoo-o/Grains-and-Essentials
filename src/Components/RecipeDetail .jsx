@@ -29,7 +29,7 @@ const RecipeDetail = () => {
       <h2>Ingredients</h2>
       <ul>
         {recipe.ingredients.map((ingredient, index) => (
-          <li key={index}>
+          <li key={index} className='ingredients-names'>
              {ingredient.text}
             {ingredient.link ? (
               <NavLink to={ingredient.link.url} className="ingredient-link">

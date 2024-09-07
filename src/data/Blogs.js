@@ -6,18 +6,18 @@ const recipes = [
       imageUrl: '/recipeblogs/chickpeafalafel.webp',
       intro: "Discover the ultimate trifecta of flavour, nutrition, and versatility with our delectable falafel recipe! Made with protein-rich Split Yellow Mung Lentils and packed with the added crunch of cabbage, these crispy, golden bites are a game-changer for any meal. Whether you're craving a satisfying brunch or a nourishing dinner, falafels are the perfect answer - pair them with your favourite dressing or sauce for a truly unforgettable treat. Indulge in the wholesome goodness and share the love with your loved ones!",
       ingredients: [
-        "½ cup Dry Mung Beans",
-        "1 cup chopped cabbage",
-        "½ cup Dry Split Chickpea Lentils",
-        "½ cup Split Yellow Mung Lentils",
-        "2 Serrano Pepper",
-        "½ bunch Fresh Cilantro",
-        "5 cloves Garlic",
-        "¼ cup Coriander Seed Whole",
-        "4 tbsp Olive Oil",
-        "1 tbsp Pink Salt",
-        "1 tsp Black Pepper",
-        "2 tsp Baking Powder"
+        { text: "½ cup ", link: { label: "Mung Beans", url: "/shop" } },
+        { text: "1 cup chopped cabbage" },
+        { text: "½ cup ", link: { label: "Split Chickpea Lentils", url: "/shop" } },
+        { text: "½ cup Split Yellow Mung Lentils" },
+        { text: "2 Serrano Pepper" },
+        { text: "½ bunch Fresh Cilantro" },
+        { text: "5 cloves Garlic" },
+        { text: "¼ cup Coriander Seed Whole" },
+        { text: "4 tbsp Olive Oil" },
+        { text: "1 tbsp Pink Salt" },
+        { text: "1 tsp Black Pepper" },
+        { text: "2 tsp " , link: { label: "Baking Powder", url: "/shop" } }
       ],
       instructions: [
         { title: 'Step 1: Soak and Drain', description: 'Mix all the beans and lentils, wash, and soak for 4-6 hours. Drain all the water out.' },
@@ -40,19 +40,19 @@ const recipes = [
         imageUrl: '/recipeblogs/kungpao.webp',
         intro: "Indulge in the bold and savory flavours of our Kung Pao Chicken, expertly paired with the nutty goodness of Brown Rice! This classic Chinese-inspired dish is a masterclass in balancing spices and textures, with juicy chicken, crunchy vegetables, and a hint of smokiness. Perfect for a quick weeknight dinner or a special occasion, this wholesome recipe is sure to satisfy your cravings and leave you wanting more!",
         ingredients: [
-            "½ kg boneless skinless chicken breast",
-            "4 tsp sesame oil",
-            "2 tsp Garlic Minced Whole",
-            "1 tsp Ginger Minced Whole",
-            "2 celery ribs",
-            "1 red pepper",
-            "2 tbsp soy sauce",
-            "1 tbsp honey",
-            "1/2 tsp pepper",
-            "1/4 cup peanuts",
-            "2 green onions",
-            "Brown Rice"
-        ],
+          { text: "½ kg boneless skinless chicken breast" },
+          { text: "4 tsp sesame oil" },
+          { text: "2 tsp Garlic Minced Whole" },
+          { text: "1 tsp Ginger Minced Whole" },
+          { text: "2 celery ribs" },
+          { text: "1 red pepper" },
+          { text: "2 tbsp soy sauce" },
+          { text: "1 tbsp honey" },
+          { text: "1/2 tsp pepper" },
+          { text: "1/4 cup peanuts" },
+          { text: "2 green onions" },
+          { text: "1 cup ", link: { label: "Brown Rice", url: "/shop" } }
+          ],
         instructions: [
             {
             title: "Step 1: Cook the Chicken",
@@ -91,16 +91,16 @@ const recipes = [
         imageUrl: '/recipeblogs/kebab.webp',
         intro: "Transform the humble lentil into a culinary masterpiece with our Masoor Lentils Special Kebabs! These mouth-watering morsels are a testament to the magic that happens when ordinary ingredients meet extraordinary flavour and creativity. Packed with protein, fibre, and nutrients, these kebabs are not only a treat for your taste buds but also a boon for your health. Get ready to delight your senses and nourish your body with this sensational lentil recipe!",
         ingredients: [
-            "1 cup Masoor Lentils, drained and soaked",
-            "1 cup yogurt",
-            "2 tbsp olive oil",
-            "1 tsp Cumin Seeds",
-            "1 tsp Pink Salt",
-            "1 tsp Red Chili Powder",
-            "½ tsp Coriander Seed Powder",
-            "1 tsp garlic paste",
-            "Oil to pan fry"
-            ],
+          { text: "1 cup ", link: { label: "Masoor Lentils", url: "/shop" } },
+          { text: "1 cup yogurt" },
+          { text: "2 tbsp olive oil" },
+          { text: "1 tsp Cumin Seeds" },
+          { text: "1 tsp Pink Salt" },
+          { text: "1 tsp Red Chili Powder" },
+          { text: "½ tsp Coriander Seed Powder" },
+          { text: "1 tsp garlic paste" },
+          { text: "Oil to pan fry" }
+          ],
         instructions: [
             {
             title: "Step 1: Cook the Lentils",
@@ -146,15 +146,15 @@ const recipes = [
         imageUrl: '/recipeblogs/chickpeasauce.webp',
         intro: "Indulge in the vibrant flavours of Mexico with our Chickpeas in Guajillo Chile Sauce recipe! This fibre-rich dish is a perfect addition to your diet, packed with nutritious chickpeas and a bold, slightly smoky sauce made with Guajillo chilies. Inspired by the warm and aromatic spices of Mexican cuisine, this recipe combines the familiarity of Pakistani flavours with the excitement of international flair. Get ready to savour a refreshing and deliciously spicy twist on traditional chickpea dishes!",
         ingredients: [
-          "2 cups cooked Chickpeas Beans",
-          "2 medium cups medium carrots",
-          "1 medium cup white onion",
-          "2 cloves of minced garlic",
-          "¼ cup of parsley",
-          "¼ cup guajillo chili salsa",
-          "⅛ tsp Black Pepper Powder",
-          "4 tsp olive oil",
-          "Salt to taste"
+          { text: "2 cups cooked ", link: { label: "Chickpeas Beans", url: "/shop" } },
+          { text: "2 medium cups medium carrots" },
+          { text: "1 medium cup white onion" },
+          { text: "2 cloves of minced garlic" },
+          { text: "¼ cup of parsley" },
+          { text: "¼ cup guajillo chili salsa" },
+          { text: "⅛ tsp Black Pepper Powder" },
+          { text: "4 tsp olive oil" },
+          { text: "Salt to taste" }
           ],
         instructions: [
           {
@@ -189,18 +189,18 @@ const recipes = [
         imageUrl: '/recipeblogs/haleem.webp',
         intro: "Indulge in the comforting warmth of Pakistan's national treasure, Haleem - a slow-cooked stew that harmoniously blends the creaminess of wheat, the tenderness of lentils, and the fragrance of aromatic spices. Traditional Haleem is slow cooked for hours, but this revised recipe simplifies the process while maintaining the flavours. One Pot Lentil Soup is simplified for a quicker and easier preparation without compromising on flavour. As we share this recipe with you, we hope you'll experience the same joy and nourishment that this hearty soup brings to our tables.",
         ingredients: [
-          "1 medium onion, finely chopped",
-          "3-4 cloves of garlic, minced",
-          "1-inch piece of ginger, grated",
-          "1 cup uncooked rinsed Haleem mix (containing Yellow Mung Bean Lentils, Split Red Masur Lentil, rice, and wheat flour)",
-          "1-2 dried red chilies",
-          "2 cups thinly sliced carrots",
-          "1 healthy pinch salt",
-          "1 tbs Haleem Masala",
-          "3 cups Beef or Lamb Broth",
-          "3/4 cup light coconut milk",
-          "2 Tbsp soy sauce",
-          "1/2 cup ghee"
+          { text: "1 medium onion, finely chopped" },
+          { text: "3-4 cloves of garlic, minced" },
+          { text: "1-inch piece of ginger, grated" },
+          { text: "1 cup uncooked rinsed Haleem mix ", link: { label: "(containing Yellow Mung Bean Lentils, Split Red Masur Lentil, rice, and wheat flour)", url: "/shop" } },
+          { text: "1-2 dried red chilies" },
+          { text: "2 cups thinly sliced carrots" },
+          { text: "1 healthy pinch salt" },
+          { text: "1 tbs Haleem Masala" },
+          { text: "3 cups Beef or Lamb Broth" },
+          { text: "3/4 cup light coconut milk" },
+          { text: "2 Tbsp soy sauce" },
+          { text: "1/2 cup ghee" }
           ],
         instructions: [
           {
@@ -242,15 +242,15 @@ const recipes = [
         imageUrl: '/recipeblogs/vanillacake.webp',
         intro: "Cake always brings a big smile. And the freshly baked cake tastes even better. In this recipe of ours, we will try to blend in some goodness into your cake baking with our ingredients. The Vanilla cake is a flavourful mouth-watering recipe which is sure to get your party going.",
         ingredients: [
-          "1 cup Refined Flour (Maida)",
-          "1/4 Cup Oil",
-          "1 cup Milk",
-          "1/2 cup Powdered White Sugar",
-          "1/2 tsp Baking Powder",
-          "1/4 tsp Baking Soda",
-          "1 tsp Vanilla essence",
-          "Mix seeds (Sunflower, melon, & flax seeds each 1 tbsp)",
-          "1 Pinch Salt"
+          { text: "1 cup Refined Flour- ", link: { label: "Maida", url: "/shop" } },
+          { text: "1/4 Cup Oil" },
+          { text: "1 cup Milk" },
+          { text: "1/2 cup Powdered ", link: { label: "White Sugar", url: "/shop" } },
+          { text: "1/2 tsp ", link: { label: "Baking Powder", url: "/shop" } },
+          { text: "1/4 tsp Baking Soda" },
+          { text: "1 tsp ", link: { label: "Vanilla Essence", url: "/shop" } },
+          { text: "Mix seeds (Sunflower, melon, & flax seeds each 1 tbsp)" },
+          { text: "1 Pinch Salt" }
           ],
         instructions: [
           {
@@ -295,16 +295,16 @@ const recipes = [
         imageUrl: '/recipeblogs/spicykidney.webp',
         intro: "Get ready to ignite your taste buds with our Mexican-Style Kidney Beans, a flavourful and nutritious recipe that's perfect for a Sunday treat! This aromatic bowl of goodness is a testament to the shared love of bold spices and flavours between Mexican and Pakistani cuisine. Just like Pakistani dishes, Mexican cuisine relies heavily on a blend of warming spices like cumin, coriander, and chili peppers to create a depth of flavour that's both comforting and exciting. Our recipe combines the best of both worlds, bringing together the familiar warmth of Pakistani spices with the vibrant spirit of Mexican flavours. Try it out and experience the magic for yourself!",
         ingredients: [
-          "2 tbsp oil",
-          "1 chopped onion",
-          "1/2 chopped jalapeño",
-          "4 cloves garlic",
-          "1 chopped tomato",
-          "1 tsp salt",
-          "1 tsp red chilli powder",
-          "1 tsp cumin powder",
-          "1 cup Kidney Beans",
-          "2 cups water"
+          { text: "2 tbsp oil" },
+          { text: "1 chopped onion" },
+          { text: "1/2 chopped jalapeño" },
+          { text: "4 cloves garlic" },
+          { text: "1 chopped tomato" },
+          { text: "1 tsp salt" },
+          { text: "1 tsp red chilli powder" },
+          { text: "1 tsp cumin powder" },
+          { text: "1 cup ", link: { label: "Kidney Beans", url: "/shop" } },
+          { text: "2 cups water" }
           ],
         instructions: [
           {
@@ -343,14 +343,14 @@ const recipes = [
         imageUrl: '/recipeblogs/kheer.webp',
         intro: "Kheer, a rice pudding, is the quintessential Pakistani sweet dish that everyone grows up eating. Made with flavourful and aromatic ingredients like Super Basmati Rice, kheer is the most common dessert in Pakistani households. Its creamy texture and subtle sweetness make it a favourite among people of all ages. Follow our simple recipe to create this delicious treat and make your celebrations even sweeter.",
         ingredients: [
-          "3 teaspoons of uncooked Super Basmati Rice",
-          "¼ cup of finely grated dry coconut",
-          "3 teaspoons of sugar (or to taste)",
-          "½ teaspoon of Green Cardamom Whole powder",
-          "2 teaspoons of almonds and cashew nuts",
-          "1 litre Whole Milk",
-          "10-15 strands of saffron (optional)",
-          "20-25 raisins"
+          { text: "3 tsp ", link: { label: "Super Basmati Rice", url: "/shop" } },
+          { text: "¼ cup grated dry coconut" },
+          { text: "3 tsp of sugar (or to taste)" },
+          { text: "½ tsp of Green Cardamom powder" },
+          { text: "2 tsp of almonds and cashew nuts" },
+          { text: "1 litre Whole Milk" },
+          { text: "10-15 strands of saffron (optional)" },
+          { text: "20-25 raisins" }
           ],
         instructions: [
           {
@@ -391,25 +391,25 @@ const recipes = [
         imageUrl: '/recipeblogs/biryani.webp',
         intro: "Writing about Pakistani cuisine without mentioning Chicken Biryani? That's like a culinary sin! This iconic dish is the heart and soul of Pakistani food, with its perfect blend of spices and flavours. But let's be real, the age-old debate still rages on - which city serves the best Chicken Biryani: Lahore or Karachi? The rivalry between these two metropolises is legendary, with each claiming their version is the most authentic and mouth-watering. Well, we won't take sides, but we will give you the secret to making the most scrumptious Chicken Biryani in the comfort of your own home, using Pride of Pakistan's Pakistani Biryani Masala. So, get ready to ignite your taste buds and join the Biryani battle!",
         ingredients: [
-            "1 cup whole milk yogurt",
-            "Pink Salt",
-            "2 tsp Red Chili Powder",
-            "1/2 tsp Organic Turmeric Ground",
-            "2 1/2 pounds bone-in skinless chicken thighs",
-            "1 1/2 cups vegetable oil",
-            "2 large onions",
-            "2 cups Basmati Rice",
-            "8 cloves",
-            "7 Organic Green Cardamom Whole",
-            "1/4 tsp Black Pepper Ground",
-            "2 large pinches Biryani Masala Seasoning",
-            "1/2 Organic Cinnamon Bark",
-            "1 tsp Organic Cumin Seed Whole",
-            "1 tbsp finely grated ginger",
-            "5 cloves garlic",
-            "2 medium tomatoes",
-            "1/2 cup cilantro leaves"
-            ],
+          { text: "1 cup whole milk yogurt" },
+          { text: "Pink Salt" },
+          { text: "2 tsp Red Chili Powder" },
+          { text: "1/2 tsp Organic Turmeric Ground" },
+          { text: "2 1/2 pounds bone-in skinless chicken thighs" },
+          { text: "1 1/2 cups vegetable oil" },
+          { text: "2 large onions" },
+          { text: "2 cups ", link: { label: "Basmati Rice", url: "/shop" } },
+          { text: "8 cloves" },
+          { text: "7 Organic Green Cardamom Whole" },
+          { text: "1/4 tsp Black Pepper Ground" },
+          { text: "2 large pinches Biryani Masala Seasoning" },
+          { text: "1/2 Organic Cinnamon Bark" },
+          { text: "1 tsp Organic Cumin Seed Whole" },
+          { text: "1 tbsp finely grated ginger" },
+          { text: "5 cloves garlic" },
+          { text: "2 medium tomatoes" },
+          { text: "1/2 cup cilantro leaves" }
+          ],
         instructions: [
             {
             title: "Step 1: Marinate the Chicken",
@@ -450,12 +450,12 @@ const recipes = [
         imageUrl: '/recipeblogs/hummuslentil.webp',
         intro: "Get ready to electrify your party with the ultimate game-changer: Red Lentil Hummus! Dips are the secret ingredient to unlocking a memorable bash, adding a thrilling trifecta of tangy, spicy, and savory flavours that will leave your guests craving for more. And the best part? This nutritious delight is incredibly easy to whip up, making it the perfect accompaniment to your festive gatherings with friends and family. So, go ahead and give your party a delicious boost with this mouth-watering Red Lentil Hummus - your taste buds and your guests will thank you!",
         ingredients: [
-          "Split Masur Red Lentils",
-          "Coconut oil",
-          "Tahini",
-          "Lemon",
-          "Ginger",
-          "Garlic"
+          { text: "", link: { label: "Split Red Masoor Lentils", url: "/shop" } },
+          { text: "Coconut oil" },
+          { text: "Tahini" },
+          { text: "Lemon" },
+          { text: "Ginger" },
+          { text: "Garlic" }
           ],
         instructions: [
           {

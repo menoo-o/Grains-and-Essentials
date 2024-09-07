@@ -26,6 +26,7 @@ return (
 
           <div className="logo">
               <img src="/logo.jpg" alt="logo" />
+              {/* <img src="/logo 1.2.png" alt="logo" /> */}
           </div>
 
           <div className="nav-links">
@@ -50,8 +51,6 @@ return (
           </div>
 
          
-
-
         </section>
 
         <section className="mini-nav">
