@@ -1,4 +1,3 @@
-// BlogGrid.js
 import React from 'react';
 import PropTypes from 'prop-types';
 import { NavLink } from 'react-router-dom';
@@ -6,7 +5,7 @@ import '../App.css';
 
 // Helper function to generate slug from the title
 const slugify = (title) => {
-  return title.toLowerCase().replace(/ /g, '-').replace(/[^\w-]+/g, ''); // Removes special characters
+  return title.toLowerCase().replace(/ /g, '-').replace(/[^\w-]+/g, '');
 };
 
 const GridBlog = ({ blogs }) => {
@@ -15,7 +14,7 @@ const GridBlog = ({ blogs }) => {
       {blogs.map(blog => (
         <NavLink 
           key={blog.id}
-          to={`/blogs/${slugify(blog.title)}`} // URL with the slugified title
+          to={`/blogs/${blog.id}/${slugify(blog.title)}`}  // Use slugified title in URL
           className='blog-card'
         >
           <img src={blog.imageUrl} alt={blog.title} className='blog-image' />
