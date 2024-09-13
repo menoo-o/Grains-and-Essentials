@@ -1,7 +1,7 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
 import { useNavigate, NavLink } from 'react-router-dom';
-import recipes from '../data/Blogs';
+import recipes from '../data/RecipeBlogs/Blogs';
 
 const RecipeDetail = () => {
   const { id, slug } = useParams(); // Get both id and slug from URL

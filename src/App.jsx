@@ -7,6 +7,8 @@ import Home from './pages/Home';
 import Shop from './pages/Shop';
 import About from './pages/About';
 import Blogs from './pages/Blogs';
+import BlogPost1 from './data/Zero Waste Blogs/BlogPosts/BlogOne'; // Import individual blog pages
+
 import Recipes from './pages/Recipes';
 import Contact from './pages/Contact';
 import Cart from './pages/Cart';
@@ -29,6 +31,7 @@ function App() {
             <Route path="/shop" element={<Shop />} />
             <Route path="/about" element={<About />} />
             <Route path="/blogs" element={<Blogs />} />
+            <Route path="/blogs/9-interesting-kitchen-hacks-and-tips" element={<BlogPost1 />} />
             <Route path="/recipes" element={<Recipes />} />
             <Route path="/recipes/:id/:slug" element={<RecipeDetail />} /> {/* Dynamic recipe route */}
             <Route path="/contact" element={<Contact />} />

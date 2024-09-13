@@ -1,7 +1,7 @@
 import React from 'react'
 import Header from '../Components/Header'
-import Grid from '../Components/Grid'
-import blogInfo from '../data/RecipeBlogsInfo'
+import Grid from '../Components/GridRecipe'
+import blogInfo from '../data/RecipeBlogs/RecipeBlogsInfo'
 
 
 // const blogInfo = [

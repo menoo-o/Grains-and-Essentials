@@ -1,52 +1,8 @@
 import React from 'react';
 // import { NavLink } from 'react-router-dom';
 import Header from '../Components/Header';
-import Grid from '../Components/Grid';
-
-const blogInfo = [
-  {
-  id: 1,
-  title: 'How important is breakfast?',
-  imageUrl: '/blogs/01.webp', // Replace with actual image paths
-  },
-  {
-  id: 2,
-  title: '5 Easy Changes to Boost Nutrition',
-  imageUrl: '/blogs/02.jpg', // Replace with actual image paths
-  },
-  {
-  id: 3,
-  title: "Interesting Facts You Didn't Know About Nuts",
-  imageUrl: 'blogs/03.webp', // Replace with actual image paths
-  },
-  {
-  id: 4,
-  title: 'Top Tips For An Organised Pantry',
-  imageUrl: 'blogs/04.webp', // Replace with actual image paths
-  },
-  {
-  id: 5,
-  title: 'How important is breakfast?',
-  imageUrl: '/blogs/01.webp', // Replace with actual image paths
-  },
-  {
-  id: 6,
-  title: '5 Easy Changes to Boost Nutrition',
-  imageUrl: '/blogs/02.jpg', // Replace with actual image paths
-  },
-  {
-  id: 7,
-  title: "Interesting Facts You Didn't Know About Nuts",
-  imageUrl: 'blogs/03.webp', // Replace with actual image paths
-  },
-  {
-  id: 8,
-  title: 'Top Tips For An Organised Pantry',
-  imageUrl: 'blogs/04.webp', // Replace with actual image paths
-  },
-  // Add more blog objects here as needed
-  ];
-
+import Grid from '../Components/GridBlog';
+import blogsInfo from '../data/Zero Waste Blogs/BlogsInfo';
 
 const Blogs = () => {
   return (
@@ -57,7 +13,7 @@ const Blogs = () => {
         paragraph="Everything you need to kick start your sustainability journey!"
       />
 
-      <Grid blogs={blogInfo} />
+      <Grid blogs={blogsInfo} />
 
 
     </div>
