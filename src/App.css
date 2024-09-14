@@ -636,6 +636,31 @@
   color: #e48e1f;
 }
 
+/* zero waste blogs  */
+.zero-blogs-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  
+  margin: 4.5rem auto;
+}
+
+.zero-blog-heading{
+  font-size: 1.45rem;
+  color: #e48e1f;
+  border-bottom: 1px solid #e48b39;
+  padding-bottom: 5px;
+  margin-bottom: 10px;
+  padding-top: 0px;
+}
+
+.zero-blog-img{
+  width: 800px;
+  height: 600px;
+  display: block;
+}
+
 /* Blog/recipe header component  */
 /* BlogHeader.css */
 

@@ -16,12 +16,12 @@ const BlogPost = () => {
   }
 
   return (
-    <div className="blog-post">
-      <h1>{blog.title}</h1>
-      <img src={blog.imageUrl} alt={blog.title} />
+    <div className="blog-post zero-blogs-container">
+      <h1 className='zero-blog-heading'>{blog.title}</h1>
+      <img src={blog.imageUrl} alt={blog.title} className='zero-blog-img' />
       <p>{blog.intro}</p>
       {/* Use dangerouslySetInnerHTML to insert HTML content */}
-      <div dangerouslySetInnerHTML={{ __html: blog.content }} />
+      <div className='blog-content' dangerouslySetInnerHTML={{ __html: blog.content }} />
     </div>
   );
 };
