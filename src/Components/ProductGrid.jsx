@@ -77,39 +77,52 @@ const ProductGrid = ({ products }) => {
       isResizable={false}
     >
       {products.map((item, index) => (
-        <div key={index} className="product-card">
-          <img src={item.imgSrc} alt={item.title} className='shoppg-img' />
-          <h3>{item.title}</h3>
-          <p>{computePrice(item.price, selectedWeights[index])}</p>
-          <div className="weight-options">
-            {['250g', '500g', '1kg'].map((weight) => (
-              <button
-                key={weight}
-                className={`weight-btn ${selectedWeights[index] === weight ? 'active' : ''}`}
-                onClick={() => handleWeightClick(index, weight)}
-              >
-                {weight}
-              </button>
-            ))}
-          </div>
-          <div className="quantity-selector">
-            <button onClick={() => handleQuantityChange(index, Math.max(1, quantities[index] - 1))}>-</button>
-            <input
-              type="number"
-              value={quantities[index]}
-              min="1"
-              onChange={(e) => handleQuantityChange(index, Number(e.target.value))}
-            />
-            <button onClick={() => handleQuantityChange(index, quantities[index] + 1)}>+</button>
-          </div>
+  <div key={index} className="product-card">
+    <img src={item.imgSrc} alt={item.title} className='shoppg-img' />
+    <h3>{item.title}</h3>
+    
+    {/* Compute price based on weight only if weight options are available */}
+    <p>{(item.category !== 'Storage' && item.id !== 3 && item.id !== 5)
+          ? computePrice(item.price, selectedWeights[index]) 
+          : `${item.price}` /* If no weight, show base price */}
+    </p>
+
+    {/* Conditionally render weight options based on category and id */}
+    {(item.category !== 'Storage' && item.id !== 3 && item.id !== 5) && (
+      <div className="weight-options">
+        {['250g', '500g', '1kg'].map((weight) => (
           <button
-            className="add-to-cart-btn"
-            onClick={() => handleAddToCart(item, index)}
+            key={weight}
+            className={`weight-btn ${selectedWeights[index] === weight ? 'active' : ''}`}
+            onClick={() => handleWeightClick(index, weight)}
           >
-            Add to Cart
+            {weight}
           </button>
-        </div>
-      ))}
+        ))}
+      </div>
+    )}
+
+    <div className="quantity-selector">
+      <button onClick={() => handleQuantityChange(index, Math.max(1, quantities[index] - 1))}>-</button>
+      <input
+        type="number"
+        value={quantities[index]}
+        min="1"
+        onChange={(e) => handleQuantityChange(index, Number(e.target.value))}
+      />
+      <button onClick={() => handleQuantityChange(index, quantities[index] + 1)}>+</button>
+    </div>
+
+    <button
+      className="add-to-cart-btn"
+      onClick={() => handleAddToCart(item, index)}
+    >
+      Add to Cart
+    </button>
+  </div>
+))}
+
+
     </GridLayout>
   );
 };

@@ -99,6 +99,7 @@ function Shop() {
             <option value="Baking">Baking</option>
             <option value="Sugar">Sugar</option>
             <option value="Rice">Rice</option>
+            <option value="Storage">Storage</option>
           </select>
 
           <h3>Sort By</h3>

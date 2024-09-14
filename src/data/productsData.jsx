@@ -9,15 +9,16 @@ const products = [
     { id: 11, imgSrc: '/shop/Grains and Flour/fine atta.webp', title: 'Refined Flour', price: '$450', category: "Grains & Flour" },
     { id: 12, imgSrc: '/shop/Grains and Flour/millet_flour.webp', title: 'Millet Flour', price: '$10', category: "Grains & Flour" },
     { id: 13, imgSrc: '/shop/Grains and Flour/sabudana.webp', title: 'Sabudana', price: '$90', category: "Grains & Flour" },
-    { id: 14, imgSrc: '/shop/Grains and Flour/Oats.webp', title: 'Oats', price: '$5', category: "Grains & Flour" },
+    { id: 14, imgSrc: '/shop/Grains and Flour/Oats.webp', title: 'Oats', price: '$25', category: "Grains & Flour" },
 
 
     { id: 1, imgSrc: '/shop/Baking/baking powder.webp', title: 'Baking Powder', price: '$100', category: "Baking" },
     { id: 2, imgSrc: '/shop/Baking/cocoa powder.webp', title: 'Cocoa Powder', price: '$75', category: "Baking" },
-    { id: 3, imgSrc: '/shop/Baking/kewra essence.webp', title: 'Kewra Essence', price: '$50', category: "Baking" },
     { id: 4, imgSrc: '/shop/Baking/maida.webp', title: 'Maida', price: '$40', category: "Baking" },
-    { id: 5, imgSrc: '/shop/Baking/vanilla essence.webp', title: 'Vanilla Essence', price: '$80', category: "Baking" },
     { id: 6, imgSrc: '/shop/Baking/yeast.webp', title: 'Yeast', price: '$10', category: "Baking" },
+    { id: 5, imgSrc: '/shop/Baking/vanilla essence.webp', title: 'Vanilla Extract', price: '$5', category: "Baking" },
+    { id: 3, imgSrc: '/shop/Baking/kewra essence.webp', title: 'Kewra Extract', price: '$5', category: "Baking" },
+    
 
 
 
@@ -44,7 +45,22 @@ const products = [
     { id: 34, imgSrc: '/shop/sugar/honey.webp', title: 'Honey', price: '$98', category: "Sugar" },
     { id: 35, imgSrc: '/shop/sugar/icing sugar.webp', title: 'Icing Sugar', price: '$74', category: "Sugar" },
     { id: 36, imgSrc: '/shop/sugar/shakar.webp', title: 'Shakar', price: '$51', category: "Sugar" },
-    { id: 37, imgSrc: '/shop/sugar/sugar.webp', title: 'White Sugar', price: '$01', category: "Sugar" },
+    { id: 37, imgSrc: '/shop/sugar/sugar.webp', title: 'White Sugar', price: '$200', category: "Sugar" },
+
+
+    { id: 38, imgSrc: '/shop/storage/plastic/01.webp', title: 'Plastic Round Jar - 100ml', price: '$45', category: "Storage" },
+    { id: 39, imgSrc: '/shop/storage/plastic/02.webp', title: 'Plastic Round Jar - 200ml', price: '$65', category: "Storage" },
+    { id: 40, imgSrc: '/shop/storage/plastic/03.webp', title: 'Plastic Round Jar - 300ml', price: '$85', category: "Storage" },
+    { id: 41, imgSrc: '/shop/storage/plastic/04.webp', title: 'Plastic Round Jar - 500ml', price: '$100', category: "Storage" },
+    { id: 42, imgSrc: '/shop/storage/plastic/05.webp', title: 'Plastic Round Jar - 1 ltr', price: '$120', category: "Storage" },
+
+    { id: 43, imgSrc: '/shop/storage/glass/01.webp', title: 'Glass Mini Jar', price: '$120', category: "Storage" },
+    { id: 44, imgSrc: '/shop/storage/glass/02.webp', title: 'Glass Mason Jar - 350ml', price: '$140', category: "Storage" },
+    { id: 45, imgSrc: '/shop/storage/glass/03.webp', title: 'Glass Mason Jar - 500ml', price: '$160', category: "Storage" },
+    { id: 46, imgSrc: '/shop/storage/glass/04.webp', title: 'Glass Mason Jar - 1 ltr', price: '$220', category: "Storage" },
+
+    { id: 47, imgSrc: '/shop/storage/tote bag.png', title: 'Tote Bag', price: '$20', category: "Storage" },
+
 
 
 
