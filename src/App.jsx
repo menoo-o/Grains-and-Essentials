@@ -5,7 +5,7 @@ import { CartProvider } from './contexts/CartContext';
 import { Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
 import Shop from './pages/Shop';
-import SingleDisplay from './pages/SingleDisplay'
+import SingleProductDisplay from './Components/SingleProductDisplay';
 
 import About from './pages/About';
 import Blogs from './pages/Blogs';
@@ -31,7 +31,7 @@ function App() {
         <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/shop" element={<Shop />} />
-            <Route path="/single" element={<SingleDisplay />} />
+            <Route path="/products/:slug" element={<SingleProductDisplay />} />
 
 
             <Route path="/about" element={<About />} />

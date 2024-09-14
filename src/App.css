@@ -1186,6 +1186,146 @@
   .ingredient-link{
     color: red;
   }
+
+  /* Single pg product display */
+  .single-product-pg-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .single-product-pg-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #f9f9f9;
+  }
+  
+  .single-product-img {
+    width: 100%;
+    max-width: 500px;
+    margin-bottom: 20px;
+  }
+  
+  .single-product-img img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .single-product-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 600px;
+  }
+  
+  .single-product-info h2 {
+    font-size: 2em;
+    margin: 10px 0;
+    color: #333;
+  }
+  
+  .single-product-info h4 {
+    font-size: 1.5em;
+    color: #666;
+    margin-bottom: 20px;
+  }
+  
+  .single-product-weight-cart {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  
+  .single-product-weight-cart select {
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-bottom: 10px;
+  }
+  
+  .quantity-selector {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .quantity-selector button {
+    padding: 10px 15px;
+    font-size: 1.2em;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: #f5f5f5;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .quantity-selector button:hover {
+    background-color: #e0e0e0;
+  }
+  
+  .quantity-selector input {
+    width: 60px;
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1em;
+    margin: 0 10px;
+  }
+  
+  .add-to-cart-btn {
+    padding: 10px 20px;
+    font-size: 1.2em;
+    border: none;
+    border-radius: 4px;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .add-to-cart-btn:hover {
+    background-color: #0056b3;
+  }
+  
+  .product-description,
+  .product-ingredients {
+    width: 100%;
+    max-width: 600px;
+    margin: 20px 0;
+  }
+  
+  .product-description h3,
+  .product-ingredients h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #333;
+  }
+  
+  .product-description p,
+  .product-ingredients ul {
+    font-size: 1em;
+    color: #666;
+  }
+  
+  .product-ingredients ul {
+    list-style-type: disc;
+    padding-left: 20px;
+  }
+  
+  .product-ingredients li {
+    margin-bottom: 5px;
+  }
   
   
   
