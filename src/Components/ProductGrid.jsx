@@ -80,7 +80,7 @@ const ProductGrid = ({ products }) => {
     >
       {products.map((item, index) => (
         <div key={item.id} className='product-card'> {/* Use item.id as the key */}
-           <Link to={`/products/${slugify(item.title, { lower: true })}`}>
+           <Link to={`/products/${item.slug}`}>
             <img src={item.imgSrc} alt={item.title} className='shoppg-img' />
             <h3>{item.title}</h3>
           </Link>

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useParams } from 'react-router-dom';
 import slugify from 'slugify';
 import products from '../data/productsData';
@@ -6,6 +6,10 @@ import products from '../data/productsData';
 const SingleProductDisplay = () => {
   const { slug } = useParams(); // Get the slug from the URL
   const product = products.find((item) => slugify(item.title, { lower: true }) === slug); // Find product by slug
+
+  // State for expanding Nutrition and Shelf Life sections
+  const [showNutrition, setShowNutrition] = useState(false);
+  const [showShelfLife, setShowShelfLife] = useState(false);
 
   if (!product) {
     return <h2>Product not found</h2>;
@@ -54,7 +58,31 @@ const SingleProductDisplay = () => {
           </ul>
         </div>
 
-        {/* Expandable sections for Nutrition and Shelf Life can be added here */}
+        {/* Expandable Nutrition Section */}
+        <div className="product-nutrition">
+          <h3 onClick={() => setShowNutrition(!showNutrition)} style={{ cursor: 'pointer' }}>
+            Nutritional Value {showNutrition ? '-' : '+'}
+          </h3>
+          {showNutrition && (
+            <ul>
+              {Object.entries(product.nutritionalValue).map(([key, value], index) => (
+                <li key={index}>
+                  <strong>{key}: </strong>{value}
+                </li>
+              ))}
+            </ul>
+          )}
+        </div>
+
+        {/* Expandable Shelf Life Section */}
+        <div className="product-shelf-life">
+          <h3 onClick={() => setShowShelfLife(!showShelfLife)} style={{ cursor: 'pointer' }}>
+            Shelf Life {showShelfLife ? '-' : '+'}
+          </h3>
+          {showShelfLife && (
+            <p>{product.shelfLife}</p>
+          )}
+        </div>
       </div>
     </div>
   );
