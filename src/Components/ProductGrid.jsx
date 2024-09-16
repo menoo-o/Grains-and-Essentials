@@ -48,8 +48,13 @@ const ProductGrid = ({ products }) => {
     const newWeights = [...selectedWeights];
     newWeights[index] = weight;
     setSelectedWeights(newWeights);
+  
+    // Reset the quantity for the specific product when weight changes
+    const newQuantities = [...quantities];
+    newQuantities[index] = 1; // Reset the quantity to 1
+    setQuantities(newQuantities);
   };
-
+  
   const handleQuantityChange = (index, quantity) => {
     const newQuantities = [...quantities];
     newQuantities[index] = quantity;
