@@ -1,16 +1,17 @@
 import React, { useState } from 'react';
 import { useParams } from 'react-router-dom';
 import slugify from 'slugify';
-import { useCart } from '../contexts/CartContext'; // Import the useCart hook
+import { useCart } from '../contexts/CartContext';
 import products from '../data/productsData';
 import CartCard from '../Components/CartAlert';
+import Accordion from '../Components/Accordion'; // Import the Accordion component
 import '../App.css'; // Assuming CSS will be written in App.css or respective stylesheets
 
 const Singledisplay = () => {
-  const { slug } = useParams(); // Get the slug from URL
+  const { slug } = useParams();
   const product = products.find((item) => slugify(item.title, { lower: true }) === slug);
 
-  const { addItem, showCartAlert, cartItems } = useCart(); // Get addItem and showCartAlert from context
+  const { addItem, showCartAlert, cartItems } = useCart();
 
   const [selectedWeight, setSelectedWeight] = useState('250g');
   const [quantity, setQuantity] = useState(1);
@@ -21,7 +22,7 @@ const Singledisplay = () => {
 
   const handleWeightChange = (weight) => {
     setSelectedWeight(weight);
-    setQuantity(1); // Reset the quantity counter to 1 when the weight changes
+    setQuantity(1); // Reset quantity when weight changes
   };
 
   const handleQuantityChange = (change) => {
@@ -29,10 +30,9 @@ const Singledisplay = () => {
   };
 
   const handleAddToCart = () => {
-    addItem(product, selectedWeight, quantity); // Add the product to cart
+    addItem(product, selectedWeight, quantity);
   };
 
-  // Compute the price based on the selected weight
   const computePrice = (basePrice, weight) => {
     const numericPrice = parseFloat(basePrice.replace(/[^0-9.]/g, ''));
     let multiplier = 1;
@@ -51,8 +51,9 @@ const Singledisplay = () => {
         <h2>{product.title}</h2>
         <h4>{computePrice(product.price, selectedWeight)}</h4>
 
+        <p>{product.description}</p>
+
         <div className="weight-options">
-          {/* Conditionally render weight options */}
           {(product.category !== 'storage' && product.id !== 3 && product.id !== 5) && (
             ['250g', '500g', '1kg'].map((weight) => (
               <button
@@ -75,9 +76,34 @@ const Singledisplay = () => {
         <button className="single-add-to-cart-btn" onClick={handleAddToCart}>
           Add to Cart
         </button>
+
+        {/* Accordion Section */}
+        <div className="product-additional-info">
+          <Accordion title="Ingredients">
+            <ul>
+              {product.ingredients.map((ingredient, index) => (
+                <li key={index}>{ingredient}</li>
+              ))}
+            </ul>
+          </Accordion>
+
+          <Accordion title="Nutritional Information">
+            <ul>
+              <li>Serving Size: {product.nutritionalValue.servingSize}</li>
+              <li>Calories: {product.nutritionalValue.calories}</li>
+              <li>Protein: {product.nutritionalValue.protein}</li>
+              <li>Fat: {product.nutritionalValue.fat}</li>
+              <li>Carbohydrates: {product.nutritionalValue.carbohydrates}</li>
+              <li>Fiber: {product.nutritionalValue.fiber}</li>
+            </ul>
+          </Accordion>
+
+          <Accordion title="Shelf Life">
+            <p>{product.shelfLife}</p>
+          </Accordion>
+        </div>
       </div>
 
-      {/* Conditionally render cart alert based on showCartAlert */}
       {showCartAlert && cartItems.length > 0 && (
         <div className="cart-alert">
           <CartCard item={cartItems[cartItems.length - 1]} /> {/* Show the last added item */}
