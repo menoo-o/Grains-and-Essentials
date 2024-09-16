@@ -1,3 +1,27 @@
+
+//   {
+//       id: 8,
+//       title: 'Discover the Natural Sweetener: Jaggery',
+//       imageUrl: '/Zero Waste Blogs/7.1.jpeg',
+//       path: '/blog-eight',
+//   },
+//   {
+//       id: 9,
+//       title: 'Honey and Cinnamon: A Big Myth or a Powerful Remedy?',
+//       imageUrl: '/Zero Waste Blogs/8.webp',
+//       path: '/blog-nine',
+//   },
+//   {
+//       id: 10,
+//       title: 'Atta Vs. Maida, Oats, Besan, and Millet',
+//       imageUrl: '/Zero Waste Blogs/10.jpeg',
+//       path: '/blog-ten',
+//   },
+// ];
+
+// export default blogsInfo;
+
+
 // data/Zero Waste Blogs/BlogsInfo.js
 
 const blogsInfo = [

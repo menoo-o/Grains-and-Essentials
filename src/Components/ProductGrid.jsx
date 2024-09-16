@@ -2,9 +2,9 @@ import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import GridLayout from 'react-grid-layout';
 import { useCart } from '../contexts/CartContext';
-import '../App.css';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import slugify from 'slugify';
+import '../App.css';
 
 const ProductGrid = ({ products }) => {
   const { addItem } = useCart(); // Get addItem from context
@@ -79,52 +79,57 @@ const ProductGrid = ({ products }) => {
       isResizable={false}
     >
       {products.map((item, index) => (
-        <div key={item.id} className='product-card'> {/* Use item.id as the key */}
-           <Link to={`/products/${item.slug}`}>
-            <img src={item.imgSrc} alt={item.title} className='shoppg-img' />
-            <h3>{item.title}</h3>
-          </Link>
+        
 
-          {/* Compute price based on weight only if weight options are available */}
-          <p>{(item.category !== 'Storage' && item.id !== 3 && item.id !== 5)
-                ? computePrice(item.price, selectedWeights[index]) 
-                : `${item.price}` /* If no weight, show base price */}
-          </p>
+        
+  <div key={index} className="product-card">
+    <NavLink to={`/singledisplay/${slugify(item.title, { lower: true })}`}>
+    <img src={item.imgSrc} alt={item.title} className='shoppg-img' />
+    </NavLink>
+    <h3 className='product-card-title-heading'>{item.title}</h3>
+    
+    {/* Compute price based on weight only if weight options are available */}
+    <p>{(item.category !== 'storage' && item.id !== 3 && item.id !== 5)
+          ? computePrice(item.price, selectedWeights[index]) 
+          : `${item.price}` /* If no weight, show base price */}
+    </p>
 
-          {/* Conditionally render weight options based on category and id */}
-          {(item.category !== 'Storage' && item.id !== 3 && item.id !== 5) && (
-            <div className="weight-options">
-              {['250g', '500g', '1kg'].map((weight) => (
-                <button
-                  key={weight}
-                  className={`weight-btn ${selectedWeights[index] === weight ? 'active' : ''}`}
-                  onClick={() => handleWeightClick(index, weight)}
-                >
-                  {weight}
-                </button>
-              ))}
-            </div>
-          )}
-
-          <div className="quantity-selector">
-            <button onClick={() => handleQuantityChange(index, Math.max(1, quantities[index] - 1))}>-</button>
-            <input
-              type="number"
-              value={quantities[index]}
-              min="1"
-              onChange={(e) => handleQuantityChange(index, Number(e.target.value))}
-            />
-            <button onClick={() => handleQuantityChange(index, quantities[index] + 1)}>+</button>
-          </div>
-
+    {/* Conditionally render weight options based on category and id */}
+    {(item.category !== 'storage' && item.id !== 3 && item.id !== 5) && (
+      <div className="weight-options">
+        {['250g', '500g', '1kg'].map((weight) => (
           <button
-            className="add-to-cart-btn"
-            onClick={() => handleAddToCart(item, index)}
+            key={weight}
+            className={`weight-btn ${selectedWeights[index] === weight ? 'active' : ''}`}
+            onClick={() => handleWeightClick(index, weight)}
           >
-            Add to Cart
+            {weight}
           </button>
-        </div>
-      ))}
+        ))}
+      </div>
+    )}
+
+    <div className="quantity-selector">
+      <button onClick={() => handleQuantityChange(index, Math.max(1, quantities[index] - 1))}>-</button>
+      <input
+        type="number"
+        value={quantities[index]}
+        min="1"
+        onChange={(e) => handleQuantityChange(index, Number(e.target.value))}
+      />
+      <button onClick={() => handleQuantityChange(index, quantities[index] + 1)}>+</button>
+    </div>
+
+    <button
+      className="add-to-cart-btn"
+      onClick={() => handleAddToCart(item, index)}
+    >
+      Add to Cart
+    </button>
+   
+  </div>
+))}
+
     </GridLayout>
   );
 };
@@ -132,7 +137,6 @@ const ProductGrid = ({ products }) => {
 ProductGrid.propTypes = {
   products: PropTypes.arrayOf(
     PropTypes.shape({
-      id: PropTypes.number.isRequired, // Ensure id is required in PropTypes
       imgSrc: PropTypes.string.isRequired,
       title: PropTypes.string.isRequired,
       price: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,

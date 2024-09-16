@@ -5,7 +5,7 @@ import { CartProvider } from './contexts/CartContext';
 import { Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
 import Shop from './pages/Shop';
-import SingleProductDisplay from './Components/SingleProductDisplay';
+import Singledisplay from './pages/singledisplay';
 
 import About from './pages/About';
 import Blogs from './pages/Blogs';
@@ -31,8 +31,9 @@ function App() {
         <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/shop" element={<Shop />} />
-            <Route path="/products/:slug" element={<SingleProductDisplay />} />
-
+            {/* Shop displays all products, when clicked on a product, this will direct to the page below. */}
+            <Route path="/singledisplay/:slug" element={<Singledisplay />} />
+            
 
             <Route path="/about" element={<About />} />
             <Route path="/blogs" element={<Blogs />} />
