@@ -4,8 +4,14 @@ import { NavLink } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import DropNav from './DropNav';
 import { faUser, faCartShopping, faMagnifyingGlass,  faCheck, faLeaf, faTruckFast, faCube } from '@fortawesome/free-solid-svg-icons';
+import { useCart } from '../contexts/CartContext'; // Import your Cart context
 
 function Navbar(){
+     const { cartItems } = useCart(); // Access cartItems from context
+    // Calculate total number of items in the cart
+    const totalItemsInCart = cartItems.reduce((total, item) => total + item.quantity, 0);
+
+
   const routes = [
     { name: 'Home', path: '/' },
     { name: 'Shop', path: '/shop' },
@@ -44,9 +50,15 @@ return (
 
           <div className="search">
                <a href="#"> <FontAwesomeIcon icon={faMagnifyingGlass}  />  </a>
-               <NavLink to="/cart">
-                 <FontAwesomeIcon icon={faCartShopping} />
-                </NavLink>
+               <NavLink to="/cart" className="cart-link">
+               {/* the cart icon in navbar imported from fontawesome */}
+               <FontAwesomeIcon icon={faCartShopping} />
+
+                  {/* Badge showing the number of items in the cart */}
+                  {totalItemsInCart > 0 && (
+                    <span className="cart-badge">{totalItemsInCart}</span>
+                  )}
+</NavLink>
                <a href="#"> <FontAwesomeIcon icon={faUser} className='fa-user'  />  </a>
           </div>
 

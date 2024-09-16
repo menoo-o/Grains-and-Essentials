@@ -89,6 +89,26 @@
 .main__container{
   display: none;
 }
+
+/* Navbar CSS */
+.cart-link {
+  position: relative;
+  display: inline-block;
+}
+
+/* Badge on the cart icon */
+.cart-badge {
+  position: absolute;
+  top: -12px; /* Adjust as needed */
+  right: -15px; /* Adjust as needed */
+  background-color: #e29828;
+  color: rgb(56, 35, 29);
+  padding: 3px 7px;
+  border-radius: 50%;
+  font-size: 0.6em;
+}
+
+
   /* navbar ends */
 
 
@@ -1324,9 +1344,11 @@
 }
 
 .accordion-item {
+  width: 450px;
   margin: 10px 0;
   border: 1px solid #ddd;
   border-radius: 4px;
+  
 }
 
 .accordion-title {
@@ -1336,14 +1358,14 @@
   text-align: left;
   border: none;
   cursor: pointer;
-  font-size: 16px;
+  font-size: 1.2em !important;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
 .accordion-title:hover {
-  background-color: #e4e4e4;
+  background-color: #ecb997 !important;
 }
 
 .accordion-icon {
@@ -1398,7 +1420,17 @@
   margin: 0;
 }
 
+.accordion-content {
+  max-height: 0; /* Initially collapsed */
+  overflow: hidden;
+  transition: max-height 0.5s ease; /* Smooth opening/closing */
+  padding: 0; /* Remove padding initially */
+}
 
+.accordion-content.active {
+  max-height: 500px; /* Adjust the height as needed */
+  padding: 30px !important; /* Add padding when content is visible */
+}
   
 
 
