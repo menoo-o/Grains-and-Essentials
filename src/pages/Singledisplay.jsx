@@ -54,7 +54,7 @@ const Singledisplay = () => {
        
 
         <div className="weight-options">
-          {(product.category !== 'storage' && product.id !== 3 && product.id !== 5) && (
+          {(product.category !== 'Storage' && product.id !== 3 && product.id !== 5) && (
             ['250g', '500g', '1kg'].map((weight) => (
               <button
                 key={weight}
@@ -84,11 +84,15 @@ const Singledisplay = () => {
   {product.category === 'Storage' ? (
     <>
       <Accordion title="Material">
-        <ul>
-          {product.material.map((material, index) => (
-            <li key={index}>{material}</li>
-          ))}
-        </ul>
+        {Array.isArray(product.material) ? (
+          <ul>
+            {product.material.map((material, index) => (
+              <li key={index}>{material}</li>
+            ))}
+          </ul>
+        ) : (
+          <p>{product.material}</p>  
+        )}
       </Accordion>
 
       <Accordion title="Care Instructions">
@@ -122,6 +126,7 @@ const Singledisplay = () => {
     </>
   )}
 </div>
+
  
 
 

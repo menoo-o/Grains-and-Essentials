@@ -701,7 +701,7 @@ const products = [
     title: 'Plastic Round Jar - 100ml',
     price: '$45',
     category: 'Storage',
-    description: 'Food-grade, BPA-free plastic jar for storing lentils, rice, spices, or other small pantry items.',
+    description: 'Food-grade, plastic jar for storing lentils, rice, spices, or other small pantry items.',
     capacity: '100ml',
     material: 'BPA-free plastic',
     careInstructions: 'Hand wash only. Not suitable for microwave use.'
@@ -713,7 +713,7 @@ const products = [
     title: 'Plastic Round Jar - 200ml',
     price: '$65',
     category: 'Storage',
-    description: 'Food-grade, BPA-free plastic jar for storing lentils, rice, or small grains.',
+    description: 'Food-grade, plastic jar for storing lentils, rice, or small grains.',
     capacity: '200ml',
     material: 'BPA-free plastic',
     careInstructions: 'Dishwasher safe (top rack). Avoid high heat.'
@@ -737,7 +737,7 @@ const products = [
     title: 'Plastic Round Jar - 500ml',
     price: '$100',
     category: 'Storage',
-    description: 'Large, BPA-free plastic jar perfect for storing lentils, rice, grains, and other kitchen staples.',
+    description: 'Large, plastic jar perfect for storing lentils, rice, grains, and other kitchen staples.',
     capacity: '500ml',
     material: 'BPA-free plastic',
     careInstructions: 'Dishwasher safe. Keep away from direct heat.'
@@ -805,34 +805,16 @@ const products = [
   
   {
     id: 47,
-    imgSrc: '/shop/storage/tote_bag.png',
+    imgSrc: '/shop/storage/tote bag.png',
     title: 'Tote Bag',
     price: '$20',
     category: 'Storage',
     description: 'Reusable, sturdy tote bag for carrying groceries, grains, lentils, or other items.',
-    material: ['Cotton', 'Canvas'],
+    material: 'Cotton',
     careInstructions: 'Machine wash cold. Air dry to prevent shrinkage.'
   }
   
   
-  
-  
-    // { id: 38, imgSrc: '/shop/storage/plastic/01.webp', title: 'Plastic Round Jar - 100ml', price: '$45', category: "Storage" },
-    // { id: 39, imgSrc: '/shop/storage/plastic/02.webp', title: 'Plastic Round Jar - 200ml', price: '$65', category: "Storage" },
-    // { id: 40, imgSrc: '/shop/storage/plastic/03.webp', title: 'Plastic Round Jar - 300ml', price: '$85', category: "Storage" },
-    // { id: 41, imgSrc: '/shop/storage/plastic/04.webp', title: 'Plastic Round Jar - 500ml', price: '$100', category: "Storage" },
-    // { id: 42, imgSrc: '/shop/storage/plastic/05.webp', title: 'Plastic Round Jar - 1 ltr', price: '$120', category: "Storage" },
-
-    // { id: 43, imgSrc: '/shop/storage/glass/01.webp', title: 'Glass Mini Jar', price: '$120', category: "Storage" },
-    // { id: 44, imgSrc: '/shop/storage/glass/02.webp', title: 'Glass Mason Jar - 350ml', price: '$140', category: "Storage" },
-    // { id: 45, imgSrc: '/shop/storage/glass/03.webp', title: 'Glass Mason Jar - 500ml', price: '$160', category: "Storage" },
-    // { id: 46, imgSrc: '/shop/storage/glass/04.webp', title: 'Glass Mason Jar - 1 ltr', price: '$220', category: "Storage" },
-
-    // { id: 47, imgSrc: '/shop/storage/tote bag.png', title: 'Tote Bag', price: '$20', category: "Storage" },
-
-
-
-
    
 
 
