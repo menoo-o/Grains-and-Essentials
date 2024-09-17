@@ -51,7 +51,7 @@ const Singledisplay = () => {
         <h2>{product.title}</h2>
         <h4>{computePrice(product.price, selectedWeight)}</h4>
 
-        <p>{product.description}</p>
+       
 
         <div className="weight-options">
           {(product.category !== 'storage' && product.id !== 3 && product.id !== 5) && (
@@ -77,31 +77,54 @@ const Singledisplay = () => {
           Add to Cart
         </button>
 
+        <p>{product.description}</p>
+
         {/* Accordion Section */}
         <div className="product-additional-info">
-          <Accordion title="Ingredients">
-            <ul>
-              {product.ingredients.map((ingredient, index) => (
-                <li key={index}>{ingredient}</li>
-              ))}
-            </ul>
-          </Accordion>
+  {product.category === 'Storage' ? (
+    <>
+      <Accordion title="Material">
+        <ul>
+          {product.material.map((material, index) => (
+            <li key={index}>{material}</li>
+          ))}
+        </ul>
+      </Accordion>
 
-          <Accordion title="Nutritional Information">
-            <ul>
-              <li>Serving Size: {product.nutritionalValue.servingSize}</li>
-              <li>Calories: {product.nutritionalValue.calories}</li>
-              <li>Protein: {product.nutritionalValue.protein}</li>
-              <li>Fat: {product.nutritionalValue.fat}</li>
-              <li>Carbohydrates: {product.nutritionalValue.carbohydrates}</li>
-              <li>Fiber: {product.nutritionalValue.fiber}</li>
-            </ul>
-          </Accordion>
+      <Accordion title="Care Instructions">
+        <p>{product.careInstructions}</p>
+      </Accordion>
+    </>
+  ) : (
+    <>
+      <Accordion title="Ingredients">
+        <ul>
+          {product.ingredients.map((ingredient, index) => (
+            <li key={index}>{ingredient}</li>
+          ))}
+        </ul>
+      </Accordion>
 
-          <Accordion title="Shelf Life">
-            <p>{product.shelfLife}</p>
-          </Accordion>
-        </div>
+      <Accordion title="Nutritional Information">
+        <ul>
+          <li>Serving Size: {product.nutritionalValue.servingSize}</li>
+          <li>Calories: {product.nutritionalValue.calories}</li>
+          <li>Protein: {product.nutritionalValue.protein}</li>
+          <li>Fat: {product.nutritionalValue.fat}</li>
+          <li>Carbohydrates: {product.nutritionalValue.carbohydrates}</li>
+          <li>Fiber: {product.nutritionalValue.fiber}</li>
+        </ul>
+      </Accordion>
+
+      <Accordion title="Shelf Life">
+        <p>{product.shelfLife}</p>
+      </Accordion>
+    </>
+  )}
+</div>
+ 
+
+
       </div>
 
       {showCartAlert && cartItems.length > 0 && (

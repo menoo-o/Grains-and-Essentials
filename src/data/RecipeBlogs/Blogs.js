@@ -91,7 +91,7 @@ const recipes = [
         imageUrl: '/recipeblogs/kebab.webp',
         intro: "Transform the humble lentil into a culinary masterpiece with our Masoor Lentils Special Kebabs! These mouth-watering morsels are a testament to the magic that happens when ordinary ingredients meet extraordinary flavour and creativity. Packed with protein, fibre, and nutrients, these kebabs are not only a treat for your taste buds but also a boon for your health. Get ready to delight your senses and nourish your body with this sensational lentil recipe!",
         ingredients: [
-          { text: "1 cup ", link: { label: "Masoor Lentils", url: "/shop" } },
+          { text: "1 cup ", link: { label: "Masoor Lentils", url: "/singledisplay/red-lentils" } },
           { text: "1 cup yogurt" },
           { text: "2 tbsp olive oil" },
           { text: "1 tsp Cumin Seeds" },

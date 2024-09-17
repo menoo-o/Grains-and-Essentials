@@ -94,13 +94,13 @@ const ProductGrid = ({ products }) => {
     <h3 className='product-card-title-heading'>{item.title}</h3>
     
     {/* Compute price based on weight only if weight options are available */}
-    <p>{(item.category !== 'storage' && item.id !== 3 && item.id !== 5)
+    <p>{(item.category !== 'Storage' && item.id !== 3 && item.id !== 5)
           ? computePrice(item.price, selectedWeights[index]) 
           : `${item.price}` /* If no weight, show base price */}
     </p>
 
     {/* Conditionally render weight options based on category and id */}
-    {(item.category !== 'storage' && item.id !== 3 && item.id !== 5) && (
+    {(item.category !== 'Storage' && item.id !== 3 && item.id !== 5) && (
       <div className="weight-options">
         {['250g', '500g', '1kg'].map((weight) => (
           <button
