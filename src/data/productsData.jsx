@@ -582,7 +582,7 @@ const products = [
     imgSrc: '/shop/sugar/brown-sugar.webp',
     title: 'Brown Sugar',
     price: '$58',
-    category: 'Sugar',
+    category: 'Honey & Sweetners',
     description: 'Add a hint of caramel magic to your baked goods! Our Brown Sugar is unrefined, soft, and perfect for cookies, cakes, and desserts.',
     ingredients: ['Sugar Cane', 'Molasses'],
     nutritionalValue: {
@@ -602,7 +602,7 @@ const products = [
     imgSrc: '/shop/sugar/gurr.webp',
     title: 'Gurr',
     price: '$1000',
-    category: 'Sugar',
+    category: 'Honey & Sweetners',
     description: 'Experience the traditional taste of Pakistan! Our Gurr is unrefined, crude sugar made from pure sugarcane juice, perfect for cooking, medicine, and cultural rituals.',
     ingredients: ['100% Organic Sugarcane Juice'],
     nutritionalValue: {
@@ -622,7 +622,7 @@ const products = [
     imgSrc: '/shop/sugar/honey.webp',
     title: 'Honey',
     price: '$98',
-    category: 'Sugar',
+    category: 'Honey & Sweetners',
     description: "Sweeten your life with nature's nectar! Our pure Honey is packed with antibacterial properties, perfect for cooking, baking, and wellness.",
     ingredients: ['100% Organic Honey'],
     nutritionalValue: {
@@ -641,7 +641,7 @@ const products = [
     imgSrc: '/shop/sugar/icing sugar.webp',
     title: 'Icing Sugar',
     price: '$74',
-    category: 'Sugar',
+    category: 'Honey & Sweetners',
     description: 'Decorate your desserts like a pro! Our finely powdered Icing Sugar is perfect for cakes, pastries, and sweet treats.',
     ingredients: ['White Refined Sugar'],
     nutritionalValue: {
@@ -661,7 +661,7 @@ const products = [
     imgSrc: '/shop/sugar/shakar.webp',
     title: 'Shakar',
     price: '$51',
-    category: 'Sugar',
+    category: 'Honey & Sweetners',
     description: 'Add a touch of tradition to your cooking! Our unrefined Shakar is crystalline sugar, commonly used in Indian cooking and medicine.',
     ingredients: ['Organic Sugarcane Juice'],
     nutritionalValue: {
@@ -680,7 +680,7 @@ const products = [
     imgSrc: '/shop/sugar/sugar.webp',
     title: 'White Sugar',
     price: '$200',
-    category: 'Sugar',
+    category: 'Honey & Sweetners',
     description: 'Sweeten your daily life with our pure White Sugar! Refined, granulated, and perfect for cooking, baking, and everyday use.',
     ingredients: ['Sugar Cane', 'Sugar Beets'],
     nutritionalValue: {

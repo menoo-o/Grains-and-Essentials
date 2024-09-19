@@ -17,6 +17,15 @@ import Cart from './pages/Cart';
 import Navbar from './Components/Navbar';
 import RecipeDetail from './Components/RecipeDetail ';
 import Footer from './Components/Footer';
+
+// import Login from './pages/Login';
+// import Signup from './pages/Signup';
+// import PrivateRoute from './components/PrivateRoute'; // Your private route component
+
+
+
+
+
 import './App.css';
 import './index.css';
 
@@ -43,6 +52,12 @@ function App() {
             <Route path="/recipes/:id/:slug" element={<RecipeDetail />} /> {/* Dynamic recipe route */}
             <Route path="/contact" element={<Contact />} />
             <Route path="/cart" element={<Cart />} />
+
+            {/* <Route path="/login" element={<Login />} />
+            <Route path="/signup" element={<Signup />} />
+            <Route path="/dashboard" element={<PrivateRoute component={Dashboard} />} /> */}
+
+
         </Routes>
         <Footer />
       </div>

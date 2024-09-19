@@ -1,8 +1,9 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import ProductGrid from '../Components/ProductGrid';
 import Header from '../Components/Header';
 import CartCard from '../Components/CartAlert'; // Import CartCard component
 import { useNavigate, useLocation } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import { useCart } from '../contexts/CartContext'; // Import useCart hook to access cart context
 import products from '../data/productsData';
 import '../App.css';
@@ -73,12 +74,17 @@ function Shop() {
     setCurrentPage(pageNum);
   };
 
+  const headingText = filter !== 'All Products' ? `${filter}` : 'All Products';
+
+
+ 
+
   return (
     <>
       <div className='shoppg-heading'>
         <Header
-          heading="All Products"
-          paragraph="Fill up your pantry stocks here"
+          heading={headingText}
+          paragraph={filter !== 'All Products' ? `Explore our ${filter} products.` : 'Fill up your pantry stocks here'}
         />
       </div>
 

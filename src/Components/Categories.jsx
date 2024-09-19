@@ -39,7 +39,7 @@ const Categories = () => {
           </NavLink>
 
           {/* Honey & Sweeteners */}
-          <NavLink to="/shop?category=Sugar" className="image-container sugar">
+          <NavLink to="/shop?category=Honey%20%26%20Sweetners" className="image-container sugar">
             <img src="/categories/sugar.jpeg" alt="sugar" width="200" height="200" />
             <div>
               <p>Honey & Sweeteners</p>

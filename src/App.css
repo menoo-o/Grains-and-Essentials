@@ -12,8 +12,8 @@
 
 
   nav {
-    background-color: #ce6301;
-    /* background-color: #dc661f; */
+    /* background-color: #ce6301; */
+    background-color: #dc661f;
 
     border-bottom: 1px solid #ddd;
     height: 125px;
@@ -33,7 +33,7 @@
   .logo img {
     margin: 0 ;
     padding: 0 ;
-    width: 150px;
+    width: 140px;
     height: 122px;
     
   }
@@ -307,7 +307,33 @@
   margin: 10px 0;
 }
 
-.weight-options button {
+
+.price-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px; /* adjust spacing as needed */
+}
+
+.old-price, .new-price {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.price-slash {
+  text-decoration: line-through;
+  color: #999; /* or any other color you prefer for the old price */
+  font-size: 16px; /* adjust font size as needed */
+}
+
+.new-price {
+  font-size: 18px; /* adjust font size as needed */
+  font-weight: bold;
+  color: #dc661f; /* or any other color you prefer for the new price */
+  margin-left: 10px; /* adjust spacing as needed */
+}
+
+
+ .weight-options button {
   background-color: #fff;
   border: 1px solid #f08c65;
   padding: 5px 10px;
@@ -331,11 +357,10 @@
   border-radius: 4px;
   color: white;
   font-size: 1.4em; /* Adjust as necessary */
-  background-color: #ffcca9;
-  font-family: inherit;
-}
-
-.quantity-selector button:hover{
+  /* background-color: #ffcca9;
+  font-family: inherit; */
+ } 
+ .quantity-selector button:hover{
   background-color: #f7b78c;
 }
 
@@ -348,12 +373,12 @@
   margin: 0 5px;
   font-family: inherit;
   font-size: 0.9rem; /* Adjust as necessary */
-  appearance: none; /* Remove any default arrows/buttons */
-      -moz-appearance: textfield; /* Remove spin buttons in Firefox */
-}
+  /* appearance: none; /* Remove any default arrows/buttons */
+      /* -moz-appearance: textfield; /* Remove spin buttons in Firefox */
+ }
 
 .add-to-cart-btn {
-  display: inline-block;
+  display: block;
   background-color: #ffa061;
   color: white;
   border: none;
@@ -366,7 +391,73 @@
 }
 
 .add-to-cart-btn:hover {
-  background-color: #ff7b2e;
+  background-color: #d46727;
+} 
+
+.new-arrival-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin: 20px;
+  width: 380px; /* adjust width as needed */
+}
+
+.new-arrival-item img {
+  width: 100%;
+  height: 270px; /* adjust height as needed */
+  object-fit: cover;
+  border-radius: 10px 10px 0 0;
+}
+
+.new-arrival-item h3 {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 10px 0;
+  text-align: center;
+  color: rgb(112, 54, 0);
+}
+
+.price-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.old-price {
+  margin-right: 10px;
+}
+
+.price-slash {
+  text-decoration: line-through;
+  color: #ccc;
+  font-size: 16px;
+}
+
+.new-price {
+  font-size: 18px;
+  padding-left: 5px;
+  font-weight: bold;
+  color: #FFA07A !important; /* orange color */
+}
+
+.add-to-cart-btn {
+  background-color: #FF8C00; /* vibrant orange color */
+  color: #fff;
+  padding: 8px 80px;
+  border: none;
+  font-family: inherit;
+  font-size: 1em;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.add-to-cart-btn:hover {
+  background-color: #FF6F00; /* darker orange on hover */
 }
 
 /* recipie section */
@@ -423,7 +514,8 @@
 
 
 .footer-container {
-  background-color: #ce6301;
+  /* background-color: #ce6301; */
+  background-color: #dc661f;
   color: #fff;
   padding: 40px 20px;
 }

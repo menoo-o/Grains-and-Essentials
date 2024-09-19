@@ -12,11 +12,13 @@ const SaleItems = ({ quantities, onQuantityChange }) => {
         <h1>SALE ITEMS</h1>
         <Button />
       </div>
+
       <CarouselComponent 
         items={saleData} 
         quantities={quantities} 
         onQuantityChange={onQuantityChange} 
       />
+      
     </section>
   );
 };
