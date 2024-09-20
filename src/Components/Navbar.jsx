@@ -31,8 +31,10 @@ return (
         </div>
 
           <div className="logo">
-              {/* <img src="/logo.jpg" alt="logo" /> */}
-              <img src="/logo 1.2.png" alt="logo" />
+             <NavLink to='/'> 
+             <img src="/logo 1.2.png" alt="logo" />
+             </NavLink>
+              
           </div>
 
           <div className="nav-links">
@@ -58,8 +60,11 @@ return (
                   {totalItemsInCart > 0 && (
                     <span className="cart-badge">{totalItemsInCart}</span>
                   )}
-</NavLink>
-               <a href="#"> <FontAwesomeIcon icon={faUser} className='fa-user'  />  </a>
+                </NavLink>
+                <NavLink to='login'>
+                 <FontAwesomeIcon icon={faUser} className='fa-user'  /> 
+                </NavLink>
+               
           </div>
 
          

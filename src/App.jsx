@@ -10,6 +10,7 @@ import Singledisplay from './pages/Singledisplay'
 import About from './pages/About';
 import Blogs from './pages/Blogs';
 import BlogPost from './data/Zero Waste Blogs/BlogPost';  // BlogPost component
+import CombinedForm from './pages/Login';
 
 import Recipes from './pages/Recipes';
 import Contact from './pages/Contact';
@@ -17,6 +18,7 @@ import Cart from './pages/Cart';
 import Navbar from './Components/Navbar';
 import RecipeDetail from './Components/RecipeDetail ';
 import Footer from './Components/Footer';
+
 
 // import Login from './pages/Login';
 // import Signup from './pages/Signup';
@@ -52,6 +54,8 @@ function App() {
             <Route path="/recipes/:id/:slug" element={<RecipeDetail />} /> {/* Dynamic recipe route */}
             <Route path="/contact" element={<Contact />} />
             <Route path="/cart" element={<Cart />} />
+            <Route path="/login" element={<CombinedForm />} />
+
 
             {/* <Route path="/login" element={<Login />} />
             <Route path="/signup" element={<Signup />} />

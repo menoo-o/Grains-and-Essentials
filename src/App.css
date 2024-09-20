@@ -1523,11 +1523,59 @@
   max-height: 500px; /* Adjust the height as needed */
   padding: 30px !important; /* Add padding when content is visible */
 }
-  
 
+/* login page */
+.combined-form-container {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #f2f2f2;
+  border-radius: 8px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
 
+.button-container {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
 
+.toggle-btn {
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  background-color: #f2f2f2;
+  color: #333;
+  font-weight: bold;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
 
+.toggle-btn.active,
+.toggle-btn:hover {
+  background-color: #ff8800; /* Theme Color */
+  color: #fff;
+}
+
+.form-container {
+  display: none; /* Hide both forms initially */
+}
+
+.orange-btn {
+  background-color: #ff8800; /* Theme Color */
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.orange-btn:hover {
+  background-color: #e67600; /* Darker orange */
+}
 
 
 /* .................MEDIA QUERIES................ */
@@ -1997,7 +2045,53 @@
       font-size: 0.9em; /* Adjust font size for mobile view */
       margin-top: 15px;
     }
- 
+
+    /* login page */
+    @media (min-width: 330px) and (max-width: 480px) {
+      .combined-form-container {
+        max-width: 90%; /* Fit to the mobile screen */
+        padding: 15px;
+      }
+    
+      .button-container {
+        flex-direction: column;
+      }
+    
+      .toggle-btn {
+        width: 100%;
+        margin-bottom: 10px; /* Stack buttons vertically */
+        padding: 12px;
+      }
+    
+      .form-container {
+        width: 100%;
+        padding: 10px 5px;
+        border-top: 1px solid #f2f2f2;
+        margin-top: 10px;
+      }
+    }
+    
+  }
+  
+
+  @media (min-width: 1024px) {
+    .combined-form-container {
+      margin-top: 75px;
+      max-width: 600px; /* Center container */
+    }
+  
+    .button-container {
+      justify-content: space-between;
+    }
+  
+    .toggle-btn {
+      width: 48%; /* Two buttons fit horizontally */
+      padding: 12px 20px;
+    }
+  
+    .form-container {
+      margin-top: 20px;
+    }
   }
   
 
@@ -2014,3 +2108,139 @@
 
 
 
+
+
+
+
+  /* login */
+  /* General Styles */
+.combined-form-container {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #f2f2f2;
+  border-radius: 8px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Button Container for Mobile View */
+.mobile-btn-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.mobile-btn-container button {
+  padding: 10px 20px;
+  margin: 0 10px;
+  background-color: #f2f2f2;
+  color: #333;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.mobile-btn-container button:hover {
+  background-color: #ff8800; /* Hover theme color */
+  color: #fff;
+}
+
+.active-btn {
+  background-color: #ff8800; /* Active theme color */
+  color: #fff;
+}
+
+/* Form Container */
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+
+label {
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+input {
+  padding: 8px;
+  margin-bottom: 10px;
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.orange-btn {
+  background-color: #ff8800; /* Theme Color */
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 4px;
+  width: 100%;
+  transition: background-color 0.3s;
+}
+
+.orange-btn:hover {
+  background-color: #e67600; /* Darker orange */
+}
+
+/* Mobile View CSS */
+@media (min-width: 330px) and (max-width: 480px) {
+  .combined-form-container {
+    width: 370px;/* Fit to the mobile screen */
+    margin-top: 20px;
+    padding: 15px;
+  }
+
+  .mobile-btn-container {
+    flex-direction: row; /* Stack buttons vertically */
+    margin-bottom: 10px;
+
+  }
+
+  .mobile-btn-container button {
+    width: 100%;
+    margin-bottom: 10px; /* Space between buttons */
+    padding: 12px;
+  }
+
+  form {
+    padding: 10px 5px;
+    border-top: 1px solid #f2f2f2;
+    width: 100%;
+  }
+}
+
+/* Desktop View CSS */
+@media (min-width: 1024px) {
+  .combined-form-container {
+   
+    max-width: 800px; /* Center container */
+    padding: 30px;
+    width: 700px;
+    margin-top: 70px;
+    margin-bottom: 80px;
+
+  }
+
+  .mobile-btn-container {
+    justify-content: space-between; /* Align buttons horizontally */
+    margin-bottom: 30px;
+  }
+
+  .mobile-btn-container button {
+    width: 48%;
+    padding: 15px;
+  }
+
+  form {
+    margin-top: 20px;
+  }
+}
