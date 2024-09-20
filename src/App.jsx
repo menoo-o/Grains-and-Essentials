@@ -5,7 +5,7 @@ import { CartProvider } from './contexts/CartContext';
 import { Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
 import Shop from './pages/Shop';
-import Singledisplay from './pages/singledisplay';
+import Singledisplay from './pages/Singledisplay'
 
 import About from './pages/About';
 import Blogs from './pages/Blogs';
