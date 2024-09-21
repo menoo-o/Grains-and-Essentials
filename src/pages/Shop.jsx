@@ -97,7 +97,7 @@ function Shop() {
 
       <div className='shoppg-container'>
         <div className='left-block-shoppg'>
-          <h3>Filter By</h3>
+          <h3 className='filter-by'>Filter By</h3>
           <select value={filter} onChange={(e) => setFilter(e.target.value)}>
             <option value="All Products">All Products</option>
             <option value="Grains & Flour">Grains & Flour</option>
@@ -108,9 +108,9 @@ function Shop() {
             <option value="Storage">Storage</option>
           </select>
 
-          <h3>Sort By</h3>
+          <h3 className='sort-by'>Sort By</h3>
           <select value={sort} onChange={(e) => setSort(e.target.value)}>
-            <option value="best selling">Best Selling</option>
+            <option className='input-filters' value="best selling">Best Selling</option>
             <option value="price low to high">Price: Low to High</option>
             <option value="price high to low">Price: High to Low</option>
             <option value="alphabetical a-z">Alphabetical: A-Z</option>

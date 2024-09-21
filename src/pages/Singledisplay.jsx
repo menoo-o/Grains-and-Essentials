@@ -58,7 +58,7 @@ const Singledisplay = () => {
             ['250g', '500g', '1kg'].map((weight) => (
               <button
                 key={weight}
-                className={`weight-btn-single ${selectedWeight === weight ? 'active' : ''}`}
+                className={`weight-btn-single single-weight ${selectedWeight === weight ? 'active' : ''}`}
                 onClick={() => handleWeightChange(weight)}
               >
                 {weight}

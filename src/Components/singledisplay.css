@@ -53,11 +53,15 @@
     background-color: #FFA07A; /* Orange color */
     color: rgb(224, 190, 145);
     border: none;
-    padding: 10px 50px !important;
+    padding: 10px 150px ;
     border-radius: 10px;
     cursor: pointer;
     font-size: 0.9em;
     font-weight: 600;
+  }
+
+  .single-weight{
+    padding: 10px 150px;
   }
   
   .weight-btn-single.active {
@@ -75,7 +79,7 @@
     justify-content: center;
     align-items: center;
     margin-bottom: 20px;
-    margin-left: 4.5rem;
+    margin-left: 2.5rem;
   }
   
   .quantity-counter button {
@@ -133,6 +137,7 @@
   border: 1px solid #ddd;
   border-radius: 4px;
 padding: 10px;
+
   
 }
 
@@ -250,7 +255,7 @@ padding: 10px;
       align-items: center; /* Center align text */
       text-align: center; /* Center align text */
       
-    width: 97dvw;
+    width: 93dvw;
       
     }
   
@@ -269,13 +274,15 @@ padding: 10px;
       flex-direction: row; /* Stack vertically */
       align-items: center; /* Center align */
       gap: 5px; /* Add spacing */
-     
+   
+ 
 
     }
   
     .weight-btn-single {
-      width: 80%; /* Reduce button width */
-      padding: 8px 0; /* Adjust padding */
+      width: 50%; /* Reduce button width */
+      
+      padding: 10px 33px !important;
     }
   
     /* Quantity counter adjustments for mobile */
@@ -304,7 +311,15 @@ padding: 10px;
       font-size: 1em; /* Adjust padding */
       margin-bottom: 20px;
     }
+    
+    .accordion-item{
+        width: 95dvw;
+    }
   
     
   }
   
+
+  .single-weight{
+    padding: 10px 40px !important;
+  }

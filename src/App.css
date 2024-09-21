@@ -904,7 +904,8 @@
 /* Shop */
 /* Product grid */
 .layout {
-  background: #f9f9f9; /* Adjust as needed */
+ 
+  background: #ffffff; /* Adjust as needed */
 }
 
 .product-card {
@@ -1822,13 +1823,14 @@
     }
   
     .left-block-shoppg {
-      margin: 0 15px !important;
+      margin: 0 0px !important;
       display: flex; /* Flexbox for alignment */
       flex-direction: row !important; /* Align filter and sort in a row */
       justify-content: space-between; /* Space between filter and sort options */
-      width: 80%; /* Full width on mobile */
+      width: 90dvw !important;  /* Full width on mobile */
        /* Add space below filter/sort */
       align-items: center;
+     
       
     }
   
@@ -1836,17 +1838,22 @@
       display: grid !important; /* Use grid layout for product cards */
       grid-template-columns: 1fr !important; /* 2 columns for product cards on mobile */
       justify-self: center ; /* Gap between product cards */
-      width: 100%; /* Full width on mobile */
-
+      width: 85dvw !important;
+      justify-content: center;
     }
+
   
     .product-card {
-      width: 70% !important; /* Full width of grid column */
+      display: flex;
+      padding: 0;
+      width: 83dvw !important; /* Full width of grid column */
       max-width: none; /* Remove max-width constraint */
-      margin: 50px; /* Remove margin */
+      margin-left: 20px;
+      /* Remove margin */
       height: 470px !important;
       border: 1px solid rgba(221, 172, 117, 0.562);
       margin-top: 30px !important;
+
     }
   
     .product-card img {
@@ -1894,6 +1901,21 @@
       font-size: 0.9em; /* Adjust font size for mobile view */
       margin-top: 15px;
     }
+
+    .filter-by, .sort-by{
+      font-size: 0.85em !important;
+    }
+
+    select {
+      width: 120px !important ; /* Adjust the width to your preference */
+      padding: 5px; /* Add some padding for better appearance */
+      font-size: 0.9em !important; /* Adjust font size */
+      border-radius: 5px; /* Add border-radius for a rounded look */
+      border: 1px solid #ccc; /* Border color */
+      background-color: #fff; /* Background color */
+      cursor: pointer; /* Change cursor to pointer */
+    }
+
 
     /* login page */
     @media (min-width: 330px) and (max-width: 480px) {
