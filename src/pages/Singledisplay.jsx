@@ -77,7 +77,7 @@ const Singledisplay = () => {
           Add to Cart
         </button>
 
-        <p>{product.description}</p>
+        <p className='product-desp'>{product.description}</p>
 
         {/* Accordion Section */}
         <div className="product-additional-info">
