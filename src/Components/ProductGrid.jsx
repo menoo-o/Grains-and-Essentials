@@ -94,18 +94,18 @@ const ProductGrid = ({ products }) => {
     <h3 className='product-card-title-heading'>{item.title}</h3>
     
     {/* Compute price based on weight only if weight options are available */}
-    <p>{(item.category !== 'Storage' && item.id !== 3 && item.id !== 5)
+    <p className='price-shop-grid'>{(item.category !== 'Storage' && item.id !== 3 && item.id !== 5)
           ? computePrice(item.price, selectedWeights[index]) 
           : `${item.price}` /* If no weight, show base price */}
     </p>
 
     {/* Conditionally render weight options based on category and id */}
     {(item.category !== 'Storage' && item.id !== 3 && item.id !== 5) && (
-      <div className="weight-options">
+      <div className="weight-options weight-options-grid">
         {['250g', '500g', '1kg'].map((weight) => (
           <button
             key={weight}
-            className={`weight-btn ${selectedWeights[index] === weight ? 'active' : ''}`}
+            className={`weight-btn weight-btn-grid ${selectedWeights[index] === weight ? 'active' : ''}`}
             onClick={() => handleWeightClick(index, weight)}
           >
             {weight}
@@ -115,18 +115,18 @@ const ProductGrid = ({ products }) => {
     )}
 
     <div className="quantity-selector">
-      <button onClick={() => handleQuantityChange(index, Math.max(1, quantities[index] - 1))}>-</button>
+      <button className='btn-shop-grid' onClick={() => handleQuantityChange(index, Math.max(1, quantities[index] - 1))}>-</button>
       <input
         type="number"
         value={quantities[index]}
         min="1"
         onChange={(e) => handleQuantityChange(index, Number(e.target.value))}
       />
-      <button onClick={() => handleQuantityChange(index, quantities[index] + 1)}>+</button>
+      <button className='btn-shop-grid' onClick={() => handleQuantityChange(index, quantities[index] + 1)}>+</button>
     </div>
 
     <button
-      className="add-to-cart-btn"
+      className="add-to-cart-btn add-to-cart-btn-grid"
       onClick={() => handleAddToCart(item, index)}
     >
       Add to Cart
