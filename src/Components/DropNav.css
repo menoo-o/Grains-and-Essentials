@@ -53,9 +53,10 @@ body {
     position: absolute;
     z-index: 10;
     top: 100px; 
-    width: 95dvw;
+    left: 190px;
+    width: 97dvw;
     transform: translateX(-45%);
-    background-color: #ce6401f8;
+    background-color: #dc661f ;
     border: none;
 
     padding: 0rem 2rem;
@@ -75,7 +76,7 @@ body {
     align-items: center;
     justify-content: flex-start;
     border-radius: var(--border-radius);
-    background-color: #ce6401f8; /* Assuming you want to see the effect on a colored background */
+    background-color: #dc661f; /* Assuming you want to see the effect on a colored background */
     padding: 0.5rem;
     color: white;
     font-size: 1.10em;
@@ -83,9 +84,7 @@ body {
     transition: filter 300ms; /* This ensures that only the filter property is animated */
   }
   
-  .menu-item:hover {
-    filter: grayscale(100%); /* Brightness will increase on hover */
-  }
+ 
   
 
   h2{
@@ -171,4 +170,4 @@ body {
     opacity: 0;
     transition: transform 600ms ease, opacity 600ms ease;
   }
-  
+
