@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import '../App.css';
+import '../Components/login.css';
 
 const CombinedForm = () => {
   const [activeForm, setActiveForm] = useState('signin');
