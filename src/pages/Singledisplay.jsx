@@ -5,7 +5,7 @@ import { useCart } from '../contexts/CartContext';
 import products from '../data/productsData';
 import CartCard from '../Components/CartAlert';
 import Accordion from '../Components/Accordion'; // Import the Accordion component
-import '../App.css'; // Assuming CSS will be written in App.css or respective stylesheets
+import '../Components/singledisplay.css'; // Assuming CSS will be written in App.css or respective stylesheets
 
 const Singledisplay = () => {
   const { slug } = useParams();

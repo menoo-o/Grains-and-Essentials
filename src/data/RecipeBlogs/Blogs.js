@@ -8,7 +8,7 @@ const recipes = [
       ingredients: [
         { text: "½ cup ", link: { label: "Mung Beans", url: "/shop" } },
         { text: "1 cup chopped cabbage" },
-        { text: "½ cup ", link: { label: "Split Chickpea Lentils", url: "/shop" } },
+        { text: "½ cup ", link: { label: "Split Chickpea Lentils", url: "/singledisplay/chana-daal" } },
         { text: "½ cup Split Yellow Mung Lentils" },
         { text: "2 Serrano Pepper" },
         { text: "½ bunch Fresh Cilantro" },
@@ -17,7 +17,7 @@ const recipes = [
         { text: "4 tbsp Olive Oil" },
         { text: "1 tbsp Pink Salt" },
         { text: "1 tsp Black Pepper" },
-        { text: "2 tsp " , link: { label: "Baking Powder", url: "/shop" } }
+        { text: "2 tsp " , link: { label: "Baking Powder", url: "/singledisplay/baking-powder" } }
       ],
       instructions: [
         { title: 'Step 1: Soak and Drain', description: 'Mix all the beans and lentils, wash, and soak for 4-6 hours. Drain all the water out.' },
@@ -51,7 +51,7 @@ const recipes = [
           { text: "1/2 tsp pepper" },
           { text: "1/4 cup peanuts" },
           { text: "2 green onions" },
-          { text: "1 cup ", link: { label: "Brown Rice", url: "/shop" } }
+          { text: "1 cup ", link: { label: "Brown Rice", url: "/singledisplay/brown-rice" } }
           ],
         instructions: [
             {
@@ -146,7 +146,7 @@ const recipes = [
         imageUrl: '/recipeblogs/chickpeasauce.webp',
         intro: "Indulge in the vibrant flavours of Mexico with our Chickpeas in Guajillo Chile Sauce recipe! This fibre-rich dish is a perfect addition to your diet, packed with nutritious chickpeas and a bold, slightly smoky sauce made with Guajillo chilies. Inspired by the warm and aromatic spices of Mexican cuisine, this recipe combines the familiarity of Pakistani flavours with the excitement of international flair. Get ready to savour a refreshing and deliciously spicy twist on traditional chickpea dishes!",
         ingredients: [
-          { text: "2 cups cooked ", link: { label: "Chickpeas Beans", url: "/shop" } },
+          { text: "2 cups cooked ", link: { label: "Chickpeas Beans", url: "/singledisplay/chana-daal" } },
           { text: "2 medium cups medium carrots" },
           { text: "1 medium cup white onion" },
           { text: "2 cloves of minced garlic" },
