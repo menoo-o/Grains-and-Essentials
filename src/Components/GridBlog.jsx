@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { NavLink } from 'react-router-dom';
-import '../App.css';
+import '../Components/Blogs.css';
 
 // Helper function to generate slug from the title
 const slugify = (title) => {

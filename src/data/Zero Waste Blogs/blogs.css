@@ -1,0 +1,86 @@
+/* Blog Post Container */
+.blog-post {
+    max-width: 800px; /* Limit width for readability */
+    margin: 60px auto; /* Center align with top and bottom spacing */
+    padding: 20px;
+    background-color: #fcfcfc; /* Light orange background */
+    border: 1px solid #FF6F00; /* Orange border */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    font-family: Arial, sans-serif; /* General font */
+    color: #333; /* Text color */
+  }
+  
+  /* Blog Title */
+  .zero-blog-heading {
+    font-size: 2em;
+    color: #FF6F00; /* Orange color for the title */
+    text-align: center;
+    margin-bottom: 15px; /* Space below the title */
+    line-height: 1.2; /* Better spacing */
+  }
+  
+  /* Blog Image */
+  .zero-blog-img {
+    width: 100%; /* Full width of the container */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 8px; /* Rounded corners */
+    margin-bottom: 20px; /* Space below the image */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow */
+  }
+  
+  /* Blog Intro Paragraph */
+  .blog-post p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    margin: 15px 0; /* Top and bottom spacing */
+  }
+  
+  /* Blog Content */
+  .blog-content h3 {
+    font-size: 1.3em;
+    color: #FF6F00; /* Subheading color */
+    margin-top: 20px; /* Space above headings */
+    margin-bottom: 10px; /* Space below headings */
+  }
+  
+  .blog-content p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    margin: 10px 0; /* Space above and below paragraphs */
+  }
+  
+  .blog-content ul {
+    list-style: disc;
+    margin: 20px 0;
+    padding-left: 20px; /* Indent the list */
+  }
+  
+  .blog-content li {
+    margin: 10px 0; /* Space between list items */
+  }
+  
+  /* Mobile View */
+  @media (max-width: 768px) {
+    .blog-post {
+      padding: 15px; /* Reduce padding on smaller screens */
+      margin: 15px; /* Reduce margin for better fit */
+    }
+  
+    .zero-blog-heading {
+      font-size: 1.8em; /* Smaller font size for title */
+    }
+  
+    .zero-blog-img {
+      margin-bottom: 15px; /* Adjust space below image */
+    }
+  
+    .blog-content h3 {
+      font-size: 1.2em; /* Smaller subheading size */
+    }
+  
+    .blog-content p {
+      font-size: 1em; /* Smaller paragraph size */
+    }
+  }
+  

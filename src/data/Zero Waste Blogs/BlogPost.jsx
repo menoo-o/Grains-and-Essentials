@@ -1,7 +1,10 @@
 // data/Zero Waste Blogs/BlogPost.js
 import React from 'react';
 import { useParams } from 'react-router-dom';
+import './blogs.css'
 import blogsInfo from './BlogsInfo';  // Import the blog data
+
+
 
 const BlogPost = () => {
   const { id } = useParams(); // Get the id from the URL

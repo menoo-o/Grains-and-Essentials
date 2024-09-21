@@ -1,0 +1,91 @@
+/* General Styles */
+.blog-grid {
+    display: grid;
+    gap: 20px; /* Space between blog cards */
+    padding: 20px; /* Padding around the grid */
+  }
+  
+  /* Blog Card Styles */
+  .blog-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none; /* Remove underline from links */
+    padding: 15px;
+    background-color: #ffffff; /* Light orange background */
+    border: 1px solid #FF6F00; /* Orange border */
+    border-radius: 10px; /* Rounded corners */
+    height: 400px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    transition: transform 0.3s, box-shadow 0.3s; /* Smooth transition */
+  }
+  
+  /* Hover Effect for Blog Cards */
+  .blog-card:hover {
+    transform: translateY(-5px); /* Lift effect */
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15); /* Enhanced shadow */
+  }
+  
+  /* Blog Image */
+  .blog-image {
+    width: 100%;
+    height: 350px; /* Maintain aspect ratio */
+    border-radius: 5px; /* Slight rounding */
+    margin-bottom: 5px; /* Space below image */
+  }
+  
+  /* Blog Title */
+  .blog-title {
+    font-size: 1.2em;
+    color: #FF6F00; /* Orange theme color */
+    text-align: center;
+    margin: 0;
+  }
+  
+  /* Mobile View */
+  @media (max-width: 768px) {
+    .blog-grid {
+      grid-template-columns: 1fr; /* Single column for mobile */
+      gap: 15px; /* Reduce space between blog cards */
+    }
+  
+    .blog-card {
+      width: 100%; /* Full width for better touch area */
+      padding: 10px; /* Less padding for compact view */
+    }
+  
+    .blog-title {
+      font-size: 1em; /* Smaller font size for titles */
+    }
+  }
+  
+  /* Tablet View */
+  @media (min-width: 769px) and (max-width: 1024px) {
+    .blog-grid {
+      grid-template-columns: 1fr 1fr; /* Two columns for tablets */
+    }
+  
+    .blog-card {
+      padding: 15px; /* Default padding */
+    }
+  
+    .blog-title {
+      font-size: 1.1em; /* Adjust font size */
+    }
+  }
+  
+  /* Desktop View */
+  @media (min-width: 1025px) {
+    .blog-grid {
+      grid-template-columns: 1fr 1fr 1fr; /* Three columns for desktop */
+    }
+  
+    .blog-card {
+      padding: 20px; /* More padding for larger view */
+    }
+  
+    .blog-title {
+      font-size: 1.2em; /* Default font size */
+    }
+  }
+  
