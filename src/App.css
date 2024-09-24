@@ -1371,6 +1371,23 @@
   background-color: #e67600; /* Darker orange */
 }
 
+/* LOADER */
+/* ///SVG/// */
+.my-svg {
+  width: 500px; /* change width */
+  height: 500px; /* change height */
+  stroke-width: 10; /* change stroke width */
+}
+
+.svg-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100dvh;
+}
+
+
+
 
 /* .................MEDIA QUERIES................ */
 

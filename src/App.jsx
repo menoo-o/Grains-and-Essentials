@@ -1,33 +1,26 @@
 // src/App.jsx
-import ScrollToTop from './Components/ScrollToTop'
-import React from 'react';
-import { CartProvider } from './contexts/CartContext';
+import { Suspense, lazy } from 'react';
 import { Routes, Route } from 'react-router-dom';
-import Home from './pages/Home';
-import Shop from './pages/Shop';
-import Singledisplay from './pages/Singledisplay'
-
-import About from './pages/About';
-import Blogs from './pages/Blogs';
-import BlogPost from './data/Zero Waste Blogs/BlogPost';  // BlogPost component
-import CombinedForm from './pages/Login';
-
-import Recipes from './pages/Recipes';
-import Contact from './pages/Contact';
-import Cart from './pages/Cart';
+import ScrollToTop from './Components/ScrollToTop';
+import Loading from './Components/Loader';  // A loading component to show while components are being loaded
+import { CartProvider } from './contexts/CartContext';
 import Navbar from './Components/Navbar';
-import RecipeDetail from './Components/RecipeDetail ';
 import Footer from './Components/Footer';
+import RecipeDetail from './Components/RecipeDetail ';
 
+// Lazy loading for pages and components
+const Home = lazy(() => import('./pages/Home'));
+const Shop = lazy(() => import('./pages/Shop'));
+const Singledisplay = lazy(() => import('./pages/Singledisplay'));
+const About = lazy(() => import('./pages/About'));
+const Blogs = lazy(() => import('./pages/Blogs'));
+const BlogPost = lazy(() => import('./data/Zero Waste Blogs/BlogPost'));  // Lazy loaded BlogPost
+const CombinedForm = lazy(() => import('./pages/Login'));  // Login/Signup page
+const Recipes = lazy(() => import('./pages/Recipes'));
+const Contact = lazy(() => import('./pages/Contact'));
+const Cart = lazy(() => import('./pages/Cart'));
 
-// import Login from './pages/Login';
-// import Signup from './pages/Signup';
-// import PrivateRoute from './components/PrivateRoute'; // Your private route component
-
-
-
-
-
+// Importing CSS files
 import './App.css';
 import './index.css';
 
@@ -39,30 +32,24 @@ function App() {
         <nav>
           <Navbar />
         </nav>
-        <Routes>
+
+        {/* Wrapping routes in Suspense for lazy loading */}
+        <Suspense fallback={<Loading />}> {/* This will show Loading component while the components load */}
+          <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/shop" element={<Shop />} />
-            {/* Shop displays all products, when clicked on a product, this will direct to the page below. */}
             <Route path="/singledisplay/:slug" element={<Singledisplay />} />
-            
-
             <Route path="/about" element={<About />} />
             <Route path="/blogs" element={<Blogs />} />
-            <Route path="/blogs/:id/:slug" element={<BlogPost />} />  
-           
+            <Route path="/blogs/:id/:slug" element={<BlogPost />} />
             <Route path="/recipes" element={<Recipes />} />
-            <Route path="/recipes/:id/:slug" element={<RecipeDetail />} /> {/* Dynamic recipe route */}
+            <Route path="/recipes/:id/:slug" element={<RecipeDetail />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/cart" element={<Cart />} />
             <Route path="/login" element={<CombinedForm />} />
+          </Routes>
+        </Suspense>
 
-
-            {/* <Route path="/login" element={<Login />} />
-            <Route path="/signup" element={<Signup />} />
-            <Route path="/dashboard" element={<PrivateRoute component={Dashboard} />} /> */}
-
-
-        </Routes>
         <Footer />
       </div>
     </CartProvider>
