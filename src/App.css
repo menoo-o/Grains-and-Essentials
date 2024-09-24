@@ -1843,7 +1843,7 @@
     
     /* Shop pg */
     .shoppg-container {
-      
+      background-color: white !important;
       display: flex; /* Use flexbox for mobile */
       justify-content: center;
       align-self: center;
@@ -1861,6 +1861,7 @@
       width: 90dvw !important;  /* Full width on mobile */
        /* Add space below filter/sort */
       align-items: center;
+      
      
       
     }
@@ -1871,15 +1872,17 @@
       justify-self: center ; /* Gap between product cards */
       width: 85dvw !important;
       justify-content: center;
+     
     }
 
   
     .product-card {
       display: flex;
       padding: 0;
-      width: 83dvw !important; /* Full width of grid column */
+      background-color: white !important;
+      width: 80dvw !important; /* Full width of grid column */
       max-width: none; /* Remove max-width constraint */
-      margin-left: 20px;
+      margin-left: 15px;
       /* Remove margin */
       height: 470px !important;
       border: 1px solid rgba(221, 172, 117, 0.562);
