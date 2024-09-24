@@ -1827,6 +1827,20 @@
       padding: 7px 15px;
     }
 
+    /* loader */
+    .my-svg {
+      width: 200px; /* change width */
+      height: 200px; /* change height */
+      stroke-width: 10; /* change stroke width */
+    }
+    
+    .svg-container{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100dvh;
+    }
+    
     /* Shop pg */
     .shoppg-container {
       
