@@ -6,15 +6,15 @@ import ImageLoader from './ImageLoader';
 const Hero = () => {
     const carouselItems = [
         {
-            imgSrc: '/hero1.jpg',
+            imgSrc: '/hero1.webp',
             text: 'Rice That Reigns Supreme',
         },
         {
-            imgSrc: '/hero2.jpg',
+            imgSrc: '/hero2.webp',
             text: 'Nourishing Your Life, One Grain at a Time',
         },
         {
-            imgSrc: '/hero3.jpg',
+            imgSrc: '/hero3.webp',
             text: 'Pure Lentils, Pure Nutrition',
         },
     ];
