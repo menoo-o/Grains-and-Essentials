@@ -1378,7 +1378,7 @@
   height: 500px; /* change height */
   stroke-width: 10; /* change stroke width */
   border-radius: 50%;
-  animation: spin 1s linear infinite;
+  animation: spin 2500ms linear infinite;
 }
 
 .svg-container{
