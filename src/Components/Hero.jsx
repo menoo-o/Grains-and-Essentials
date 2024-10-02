@@ -1,7 +1,7 @@
 import { Carousel } from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css'; // Import carousel styles
 import '../App.css'; // Import custom styles
-import ImageLoader from './ImageLoader';
+
 
 const Hero = () => {
     const carouselItems = [
@@ -14,7 +14,7 @@ const Hero = () => {
             text: 'Nourishing Your Life, One Grain at a Time',
         },
         {
-            imgSrc: '/hero3.webp',
+            imgSrc: '/hero3.web',
             text: 'Pure Lentils, Pure Nutrition',
         },
     ];
@@ -30,7 +30,7 @@ const Hero = () => {
             >
                 {carouselItems.map((item, index) => (
                     <div key={index} className="carousel-item">
-                        <ImageLoader src={item.imgSrc} alt={`Slide ${index + 1}`} />
+                        <img src={item.imgSrc} alt={`Slide ${index + 1}`} />
                         <div className="carousel-text">
                             <h2>{item.text}</h2>
                         </div>
