@@ -1,6 +1,7 @@
 import { Carousel } from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css'; // Import carousel styles
 import '../App.css'; // Import custom styles
+import ImageLoader from './ImageLoader';
 
 const Hero = () => {
     const carouselItems = [
@@ -29,7 +30,7 @@ const Hero = () => {
             >
                 {carouselItems.map((item, index) => (
                     <div key={index} className="carousel-item">
-                        <img src={item.imgSrc} alt={`Slide ${index + 1}`} />
+                        <ImageLoader src={item.imgSrc} alt={`Slide ${index + 1}`} />
                         <div className="carousel-text">
                             <h2>{item.text}</h2>
                         </div>

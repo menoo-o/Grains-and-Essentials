@@ -2,6 +2,7 @@
 import PropTypes from 'prop-types';
 import { NavLink } from 'react-router-dom';
 import '../App.css';
+import ImageLoader from './ImageLoader';
 
 // Helper function to generate slug from the title
 const slugify = (title) => {
@@ -17,7 +18,7 @@ const Grid = ({ blogs }) => {
           to={`/recipes/${blog.id}/${slugify(blog.title)}`} // URL with id and slug
           className='blog-card'
         >
-          <img src={blog.imageUrl} alt={blog.title} className='blog-image' />
+          <ImageLoader src={blog.imageUrl} alt={blog.title} className='blog-image' />
           <h3 className='blog-title'>{blog.title}</h3>
         </NavLink>
       ))}
